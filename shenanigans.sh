@@ -35,9 +35,7 @@ alias x='exit'
 alias grep='grep --color=always'
 alias less='less -R'
 alias e='emacs'
-alias n='nvim'
 alias gg='lazygit'
-alias gt='git-town'
 alias server='python3 -m http.server 6969'
 
 # Custom folder jump commands.

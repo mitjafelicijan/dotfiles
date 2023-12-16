@@ -9,7 +9,8 @@ git clone git@github.com:mitjafelicijan/dotfiles.git ~/.dotfiles
 Then create symbolic links to actual config files.
 
 ```sh
-ln -s ~/.dotfiles/emacs.el ~/.config/emacs/init.el
-ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/shenanigans.sh ~/.shenanigans.sh
+ln -s ~/.dotfiles/emacs.el ~/.config/emacs/init.el
+ln -s ~/.dotfiles/helix.toml ~/.config/helix/config.toml
+ln -s ~/.dotfiles/vimrc ~/.vimrc
 ```

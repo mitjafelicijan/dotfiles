@@ -24,7 +24,7 @@ set spelllang=en_us
 " Buffer navigation remaps.
 nnoremap <C-]> :bnext<cr>
 nnoremap <C-[> :bprevious<cr>
-nnoremap <C-b> :buffers<cr>
+nnoremap <C-b> :buffers<cr>:buffer 
 
 " Commenting blocks of code.
 augroup commenting_blocks_of_code
@@ -37,6 +37,12 @@ augroup commenting_blocks_of_code
 augroup END
 noremap <silent> gcc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> gcu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+" Status Line enhancements.
+set laststatus=2
+set statusline=%f%m%=%y\ %{strlen(&fenc)?&fenc:'none'}\ %l:%c\ %L\ %P
+hi StatusLine cterm=NONE ctermbg=black ctermfg=brown
+hi StatusLineNC cterm=NONE ctermbg=black ctermfg=darkgray
 
 " Language specific indentation.
 filetype plugin indent on

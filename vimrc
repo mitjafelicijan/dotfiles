@@ -21,7 +21,7 @@ set backspace=2
 set scrolloff=4
 set spelllang=en_us
 
-# Buffer navigation remaps.
+" Buffer navigation remaps.
 nnoremap <C-]> :bnext<cr>
 nnoremap <C-[> :bprevious<cr>
 nnoremap <C-b> :buffers<cr>

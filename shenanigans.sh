@@ -1,12 +1,12 @@
 # Software list.
-# cifs-utils tree jq xmlstarlet s3cmd xclip neovim mc gnupg 
-# tilix fzf ripgrep
+# cifs-utils tree s3cmd xclip mc gnupg ripgrep
+# jq xmlstarlet tilix fzf hx
 
 # Magical environment variables.
 
 NIX_SHELL_PRESERVE_PROMPT=1
 TERM=xterm-256color
-EDITOR=vim
+EDITOR=hx
 
 # Better prompt.
 

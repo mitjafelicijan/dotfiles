@@ -24,7 +24,7 @@ auto-signature-help = false
 "A-." = [ "goto_next_buffer" ]
 "{" = [ "goto_prev_paragraph" ]
 "}" = [ "goto_next_paragraph" ]
-"D" = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
+"D" = ["ensure_selections_forward", "extend_to_line_end", "change_selection"]
 
 [keys.select]
 "{" = [ "goto_prev_paragraph" ]

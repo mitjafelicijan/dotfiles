@@ -20,6 +20,8 @@ auto-signature-help = false
 
 [keys.normal]
 "esc" = [ "collapse_selection", "keep_primary_selection" ]
+"A-," = [ "goto_previous_buffer" ]
+"A-." = [ "goto_next_buffer" ]
 "{" = [ "goto_prev_paragraph" ]
 "}" = [ "goto_next_paragraph" ]
 "D" = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]

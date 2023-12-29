@@ -34,7 +34,6 @@ alias h='history'
 alias x='exit'
 alias grep='grep --color=always'
 alias less='less -R'
-alias e='emacs'
 alias gg='lazygit'
 alias server='python3 -m http.server 6969'
 
@@ -51,7 +50,6 @@ export PATH=$HOME/Vault/bin:$PATH
 export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
-
 export PATH=$HOME/Android/Sdk/platform-tools:$PATH
 export PATH=$HOME/Android/Sdk/tools:$PATH
 
@@ -80,7 +78,6 @@ backup() {
 
 	# Make a copy of dotfiles.
 	cp /home/$USER/.shenanigans.sh shenanigans.sh
-	cp /home/$USER/.bash_history bash_history
 	cp /home/$USER/.bash_history_infinite bash_history_infinite
 	cp /home/$USER/.smbcredentials smbcredentials
 	cp /home/$USER/.gitconfig gitconfig
@@ -108,6 +105,8 @@ backup() {
 	rsync -azv \
 		--exclude '.venv/' \
 		--exclude '.git/' \
+		--exclude '.import/' \
+		--exclude '.godot/' \
 		--exclude 'node_modules/' \
 		--delete \
 		$VHOME/ /media/Void/Backup/$ME/
@@ -118,6 +117,8 @@ backup() {
 		--delete-removed \
 		--exclude 'node_modules/*' \
 		--exclude '.git/*' \
+		--exclude '.import/*' \
+		--exclude '.godot/*' \
 		--exclude '.venv/*' \
 		$VHOME/ s3://vault/backup/$ME/
 

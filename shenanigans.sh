@@ -40,7 +40,7 @@ alias server='python3 -m http.server 6969'
 # Custom folder jump commands.
 
 alias p='cd ~/Vault/projects'
-alias j='cd ~/Junk'
+alias j='cd ~/Junk/current'
 alias d='cd ~/Downloads'
 alias v='cd ~/Vault'
 

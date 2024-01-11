@@ -101,6 +101,12 @@ backup() {
 	mkdir -p $VHOME/videos
 	cp -rfn ~/Videos/* $VHOME/videos/
 
+	# Backup Turtle WoW stuff.
+	mkdir -p $VHOME/turtle-wow
+	cp -rfn ~/Games/Turtle/Interface $VHOME/turtle-wow/
+	cp -rfn ~/Games/Turtle/WTF $VHOME/turtle-wow/
+	cp -rfn ~/Games/Turtle/start.sh $VHOME/turtle-wow/
+	
 	# Sync with NAS.
 	rsync -azv \
 		--exclude '.venv/' \

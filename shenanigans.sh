@@ -69,6 +69,11 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 # Useful function. Much wow!
 
+turtle() {
+	cd ~/Games/Turtle
+	./start.sh
+}
+
 backup() {
 	VHOME=/home/$USER/Vault
 	ME=$(whoami)@$(hostname)

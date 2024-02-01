@@ -89,8 +89,9 @@ backup() {
 	cp /home/$USER/.s3cfg s3cfg
 
 	cp /home/$USER/.vimrc vimrc
-	cp /home/$USER/.config/nvim/init.lua neovim.lua
 	cp /home/$USER/.config/emacs/init.el init.el
+	cp /home/$USER/.config/helix/config.toml config.toml
+	cp /home/$USER/.newsbeuter/urls urls
 
 	cp -Rf /home/$USER/.ssh/ ./
 	cp -Rf /home/$USER/.aws/ ./

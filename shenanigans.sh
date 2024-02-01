@@ -1,6 +1,6 @@
 # Software list.
 # cifs-utils tree s3cmd xclip mc gnupg ripgrep
-# jq xmlstarlet tilix fzf hx
+# jq xmlstarlet tilix fzf hx newsbeuter
 
 # Magical environment variables.
 

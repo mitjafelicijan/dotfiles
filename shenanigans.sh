@@ -91,7 +91,8 @@ backup() {
 	cp /home/$USER/.vimrc vimrc
 	cp /home/$USER/.config/emacs/init.el init.el
 	cp /home/$USER/.config/helix/config.toml config.toml
-	cp /home/$USER/.newsbeuter/urls urls
+	cp /home/$USER/.newsboat/urls urls
+	cp /home/$USER/.newsboat/cache.db cache.db
 
 	cp -Rf /home/$USER/.ssh/ ./
 	cp -Rf /home/$USER/.aws/ ./

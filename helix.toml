@@ -4,7 +4,6 @@ theme = "jellybeans"
 line-number = "relative"
 color-modes = true
 true-color = true
-scrolloff = 10
 idle-timeout = 1000
 mouse = false
 middle-click-paste = true
@@ -20,12 +19,6 @@ auto-signature-help = false
 
 [keys.normal]
 "esc" = [ "collapse_selection", "keep_primary_selection" ]
-"A-," = [ "goto_previous_buffer" ]
-"A-." = [ "goto_next_buffer" ]
-"{" = [ "goto_prev_paragraph" ]
-"}" = [ "goto_next_paragraph" ]
 "D" = [ "ensure_selections_forward", "extend_to_line_end", "change_selection" ]
-
-[keys.select]
-"{" = [ "goto_prev_paragraph" ]
-"}" = [ "goto_next_paragraph" ]
+"C-left" = [ "goto_previous_buffer" ]
+"C-right" = [ "goto_next_buffer" ]

@@ -42,7 +42,6 @@ alias server='python3 -m http.server 6969'
 alias p='cd ~/Vault/projects'
 alias j='cd ~/Junk/current'
 alias d='cd ~/Downloads'
-alias v='cd ~/Vault'
 
 # Additional path settings.
 
@@ -52,6 +51,8 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/Android/Sdk/platform-tools:$PATH
 export PATH=$HOME/Android/Sdk/tools:$PATH
+export PATH=$HOME/Applications/v:$PATH
+export PATH=$HOME/Applications/odin:$PATH
 
 # History and search.
 

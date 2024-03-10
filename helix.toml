@@ -1,20 +1,20 @@
-theme = "jellybeans"
+# https://github.com/helix-editor/helix/blob/master/runtime/themes/jellybeans.toml
+# Located in ~/.congfig/helix/runtime/themes/fattybeans.toml
+#     inherits = "jellybeans"
+#     "ui.background" ={}
+theme = "fattybeans"
 
 [editor]
 line-number = "relative"
 color-modes = true
 true-color = true
-idle-timeout = 1000
 mouse = false
 middle-click-paste = true
 rulers = [80, 120]
-
-[editor.cursor-shape]
-insert = "bar"
+idle-timeout = 1000
 
 [editor.lsp]
 display-messages = true
-display-inlay-hints = false
 auto-signature-help = false
 
 [keys.normal]

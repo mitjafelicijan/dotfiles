@@ -139,3 +139,24 @@ backup() {
 	# Add to log file.
 	echo `date +"%D %T"` >> ~/.vault.log
 }
+
+tarball() {
+	echo $1
+	if [ -z "$1" ]; then
+    echo "No arguments provided. Usage: tarball <git-folder>"
+		return
+	fi
+
+	if [ ! -d "$1" ]; then
+		echo "Directory $1 does not exist."
+		return
+	fi
+
+	cwd=$(pwd)
+	pname=$(basename "$1")
+	cdate=$(date "+%Y%m%d%H%M")
+	
+	cd $1
+	git archive --format=tar -o "/tmp/$pname-$cdate.tar.gz" -v HEAD
+	cd $cwd
+}

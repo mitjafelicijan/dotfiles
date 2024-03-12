@@ -45,14 +45,7 @@ alias d='cd ~/Downloads'
 
 # Additional path settings.
 
-export PATH=$HOME/Vault/bin:$PATH
-export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/go/bin:$PATH
-export PATH=$HOME/Android/Sdk/platform-tools:$PATH
-export PATH=$HOME/Android/Sdk/tools:$PATH
-export PATH=$HOME/Applications/v:$PATH
-export PATH=$HOME/Applications/odin:$PATH
 
 # History and search.
 
@@ -70,11 +63,6 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 # Useful function. Much wow!
 
-turtle() {
-	cd ~/Games/Turtle
-	./start.sh
-}
-
 backup() {
 	VHOME=/home/$USER/Vault
 	ME=$(whoami)@$(hostname)
@@ -87,10 +75,8 @@ backup() {
 	cp /home/$USER/.bash_history_infinite bash_history_infinite
 	cp /home/$USER/.smbcredentials smbcredentials
 	cp /home/$USER/.gitconfig gitconfig
-	cp /home/$USER/.s3cfg s3cfg
 
 	cp /home/$USER/.vimrc vimrc
-	cp /home/$USER/.config/emacs/init.el init.el
 	cp /home/$USER/.config/helix/config.toml config.toml
 	cp /home/$USER/.newsboat/urls urls
 	cp /home/$USER/.newsboat/cache.db cache.db
@@ -101,20 +87,6 @@ backup() {
 	dconf dump /com/gexperts/Tilix/ > tilix.dconf
 	# dconf load /com/gexperts/Tilix/ < tilix.dconf
 
-	# Backup screenshots.
-	mkdir -p $VHOME/pictures
-	cp -rfn ~/Pictures/* $VHOME/pictures/
-
-	# Backup screencasts.
-	mkdir -p $VHOME/videos
-	cp -rfn ~/Videos/* $VHOME/videos/
-
-	# Backup Turtle WoW stuff.
-	mkdir -p $VHOME/turtle-wow
-	cp -rfn ~/Games/Turtle/Interface $VHOME/turtle-wow/
-	cp -rfn ~/Games/Turtle/WTF $VHOME/turtle-wow/
-	cp -rfn ~/Games/Turtle/start.sh $VHOME/turtle-wow/
-	
 	# Sync with NAS.
 	rsync -azv \
 		--exclude '.venv/' \
@@ -125,38 +97,6 @@ backup() {
 		--delete \
 		$VHOME/ /media/Void/Backup/$ME/
 
-	# Sync to off-site DO S3 bucket.
-	s3cmd sync \
-		--host-bucket=vault \
-		--delete-removed \
-		--exclude 'node_modules/*' \
-		--exclude '.git/*' \
-		--exclude '.import/*' \
-		--exclude '.godot/*' \
-		--exclude '.venv/*' \
-		$VHOME/ s3://vault/backup/$ME/
-
 	# Add to log file.
 	echo `date +"%D %T"` >> ~/.vault.log
-}
-
-tarball() {
-	echo $1
-	if [ -z "$1" ]; then
-    echo "No arguments provided. Usage: tarball <git-folder>"
-		return
-	fi
-
-	if [ ! -d "$1" ]; then
-		echo "Directory $1 does not exist."
-		return
-	fi
-
-	cwd=$(pwd)
-	pname=$(basename "$1")
-	cdate=$(date "+%Y%m%d%H%M")
-	
-	cd $1
-	git archive --format=tar -o "/tmp/$pname-$cdate.tar.gz" -v HEAD
-	cd $cwd
 }

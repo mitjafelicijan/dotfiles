@@ -4,9 +4,6 @@ set nocompatible
 syntax enable
 
 " Theme.
-if has('vim')
-  colorscheme wildcharm
-endif
 set background=dark
 hi Normal ctermbg=233
 
@@ -36,7 +33,4 @@ nnoremap <C-[> :bprevious<cr>
 filetype plugin indent on
 autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd Filetype c,cpp,html,javascript,css,python setlocal expandtab tabstop=2 shiftwidth=2
-
-" Throwaway config.
-"au BufReadPost *.twig set syntax=html
 

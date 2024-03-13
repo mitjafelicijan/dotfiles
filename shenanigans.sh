@@ -42,6 +42,7 @@ alias server='python3 -m http.server 6969'
 alias p='cd ~/Vault/projects'
 alias j='cd ~/Junk/current'
 alias d='cd ~/Downloads'
+alias s='cd ~/Sandbox'
 
 # Additional path settings.
 
@@ -64,6 +65,7 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 # Useful function. Much wow!
 
 backup() {
+	CWD=$(pwd)
 	VHOME=/home/$USER/Vault
 	ME=$(whoami)@$(hostname)
 
@@ -87,6 +89,9 @@ backup() {
 	dconf dump /com/gexperts/Tilix/ > tilix.dconf
 	# dconf load /com/gexperts/Tilix/ < tilix.dconf
 
+	find /home/$USER/Videos -type f -name "*.webm" -exec cp {} $VHOME/videos/ \;
+	find /home/$USER/Pictures -type f -name "*.png" -exec cp {} $VHOME/pictures/ \;
+
 	# Sync with NAS.
 	rsync -azv \
 		--exclude '.venv/' \
@@ -94,9 +99,13 @@ backup() {
 		--exclude '.import/' \
 		--exclude '.godot/' \
 		--exclude 'node_modules/' \
+		--exclude 'digg-v5/' \
 		--delete \
 		$VHOME/ /media/Void/Backup/$ME/
 
 	# Add to log file.
 	echo `date +"%D %T"` >> ~/.vault.log
+
+	# Return back to original directory
+	cd $CWD
 }

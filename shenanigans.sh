@@ -36,13 +36,13 @@ alias grep='grep --color=always'
 alias less='less -R'
 alias gg='lazygit'
 alias server='python3 -m http.server 6969'
+alias z='zellij --layout compact options --simplified-ui true --disable-mouse-mode'
 
 # Custom folder jump commands.
 
 alias p='cd ~/Vault/projects'
 alias j='cd ~/Junk/current'
 alias d='cd ~/Downloads'
-alias s='cd ~/Sandbox'
 
 # Additional path settings.
 

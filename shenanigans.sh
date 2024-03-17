@@ -1,6 +1,5 @@
 # Software list.
-# cifs-utils tree s3cmd xclip mc gnupg ripgrep
-# jq xmlstarlet tilix fzf hx newsbeuter
+# cifs-utils tree s3cmd xclip mc gnupg ripgrep jq xmlstarlet tilix fzf hx newsbeuter
 
 # Magical environment variables.
 
@@ -79,15 +78,13 @@ backup() {
 	cp /home/$USER/.gitconfig gitconfig
 
 	cp /home/$USER/.vimrc vimrc
+	cp /home/$USER/.alacritty.yml alacritty.yml
 	cp /home/$USER/.config/helix/config.toml config.toml
 	cp /home/$USER/.newsboat/urls urls
 	cp /home/$USER/.newsboat/cache.db cache.db
 
 	cp -Rf /home/$USER/.ssh/ ./
 	cp -Rf /home/$USER/.aws/ ./
-
-	dconf dump /com/gexperts/Tilix/ > tilix.dconf
-	# dconf load /com/gexperts/Tilix/ < tilix.dconf
 
 	find /home/$USER/Videos -type f -name "*.webm" -exec cp {} $VHOME/videos/ \;
 	find /home/$USER/Pictures -type f -name "*.png" -exec cp {} $VHOME/pictures/ \;

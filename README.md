@@ -10,8 +10,7 @@ Then create symbolic links to actual config files.
 
 ```sh
 ln -s ~/.dotfiles/shenanigans.sh ~/.shenanigans.sh
-ln -s ~/.dotfiles/emacs.el ~/.config/emacs/init.el
 ln -s ~/.dotfiles/helix.toml ~/.config/helix/config.toml
-ln -s ~/.dotfiles/alacritty.yml ~/.alacritty.yml
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ```

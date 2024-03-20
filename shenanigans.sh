@@ -1,5 +1,6 @@
 # Software list.
-# cifs-utils tree s3cmd xclip mc gnupg ripgrep jq xmlstarlet tilix fzf hx newsbeuter
+# cifs-utils tree s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf
+# htop nvtop newsboat
 
 # Magical environment variables.
 
@@ -35,7 +36,6 @@ alias grep='grep --color=always'
 alias less='less -R'
 alias gg='lazygit'
 alias server='python3 -m http.server 6969'
-alias z='zellij --layout compact options --simplified-ui true --disable-mouse-mode'
 
 # Custom folder jump commands.
 
@@ -78,7 +78,7 @@ backup() {
 	cp /home/$USER/.gitconfig gitconfig
 
 	cp /home/$USER/.vimrc vimrc
-	cp /home/$USER/.alacritty.yml alacritty.yml
+	cp /home/$USER/.tmux tmux
 	cp /home/$USER/.config/helix/config.toml config.toml
 	cp /home/$USER/.newsboat/urls urls
 	cp /home/$USER/.newsboat/cache.db cache.db

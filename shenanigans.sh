@@ -86,8 +86,8 @@ backup() {
 	cp -Rf /home/$USER/.ssh/ ./
 	cp -Rf /home/$USER/.aws/ ./
 
-	find /home/$USER/Videos -type f -name "*.webm" -exec cp {} $VHOME/videos/ \;
-	find /home/$USER/Pictures -type f -name "*.png" -exec cp {} $VHOME/pictures/ \;
+	find /home/$USER/Videos -type f -name "*.webm" -exec cp -n {} $VHOME/videos/ \;
+	find /home/$USER/Pictures -type f -name "*.png" -exec cp -n {} $VHOME/pictures/ \;
 
 	# Sync with NAS.
 	rsync -azv \

@@ -9,6 +9,7 @@ git clone git@github.com:mitjafelicijan/dotfiles.git ~/.dotfiles
 Then create symbolic links to actual config files.
 
 ```sh
+ln -s ~/.dotfiles/alacritty.yml ~/.alacritty.yml
 ln -s ~/.dotfiles/shenanigans.sh ~/.shenanigans.sh
 ln -s ~/.dotfiles/helix.toml ~/.config/helix/config.toml
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf

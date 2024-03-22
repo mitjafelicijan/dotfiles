@@ -7,7 +7,7 @@ window:
     lines: 60
 
 font:
-  size: 14
+  size: 16
   normal:
     family: Berkeley Mono
   bold:

@@ -80,7 +80,7 @@ backup() {
 	cp /home/$USER/.gitconfig gitconfig
 
 	cp /home/$USER/.vimrc vimrc
-	cp /home/$USER/.tmux tmux
+	cp /home/$USER/.tmux.conf tmux.conf
 	cp /home/$USER/.config/helix/config.toml config.toml
 	cp /home/$USER/.newsboat/urls urls
 	cp /home/$USER/.newsboat/cache.db cache.db

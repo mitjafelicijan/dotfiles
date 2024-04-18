@@ -49,7 +49,7 @@ alias d='cd ~/Downloads'
 
 export PATH=$HOME/.local/bin:$PATH
 
-# History and search.
+# History and search. Stolen from J.
 
 HISTCONTROL=ignoreboth
 shopt -s histappend

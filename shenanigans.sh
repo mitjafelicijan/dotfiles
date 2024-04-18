@@ -1,6 +1,6 @@
 # Software list.
 # cifs-utils tree s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf
-# htop nvtop newsboat
+# htop nvtop newsboat tmux
 
 # Magical environment variables.
 
@@ -36,7 +36,6 @@ alias x='exit'
 alias grep='grep --color=always'
 alias less='less -R'
 alias gg='lazygit'
-alias z='zellij --layout compact options --simplified-ui true --disable-mouse-mode'
 alias server='python3 -m http.server 6969'
 
 # Custom folder jump commands.

@@ -48,6 +48,8 @@ alias d='cd ~/Downloads'
 # Additional path settings.
 
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 
 # History and search. Stolen from J.
 

@@ -3,10 +3,6 @@
 set nocompatible
 syntax enable
 
-" Theme.
-set background=dark
-hi Normal ctermbg=233
-
 " Sane defaults.
 set path+=**
 set relativenumber

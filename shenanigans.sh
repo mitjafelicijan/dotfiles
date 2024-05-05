@@ -36,6 +36,7 @@ alias x='exit'
 alias grep='grep --color=always'
 alias less='less -R'
 alias gg='lazygit'
+alias tmux='tmux -u'
 alias server='python3 -m http.server 6969'
 
 # Custom folder jump commands.
@@ -47,9 +48,10 @@ alias d='cd ~/Downloads'
 
 # Additional path settings.
 
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
+export PATH=/usr/local/go/bin:$PATH
+export PATH=$HOME/Bitcoin/bitcoin-27.0/bin:$PATH
 
 # History and search. Stolen from J.
 

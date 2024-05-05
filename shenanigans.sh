@@ -82,7 +82,6 @@ backup() {
 	cp /home/$USER/.bash_history_infinite bash_history_infinite
 	cp /home/$USER/.smbcredentials smbcredentials
 	cp /home/$USER/.gitconfig gitconfig
-
 	cp /home/$USER/.vimrc vimrc
 	cp /home/$USER/.tmux.conf tmux.conf
 	cp /home/$USER/.config/helix/config.toml config.toml

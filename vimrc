@@ -1,9 +1,4 @@
-" https://vimhelp.org/options.txt.html
-
 set nocompatible
-syntax enable
-
-" Sane defaults.
 set path+=**
 set relativenumber
 set smartcase
@@ -20,13 +15,40 @@ set backspace=2
 set scrolloff=4
 set spelllang=en_us
 set laststatus=2
+set shiftwidth=4
+set tabstop=4
 
-" Buffer navigation remaps.
+filetype plugin on
+filetype indent on
+
+syntax enable
+
 nnoremap <C-]> :bnext<cr>
 nnoremap <C-[> :bprevious<cr>
+nnoremap <C-b> :buffers<cr>:buffer 
+nnoremap <C-p> :Explore<cr>
+nnoremap <C-l> :Lex<cr>
 
-" Language specific indentation.
-filetype plugin indent on
-autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
-autocmd Filetype c,cpp,html,javascript,css,python setlocal expandtab tabstop=2 shiftwidth=2
+" Commenting blocks of code.
+augroup commenting_blocks_of_code
+	autocmd!
+	autocmd FileType c,cpp,go,scala   let b:comment_leader = '// '
+	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+	autocmd FileType conf,fstab       let b:comment_leader = '# '
+	autocmd FileType lua              let b:comment_leader = '-- '
+	autocmd FileType vim              let b:comment_leader = '" '
+augroup END
+noremap <silent> gcc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> gcu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+" Go autoformat.
+function! GoFmt()
+	let file = expand('%')
+	silent execute "!gofmt -w " . file
+	edit!
+endfunction
+command! GoFmt call GoFmt()
+augroup go_autocmd
+	autocmd BufWritePost *.go GoFmt
+augroup END
 

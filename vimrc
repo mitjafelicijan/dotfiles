@@ -17,17 +17,17 @@ set spelllang=en_us
 set laststatus=2
 set shiftwidth=4
 set tabstop=4
+set gp=grep\ -irn
 
 filetype plugin on
 filetype indent on
 
 syntax enable
 
-nnoremap <C-]> :bnext<cr>
-nnoremap <C-[> :bprevious<cr>
+nnoremap <C-Right> :bnext<cr>
+nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-b> :buffers<cr>:buffer 
 nnoremap <C-p> :Explore<cr>
-nnoremap <C-l> :Lex<cr>
 
 " Commenting blocks of code.
 augroup commenting_blocks_of_code

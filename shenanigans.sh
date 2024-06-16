@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils tree s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf htop nvtop newsboat tmux
+# cifs-utils tree s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf htop nvtop newsboat tmux ctags
 
 # Magical environment variables.
 
@@ -37,6 +37,7 @@ alias less='less -R'
 alias gg='lazygit'
 alias tmux='tmux -u'
 alias server='python3 -m http.server 6969'
+alias nvim='nvim -u ~/.vimrc'
 
 # Custom folder jump commands.
 

@@ -4,6 +4,7 @@ set relativenumber
 set smartcase
 set ignorecase
 set incsearch
+set hidden
 set nowrap
 set nobackup
 set noswapfile

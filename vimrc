@@ -18,14 +18,15 @@ nnoremap <C-b> :buffers<cr>:buffer
 nnoremap <C-p> :Explore<cr>
 
 " Commenting blocks of code.
+" https://stackoverflow.com/a/1676672
 augroup commenting_blocks_of_code
 	autocmd!
 	autocmd FileType c,cpp,go,scala   let b:comment_leader = '// '
 	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
 	autocmd FileType conf,fstab       let b:comment_leader = '# '
-	autocmd FileType lua              let b:comment_leader = '-- '
+	autocmd FileType lua,sql          let b:comment_leader = '-- '
 	autocmd FileType vim              let b:comment_leader = '" '
 augroup END
-noremap <silent> gcc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> gcu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 

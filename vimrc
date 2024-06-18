@@ -31,3 +31,7 @@ augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
+" Personal tabs/spaces settings.
+autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd Filetype c,cpp,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
+

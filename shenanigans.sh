@@ -5,8 +5,8 @@
 
 NIX_SHELL_PRESERVE_PROMPT=1
 TERM=xterm-256color
-VISUAL=hx
-EDITOR=hx
+VISUAL=vim
+EDITOR=vim
 
 # Better prompt.
 

@@ -16,6 +16,7 @@ nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-b> :buffers<cr>:buffer 
 nnoremap <C-p> :Explore<cr>
+nnoremap <C-q> :copen<cr>
 
 " Commenting blocks of code.
 " https://stackoverflow.com/a/1676672

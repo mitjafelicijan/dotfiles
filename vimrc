@@ -32,7 +32,7 @@ noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR
 noremap <silent> cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 " Personal tabs/spaces settings.
-autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
-autocmd Filetype c,cpp setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype make,go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd Filetype c,cpp,sh setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
 

@@ -1,6 +1,6 @@
 set nocompatible
 set path+=**
-set relativenumber autoindent
+set number relativenumber autoindent
 set smartcase ignorecase incsearch
 set hidden nowrap nobackup noswapfile autoread
 set wildmenu laststatus=2

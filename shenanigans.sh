@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils tree s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf htop nvtop newsboat tmux ctags
+# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf htop nvtop newsboat tmux ctags
 
 # Magical environment variables.
 
@@ -51,7 +51,6 @@ alias d='cd ~/Downloads'
 export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
-export PATH=$HOME/Bitcoin/bitcoin-27.0/bin:$PATH
 
 # History and search. Stolen from J.
 
@@ -63,7 +62,6 @@ export HISTFILE=~/.bash_history_infinite
 PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-alias hh=hstr
 export HSTR_CONFIG=hicolor
 if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 

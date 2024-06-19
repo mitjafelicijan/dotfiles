@@ -13,7 +13,7 @@ syntax enable
 
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
-nnoremap <C-b> :buffers<cr>:buffer 
+nnoremap <C-b> :buffers<cr>:buffer
 nnoremap <C-p> :Explore<cr>
 nnoremap <C-q> :copen<cr>
 

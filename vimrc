@@ -1,13 +1,12 @@
 set nocompatible
-set path+=**
 set number relativenumber autoindent
-set smartcase ignorecase incsearch
+set ignorecase smartcase incsearch
 set hidden nowrap nobackup noswapfile autoread
 set wildmenu laststatus=2
 set encoding=utf8 spelllang=en_us
 set backspace=2 scrolloff=4
 set shiftwidth=4 tabstop=4
-set gp=grep\ -irn
+set path+=** gp=grep\ -irn
 
 filetype plugin indent on
 syntax enable
@@ -29,10 +28,17 @@ augroup commenting_blocks_of_code
 	autocmd FileType vim              let b:comment_leader = '" '
 augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 " Personal tabs/spaces settings.
-autocmd Filetype make,go setlocal noexpandtab tabstop=4 shiftwidth=4
-autocmd Filetype c,cpp,sh,lua setlocal expandtab tabstop=4 shiftwidth=4
-autocmd Filetype html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd Filetype c,cpp,lua setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
+
+" Function to auto format source code files.
+function! Format()
+	if &filetype == 'c' | call system('clang-format -i '.expand('%')) | edit! | endif
+	if &filetype == 'go' | call system('go fmt '.expand('%')) | edit! | endif
+endfunction
+command! Format call Format()
 

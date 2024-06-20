@@ -14,7 +14,6 @@ syntax enable
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-b> :buffers<cr>:buffer
-nnoremap <C-p> :Explore<cr>
 nnoremap <C-q> :copen<cr>
 
 " Personal tabs/spaces settings.
@@ -41,4 +40,13 @@ function! Format()
 	if &filetype == 'go' | write | call system('go fmt '.expand('%')) | edit! | endif
 endfunction
 command! Format call Format()
+
+" FZF integration.
+function! FZF()
+	let t=tempname()
+	silent execute '!fzf --preview=''cat {}'' --multi|awk ''{print $1":1:0"}'' > '.fnameescape(t)
+	execute 'cfile '.t|redraw!
+	call delete(t)
+endfunction
+nnoremap <C-p> :call FZF()<cr>
 

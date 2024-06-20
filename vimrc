@@ -23,7 +23,7 @@ autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth
 
 " Commenting blocks of code.
 " https://stackoverflow.com/a/1676672
-augroup commenting_blocks_of_code
+augroup CodeCommenting
 	autocmd!
 	autocmd FileType c,cpp,go,zig    let b:comment_leader = '// '
 	autocmd FileType sh,ruby,python  let b:comment_leader = '# '
@@ -34,12 +34,9 @@ augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
-" Function to auto format source code files.
-function! Format()
-	if &filetype == 'c' | write | call system('clang-format -i '.expand('%')) | edit! | endif
-	if &filetype == 'go' | write | call system('go fmt '.expand('%')) | edit! | endif
-endfunction
-command! Format call Format()
+" External auto-format programs.
+autocmd FileType c,cpp setlocal formatprg=clang-format
+autocmd FileType go setlocal formatprg=gofmt
 
 " FZF integration.
 function! FZF()

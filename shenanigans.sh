@@ -52,6 +52,10 @@ export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
+# FZF settings.
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
 # History and search. Stolen from J.
 
 HISTCONTROL=ignoreboth

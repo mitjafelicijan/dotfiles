@@ -15,6 +15,14 @@ font:
   italic:
     family: Berkeley Mono
 
+cursor:
+  blink_timeout: 0
+  style:
+    blinking: "Always"
+
 colors:
   primary:
     background: "#111111"
+  cursor:
+    text: "#000000"
+    cursor: "#ffffff"

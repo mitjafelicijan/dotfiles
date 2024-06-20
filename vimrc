@@ -21,6 +21,10 @@ autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd Filetype c,cpp,lua,zig setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
 
+" External auto-formatters.
+autocmd FileType c,cpp setlocal formatprg=clang-format
+autocmd FileType go setlocal formatprg=gofmt
+
 " Code commenting - https://stackoverflow.com/a/1676672.
 augroup CodeCommenting
 	autocmd!
@@ -32,10 +36,6 @@ augroup CodeCommenting
 augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-
-" External auto-format programs.
-autocmd FileType c,cpp setlocal formatprg=clang-format
-autocmd FileType go setlocal formatprg=gofmt
 
 " FZF fuzzy finder integration.
 function! FZF()

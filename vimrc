@@ -17,6 +17,11 @@ nnoremap <C-b> :buffers<cr>:buffer
 nnoremap <C-p> :Explore<cr>
 nnoremap <C-q> :copen<cr>
 
+" Personal tabs/spaces settings.
+autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd Filetype c,cpp,lua setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
+
 " Commenting blocks of code.
 " https://stackoverflow.com/a/1676672
 augroup commenting_blocks_of_code
@@ -29,11 +34,6 @@ augroup commenting_blocks_of_code
 augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
-
-" Personal tabs/spaces settings.
-autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
-autocmd Filetype c,cpp,lua setlocal expandtab tabstop=4 shiftwidth=4
-autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
 
 " Function to auto format source code files.
 function! Format()

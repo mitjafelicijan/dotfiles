@@ -18,18 +18,18 @@ nnoremap <C-q> :copen<cr>
 
 " Personal tabs/spaces settings.
 autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
-autocmd Filetype c,cpp,lua setlocal expandtab tabstop=4 shiftwidth=4
+autocmd Filetype c,cpp,lua,zig setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
 
 " Commenting blocks of code.
 " https://stackoverflow.com/a/1676672
 augroup commenting_blocks_of_code
 	autocmd!
-	autocmd FileType c,cpp,go,scala   let b:comment_leader = '// '
-	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-	autocmd FileType conf,fstab       let b:comment_leader = '# '
-	autocmd FileType lua,sql          let b:comment_leader = '-- '
-	autocmd FileType vim              let b:comment_leader = '" '
+	autocmd FileType c,cpp,go,zig    let b:comment_leader = '// '
+	autocmd FileType sh,ruby,python  let b:comment_leader = '# '
+	autocmd FileType conf,fstab      let b:comment_leader = '# '
+	autocmd FileType lua,sql         let b:comment_leader = '-- '
+	autocmd FileType vim             let b:comment_leader = '" '
 augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>

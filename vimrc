@@ -2,7 +2,7 @@ set nocompatible
 set number relativenumber autoindent
 set ignorecase smartcase incsearch
 set hidden nowrap nobackup noswapfile autoread
-set wildmenu wildmode=longest,list,full laststatus=2
+set wildmenu wildmode=list:longest,full laststatus=2
 set encoding=utf8 spelllang=en_us
 set backspace=2 scrolloff=4
 set shiftwidth=4 tabstop=4

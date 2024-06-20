@@ -2,7 +2,7 @@ set nocompatible
 set number relativenumber autoindent
 set ignorecase smartcase incsearch
 set hidden nowrap nobackup noswapfile autoread
-set wildmenu laststatus=2
+set wildmenu wildmode=longest,list,full laststatus=2
 set encoding=utf8 spelllang=en_us
 set backspace=2 scrolloff=4
 set shiftwidth=4 tabstop=4
@@ -37,8 +37,8 @@ autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth
 
 " Function to auto format source code files.
 function! Format()
-	if &filetype == 'c' | call system('clang-format -i '.expand('%')) | edit! | endif
-	if &filetype == 'go' | call system('go fmt '.expand('%')) | edit! | endif
+	if &filetype == 'c' | write | call system('clang-format -i '.expand('%')) | edit! | endif
+	if &filetype == 'go' | write | call system('go fmt '.expand('%')) | edit! | endif
 endfunction
 command! Format call Format()
 

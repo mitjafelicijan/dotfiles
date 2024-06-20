@@ -21,8 +21,7 @@ autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd Filetype c,cpp,lua,zig setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
 
-" Commenting blocks of code.
-" https://stackoverflow.com/a/1676672
+" Code commenting - https://stackoverflow.com/a/1676672.
 augroup CodeCommenting
 	autocmd!
 	autocmd FileType c,cpp,go,zig    let b:comment_leader = '// '
@@ -38,7 +37,7 @@ noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,
 autocmd FileType c,cpp setlocal formatprg=clang-format
 autocmd FileType go setlocal formatprg=gofmt
 
-" FZF integration.
+" FZF fuzzy finder integration.
 function! FZF()
 	let t=tempname()
 	silent execute '!fzf --preview=''cat {}'' --multi|awk ''{print $1":1:0"}'' > '.fnameescape(t)

@@ -18,7 +18,4 @@ font:
 colors:
   primary:
     background: "#111111"
-  cursor:
-    cursor: "#ffa500"
-    text: "#000000"
 

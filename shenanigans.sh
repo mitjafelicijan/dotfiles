@@ -96,6 +96,10 @@ backup() {
 	find /home/$USER/Videos -type f -name "*.webm" -exec cp -n {} $VHOME/videos/ \;
 	find /home/$USER/Pictures -type f -name "*.png" -exec cp -n {} $VHOME/pictures/ \;
 
+	mkdir ../twow
+	cp -Rf /home/$USER/Games/turtlewow/Interface ../twow
+	cp -Rf /home/$USER/Games/turtlewow/WTF ../twow
+
 	# Sync with NAS.
 	rsync -azv \
 		--exclude '.venv/' \

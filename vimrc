@@ -19,7 +19,7 @@ nnoremap <C-q> :copen<cr>
 " Personal tabs/spaces settings.
 autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd Filetype c,cpp,zig setlocal expandtab tabstop=4 shiftwidth=4
-autocmd Filetype lua,nix,html,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
+autocmd Filetype lua,nix,html,xml,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
 
 " External auto-formatters.
 autocmd FileType c,cpp setlocal formatprg=clang-format

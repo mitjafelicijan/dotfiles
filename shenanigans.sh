@@ -99,6 +99,7 @@ backup() {
 	mkdir ../twow
 	cp -Rf /home/$USER/Games/turtlewow/Interface ../twow
 	cp -Rf /home/$USER/Games/turtlewow/WTF ../twow
+	cp -Rf /home/$USER/Games/turtlewow/start.sh ../twow/
 
 	# Sync with NAS.
 	rsync -azv \
@@ -116,4 +117,20 @@ backup() {
 
 	# Return back to original directory
 	cd $CWD
+}
+
+update() {
+	if grep -qi "debian" /etc/os-release; then
+		sudo apt update
+		sudo apt upgrade -y
+	fi
+
+	if grep -qi "fedora" /etc/os-release; then
+		dnf check-update
+		sudo dnf update -y
+	fi
+
+	if which flatpak > /dev/null 2>&1; then
+		flatpak update -y
+	fi
 }

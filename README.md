@@ -15,4 +15,5 @@ ln -s ~/.dotfiles/helix.toml ~/.config/helix/config.toml
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/newsboat ~/.newsboat/config
+ln -s ~/.dotfiles/urls ~/.newsboat/urls
 ```

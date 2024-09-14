@@ -71,6 +71,16 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 # Useful function. Much wow!
 
+poe() {
+	cd ~/.wine/drive_c/Program\ Files\ \(x86\)/Grinding\ Gear\ Games/Path\ of\ Exile/
+	DXVK_FRAME_RATE=240 DXVK_HUD=0 wine Client.exe
+}
+
+wow() {
+	cd ~/Games/turtlewow/
+	./start.sh
+}
+
 backup() {
 	CWD=$(pwd)
 	VHOME=/home/$USER/Vault

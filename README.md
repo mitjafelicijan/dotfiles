@@ -16,4 +16,6 @@ ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/newsboat ~/.newsboat/config
 ln -s ~/.dotfiles/urls ~/.newsboat/urls
+ln -s ~/.dotfiles/gf2_config.ini ~/.config/gf2_config.ini
 ```
+

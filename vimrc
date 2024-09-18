@@ -11,6 +11,9 @@ set path+=** gp=grep\ -irn
 filetype plugin indent on
 syntax enable
 
+" Disable auto-formatting for Zig files.
+let g:zig_fmt_autosave = 0
+
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-b> :buffers<cr>:buffer
@@ -37,7 +40,7 @@ augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
-" FZF fuzzy finder integration.
+" FZF - fuzzy finder integration.
 function! FZF()
 	let t=tempname()
 	silent execute '!fzf --preview=''cat {}'' --multi|awk ''{print $1":1:0"}'' > '.fnameescape(t)

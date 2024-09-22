@@ -31,13 +31,11 @@ alias ll='ls -lha'
 alias t='tree -L 2'
 alias ..='cd ..'
 alias h='history'
-alias x='exit'
 alias grep='grep --color=always'
 alias less='less -R'
 alias gg='lazygit'
 alias tmux='tmux -u'
 alias server='python3 -m http.server 6969'
-alias nvim='nvim -u ~/.vimrc'
 
 # Custom folder jump commands.
 

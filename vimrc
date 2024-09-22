@@ -11,9 +11,6 @@ set path+=** gp=grep\ -irn
 filetype plugin indent on
 syntax enable
 
-" Disable auto-formatting for Zig files.
-let g:zig_fmt_autosave = 0
-
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-b> :buffers<cr>:buffer
@@ -23,10 +20,6 @@ nnoremap <C-q> :copen<cr>
 autocmd Filetype make,go,sh setlocal noexpandtab tabstop=4 shiftwidth=4
 autocmd Filetype c,cpp,zig setlocal expandtab tabstop=4 shiftwidth=4
 autocmd Filetype lua,nix,html,xml,javascript,css setlocal expandtab tabstop=2 shiftwidth=2
-
-" External auto-formatters.
-autocmd FileType c,cpp setlocal formatprg=clang-format
-autocmd FileType go setlocal formatprg=gofmt
 
 " Code commenting - https://stackoverflow.com/a/1676672.
 augroup CodeCommenting

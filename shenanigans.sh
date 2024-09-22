@@ -74,11 +74,6 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 # Useful function. Much wow!
 
-poe() {
-	cd ~/.wine/drive_c/Program\ Files\ \(x86\)/Grinding\ Gear\ Games/Path\ of\ Exile/
-	DXVK_FRAME_RATE=240 DXVK_HUD=0 wine Client.exe
-}
-
 wow() {
 	cd ~/Games/turtlewow/
 	./start.sh
@@ -134,18 +129,3 @@ backup() {
 	cd $CWD
 }
 
-update() {
-	if grep -qi "debian" /etc/os-release; then
-		sudo apt update
-		sudo apt upgrade -y
-	fi
-
-	if grep -qi "fedora" /etc/os-release; then
-		dnf check-update
-		sudo dnf update -y
-	fi
-
-	if which flatpak > /dev/null 2>&1; then
-		flatpak update -y
-	fi
-}

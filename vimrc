@@ -31,11 +31,11 @@ autocmd FileType go setlocal formatprg=gofmt
 " Code commenting - https://stackoverflow.com/a/1676672.
 augroup CodeCommenting
 	autocmd!
-	autocmd FileType c,cpp,go,zig,javascript  let b:comment_leader = '// '
-	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-	autocmd FileType conf,fstab       let b:comment_leader = '# '
-	autocmd FileType lua,sql          let b:comment_leader = '-- '
-	autocmd FileType vim              let b:comment_leader = '" '
+	autocmd FileType c,cpp,go,zig,javascript let b:comment_leader = '// '
+	autocmd FileType sh,ruby,python          let b:comment_leader = '# '
+	autocmd FileType conf,fstab              let b:comment_leader = '# '
+	autocmd FileType lua,sql                 let b:comment_leader = '-- '
+	autocmd FileType vim                     let b:comment_leader = '" '
 augroup END
 noremap <silent> cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> cu :<C-B>silent <C-E>s/^\(\s*\)\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>

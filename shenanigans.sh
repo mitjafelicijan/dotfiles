@@ -25,7 +25,6 @@ export PS1="[\033[38;5;166m\]\u@\h\[$(tput sgr0)\]]$(is_inside_nix_shell)\[\033[
 
 # General aliases.
 
-alias c='clear'
 alias l='ls -lh'
 alias ll='ls -lha'
 alias t='tree -L 2'

@@ -1,3 +1,44 @@
+# Blogs
+https://theorangeduck.com/feeds/pages Blogs "~Daniel Holden"
+https://lwn.net/headlines/rss Blogs
+https://kristoff.it/index.xml Blogs
+https://www.computerenhance.com/feed Blogs
+https://tratt.net/laurie/news.rss Blogs
+https://willhbr.net/feed.xml Blogs
+https://andrewkelley.me/rss.xml Blogs
+https://beyondloom.com/blog/rss.xml Blogs
+https://decuser.github.io/feed.xml Blogs
+https://simonwillison.net/atom/entries/ Blogs
+https://til.simonwillison.net/tils/feed.atom Blogs
+https://www.andreinc.net/feed.xml Blogs
+https://voussoir.net/writing/writing.atom Blogs "~Ethan Dalool"
+https://blog.regehr.org/feed Blogs
+https://richiejp.com/atom.xml Blogs "~Richard Palethorpe"
+https://szymonkaliski.com/feed.xml Blogs
+https://world.hey.com/dhh/feed.atom Blogs
+https://mitchellh.com/feed.xml Blogs
+https://matt-rickard.com/rss Blogs
+https://solar.lowtechmagazine.com/posts/index.xml Blogs
+https://utcc.utoronto.ca/~cks/space/blog/?atom Blogs
+https://neil.computer/rss/ Blogs
+https://matduggan.com/rss/ Blogs
+https://michael.stapelberg.ch/feed.xml Blogs
+# https://offbeatpursuit.com/blog/index.rss Blogs "~Offbeatpursuit - Blog"
+# https://offbeatpursuit.com/paste/index.rss Blogs "~Offbeatpursuit - Paste"
+# https://offbeatpursuit.com/notes/index.rss Blogs "~Offbeatpursuit - Notes"
+https://journal.valeriansaliou.name/rss/ Blogs
+https://www.duskborn.com/index.xml Blogs
+https://mirzapandzo.com/rss.xml Blogs
+https://mitjafelicijan.com/feed.xml Blogs
+
+# Announcements
+https://harelang.org/index.xml Announcements
+https://emacsredux.com/atom.xml Announcements
+https://crawl.develz.org/wordpress/feed Announcements
+https://go.dev/blog/feed.atom Announcements
+https://blog.gtk.org/feed/ Announcements
+https://github.com/helix-editor/helix/releases.atom Announcements
+
 # Videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg Videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA Videos
@@ -14,44 +55,4 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ Vid
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg Videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA Videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UC5--wS0Ljbin1TjWQX6eafA Videos
-
-# Announcements
-https://harelang.org/index.xml Announcements
-https://emacsredux.com/atom.xml Announcements
-https://crawl.develz.org/wordpress/feed Announcements
-https://go.dev/blog/feed.atom Announcements
-https://blog.gtk.org/feed/ Announcements
-
-# TV Shows release notification
-https://showrss.info/user/280834.rss?magnets=true&namespaces=true&name=null&quality=fhd&re=null "TV Shows" "~TV Shows releases"
-
-# Blogs
-https://kristoff.it/index.xml Blogs
-https://www.computerenhance.com/feed Blogs
-https://tratt.net/laurie/news.rss Blogs
-https://willhbr.net/feed.xml Blogs
-https://andrewkelley.me/rss.xml Blogs
-https://beyondloom.com/blog/rss.xml Blogs
-https://decuser.github.io/feed.xml Blogs
-https://simonwillison.net/atom/entries/ Blogs
-https://til.simonwillison.net/tils/feed.atom Blogs
-https://www.andreinc.net/feed.xml Blogs
-https://voussoir.net/writing/writing.atom Blogs "~Ethan Dalool / Voussoir"
-https://blog.regehr.org/feed Blogs
-https://richiejp.com/atom.xml Blogs "~Richard Palethorpe"
-https://szymonkaliski.com/feed.xml Blogs
-https://world.hey.com/dhh/feed.atom Blogs
-https://mitchellh.com/feed.xml Blogs
-https://matt-rickard.com/rss Blogs
-https://solar.lowtechmagazine.com/posts/index.xml Blogs
-https://utcc.utoronto.ca/~cks/space/blog/?atom Blogs
-https://neil.computer/rss/ Blogs
-https://matduggan.com/rss/ Blogs
-https://michael.stapelberg.ch/feed.xml Blogs
-https://offbeatpursuit.com/blog/index.rss Blogs "~Offbeatpursuit - Blog"
-https://offbeatpursuit.com/paste/index.rss Blogs "~Offbeatpursuit - Paste"
-https://offbeatpursuit.com/notes/index.rss Blogs "~Offbeatpursuit - Notes"
-https://journal.valeriansaliou.name/rss/ Blogs
-https://www.duskborn.com/index.xml Blogs
-https://mirzapandzo.com/rss.xml Blogs
-https://mitjafelicijan.com/feed.xml Blogs
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ Videos

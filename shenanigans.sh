@@ -109,6 +109,8 @@ backup() {
 	cp -Rf /home/$USER/Games/turtlewow/Interface ../twow
 	cp -Rf /home/$USER/Games/turtlewow/WTF ../twow
 	cp -Rf /home/$USER/Games/turtlewow/start.sh ../twow/
+	cp -Rf /home/$USER/Games/turtlewow/icon.png ../twow/
+	cp -Rf /home/$USER/Games/turtlewow/start.sh ../twow/
 
 	# Sync with NAS.
 	rsync -azv \
@@ -116,6 +118,7 @@ backup() {
 		--exclude '.git/' \
 		--exclude '.import/' \
 		--exclude '.godot/' \
+		--exclude '.zig-cache/' \
 		--exclude 'node_modules/' \
 		--exclude 'digg-v5/' \
 		--delete \

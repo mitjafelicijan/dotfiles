@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf htop nvtop newsboat tmux ctags
+# cifs-utils treei tig hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf htop nvtop newsboat tmux ctags
 
 # Magical environment variables.
 
@@ -32,7 +32,6 @@ alias ..='cd ..'
 alias h='history'
 alias grep='grep --color=always'
 alias less='less -R'
-alias gg='lazygit'
 alias tmux='tmux -u'
 alias server='python3 -m http.server 6969'
 

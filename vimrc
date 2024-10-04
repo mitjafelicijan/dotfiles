@@ -5,6 +5,7 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'yegappan/grep'
   Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm install'}
 call plug#end()
 
@@ -21,6 +22,7 @@ nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-q> :copen<cr>
 nnoremap <C-p> :CtrlP<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
+nnoremap <C-g> :Rg<cr>
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)

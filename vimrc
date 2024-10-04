@@ -1,5 +1,3 @@
-let mapleader = "\<Space>"
-
 call plug#begin()
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-commentary'

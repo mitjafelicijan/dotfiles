@@ -1,20 +1,20 @@
+call plug#begin()
+  Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'junegunn/fzf'
+  Plug 'junegunn/fzf.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm install'}
+call plug#end()
+
 colorscheme sorbet
+hi Normal guibg=NONE ctermbg=NONE
 set number relativenumber autoindent signcolumn=yes
 set hidden nowrap nobackup noswapfile autoread updatetime=300
 set encoding=utf8 spelllang=en_us
 set backspace=2 scrolloff=4
 set shiftwidth=4 tabstop=4
-
-" https://github.com/junegunn/vim-plug
-call plug#begin()
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm install'}
-call plug#end()
 
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>

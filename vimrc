@@ -24,11 +24,15 @@ nnoremap <C-q> :copen<cr>
 nnoremap <C-p> :CtrlP<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
 
-nmap <silent>[g <Plug>(coc-diagnostic-prev)
-nmap <silent>]g <Plug>(coc-diagnostic-next)
-nmap <silent>gd <Plug>(coc-definition)
-nmap <silent>gy <Plug>(coc-type-definition)
-nmap <silent>gi <Plug>(coc-implementation)
-nmap <silent>gr <Plug>(coc-references)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+xmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f <Plug>(coc-format-selected)
 nmap <leader>cf <Plug>(coc-fix-current)
+nmap <leader>re <Plug>(coc-rename)
 

@@ -12,7 +12,8 @@ call plug#end()
 
 colorscheme sorbet
 hi Normal guibg=NONE ctermbg=NONE
-hi StatusLine ctermbg=black ctermfg=darkgray
+hi StatusLine ctermfg=245 ctermbg=235 cterm=none
+hi StatusLineNC ctermfg=245 ctermbg=none cterm=none
 
 set number relativenumber autoindent signcolumn=yes
 set hidden nowrap nobackup noswapfile autoread updatetime=300

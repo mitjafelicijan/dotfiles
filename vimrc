@@ -7,7 +7,7 @@ call plug#begin()
   Plug 'jiangmiao/auto-pairs'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'yegappan/grep'
-  Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm install'}
+  Plug 'dense-analysis/ale'
 call plug#end()
 
 colorscheme sorbet
@@ -27,16 +27,16 @@ nnoremap <C-q> :copen<cr>
 nnoremap <C-p> :CtrlP<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
 nnoremap <C-g> :Rg<cr>
+nnoremap <C-k> :ALEHover<cr>
+nnoremap <C-j> :ALEDetail<cr>
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gr :ALEFindReferences<cr>
+nmap <silent> gd :ALEALEGoToDefinition<cr>
+nmap <silent> re :ALERename<cr>
 
-xmap <leader>f <Plug>(coc-format-selected)
-nmap <leader>f <Plug>(coc-format-selected)
-nmap <leader>cf <Plug>(coc-fix-current)
-nmap <leader>re <Plug>(coc-rename)
+let g:ale_hover_to_floating_preview = 1
+let g:ale_detail_to_floating_preview = 1
+let g:ale_floating_window_border = 0
+let g:ale_virtualtext_cursor = 0
+let g:ale_set_quickfix = 1
 

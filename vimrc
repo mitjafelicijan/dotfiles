@@ -4,8 +4,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'junegunn/fzf'
-  Plug 'junegunn/fzf.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm install'}
 call plug#end()
 
@@ -20,9 +19,8 @@ set shiftwidth=4 tabstop=4
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-q> :copen<cr>
-nnoremap <C-p> :GFiles<cr>
-nnoremap <C-b> :Buffers<cr>
-nnoremap <C-s> :Rg<cr>
+nnoremap <C-p> :CtrlP<cr>
+nnoremap <C-b> :CtrlPBuffer<cr>
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)

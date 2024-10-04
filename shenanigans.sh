@@ -53,6 +53,7 @@ export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/.local/bin/zls-x86_64-linux-0.13.0:$PATH
 # export PATH=$HOME/.local/bin/zig-linux-x86_64-0.13.0:$PATH
 export PATH=$HOME/.local/bin/zig-linux-x86_64-0.14.0-dev.1587+feaee2ba1:$PATH
+export PATH=$HOME/.local/bin/nim-2.0.8/bin:$PATH
 
 # FZF settings.
 

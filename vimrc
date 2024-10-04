@@ -2,6 +2,7 @@ call plug#begin()
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ctrlpvim/ctrlp.vim'

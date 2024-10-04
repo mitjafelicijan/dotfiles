@@ -31,7 +31,7 @@ nnoremap <C-k> :ALEHover<cr>
 nnoremap <C-j> :ALEDetail<cr>
 
 nmap <silent> gr :ALEFindReferences<cr>
-nmap <silent> gd :ALEALEGoToDefinition<cr>
+nmap <silent> gd :ALEGoToDefinition<cr>
 nmap <silent> re :ALERename<cr>
 
 let g:ale_hover_to_floating_preview = 1

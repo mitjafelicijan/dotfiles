@@ -25,8 +25,9 @@ export PS1="[\033[38;5;166m\]\u@\h\[$(tput sgr0)\]]$(is_inside_nix_shell)\[\033[
 
 # General aliases.
 
-alias l='ls -lh'
-alias ll='ls -lha'
+alias ls='ls --color=none'
+alias l='ls -lh --color=none'
+alias ll='ls -lha --color=none'
 alias t='tree -L 2'
 alias ..='cd ..'
 alias h='history'
@@ -34,6 +35,8 @@ alias grep='grep --color=always'
 alias less='less -R'
 alias tmux='tmux -u'
 alias server='python3 -m http.server 6969'
+alias www='lynx -accept_all_cookies -scrollbar https://lite.duckduckgo.com'
+alias st='st -g 90x40 -f "BerkeleyMono:style=Bold:size=16:antialias=true:autohint:true"'
 
 # Custom folder jump commands.
 

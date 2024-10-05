@@ -23,10 +23,10 @@ set shiftwidth=4 tabstop=4
 
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
+nnoremap <M-q> :copen<cr>
 nnoremap <C-q> :copen<cr>
-nnoremap <C-p> :CtrlP<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
-nnoremap <C-g> :Rg<cr>
+nnoremap <C-h> :Rg<cr>
 nnoremap <C-k> :ALEHover<cr>
 nnoremap <C-j> :ALEDetail<cr>
 
@@ -39,4 +39,6 @@ let g:ale_detail_to_floating_preview = 1
 let g:ale_floating_window_border = 0
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
+let g:ctrlp_use_caching = 0
+let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 

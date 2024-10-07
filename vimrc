@@ -6,7 +6,6 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'yegappan/grep'
   Plug 'dense-analysis/ale'
 call plug#end()
 
@@ -23,10 +22,8 @@ set shiftwidth=4 tabstop=4
 
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
-nnoremap <M-q> :copen<cr>
 nnoremap <C-q> :copen<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
-nnoremap <C-h> :Rg<cr>
 nnoremap <C-k> :ALEHover<cr>
 nnoremap <C-j> :ALEDetail<cr>
 

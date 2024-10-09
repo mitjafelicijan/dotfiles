@@ -34,6 +34,7 @@ alias h='history'
 alias grep='grep --color=always'
 alias less='less -R'
 alias tmux='tmux -u'
+alias vi='vim'
 alias server='python3 -m http.server 6969'
 alias www='lynx -accept_all_cookies -scrollbar https://lite.duckduckgo.com'
 alias st='st -g 90x40 -f "BerkeleyMono:style=Bold:size=16:antialias=true:autohint:true"'
@@ -53,9 +54,7 @@ export PATH=/usr/local/go/bin:$PATH
 
 # Zig paths.
 export PATH=$HOME/.local/bin/zls-x86_64-linux-0.13.0:$PATH
-# export PATH=$HOME/.local/bin/zig-linux-x86_64-0.13.0:$PATH
 export PATH=$HOME/.local/bin/zig-linux-x86_64-0.14.0-dev.1587+feaee2ba1:$PATH
-export PATH=$HOME/.local/bin/nim-2.0.8/bin:$PATH
 
 # FZF settings.
 

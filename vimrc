@@ -12,8 +12,9 @@ colorscheme sorbet
 hi Normal guibg=NONE ctermbg=NONE
 hi StatusLine ctermfg=245 ctermbg=235 cterm=none
 hi StatusLineNC ctermfg=245 ctermbg=none cterm=none
+hi CursorLine cterm=none ctermbg=233 ctermfg=none
 
-set number relativenumber autoindent signcolumn=yes
+set number relativenumber autoindent signcolumn=yes cursorline
 set hidden nowrap nobackup noswapfile autoread updatetime=300
 set encoding=utf8 spelllang=en_us
 set backspace=2 scrolloff=4

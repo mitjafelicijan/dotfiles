@@ -2,7 +2,6 @@ call plug#begin()
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
-  Plug 'junegunn/gv.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ctrlpvim/ctrlp.vim'
@@ -38,7 +37,4 @@ let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
 let g:ctrlp_use_caching = 0
 let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-
-packadd! termdebug
-let g:termdebug_wide=1
 

@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop newsboat tmux ctags
+# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop newsboat tmux ctags vim
 
 # Magical environment variables.
 
@@ -30,7 +30,6 @@ alias l='ls -lh --color=none'
 alias ll='ls -lha --color=none'
 alias t='tree -L 2'
 alias ..='cd ..'
-alias h='history'
 alias grep='grep --color=always'
 alias less='less -R'
 alias tmux='tmux -u'

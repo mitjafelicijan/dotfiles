@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils treei tig hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet fzf htop nvtop newsboat tmux ctags
+# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop newsboat tmux ctags
 
 # Magical environment variables.
 
@@ -36,13 +36,10 @@ alias less='less -R'
 alias tmux='tmux -u'
 alias vi='vim'
 alias server='python3 -m http.server 6969'
-alias www='lynx -accept_all_cookies -scrollbar https://lite.duckduckgo.com'
-alias st='st -g 90x40 -f "BerkeleyMono:style=Bold:size=16:antialias=true:autohint:true"'
 
 # Custom folder jump commands.
 
 alias p='cd ~/Vault/projects'
-alias n='cd ~/Vault/notes'
 alias j='cd ~/Junk/current'
 alias d='cd ~/Downloads'
 
@@ -51,14 +48,6 @@ alias d='cd ~/Downloads'
 export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
-
-# Zig paths.
-export PATH=$HOME/.local/bin/zls-x86_64-linux-0.13.0:$PATH
-export PATH=$HOME/.local/bin/zig-linux-x86_64-0.14.0-dev.1587+feaee2ba1:$PATH
-
-# FZF settings.
-
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 # History and search. Stolen from J.
 
@@ -75,11 +64,6 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 # Useful function. Much wow!
 
-wow() {
-	cd ~/Games/turtlewow/
-	./start.sh
-}
-
 backup() {
 	CWD=$(pwd)
 	VHOME=/home/$USER/Vault
@@ -91,11 +75,7 @@ backup() {
 	# Make a copy of dotfiles.
 	cp /home/$USER/.shenanigans.sh shenanigans.sh
 	cp /home/$USER/.bash_history_infinite bash_history_infinite
-	cp /home/$USER/.smbcredentials smbcredentials
 	cp /home/$USER/.gitconfig gitconfig
-	cp /home/$USER/.vimrc vimrc
-	cp /home/$USER/.tmux.conf tmux.conf
-	cp /home/$USER/.config/helix/config.toml config.toml
 	cp /home/$USER/.newsboat/urls urls
 	cp /home/$USER/.newsboat/cache.db cache.db
 
@@ -104,15 +84,6 @@ backup() {
 
 	find /home/$USER/Videos -type f -name "*.webm" -exec cp -n {} $VHOME/videos/ \;
 	find /home/$USER/Pictures -type f -name "*.png" -exec cp -n {} $VHOME/pictures/ \;
-
-	cp -Rf /home/$USER/Notebooks ./
-
-	mkdir ../twow
-	cp -Rf /home/$USER/Games/turtlewow/Interface ../twow
-	cp -Rf /home/$USER/Games/turtlewow/WTF ../twow
-	cp -Rf /home/$USER/Games/turtlewow/start.sh ../twow/
-	cp -Rf /home/$USER/Games/turtlewow/icon.png ../twow/
-	cp -Rf /home/$USER/Games/turtlewow/start.sh ../twow/
 
 	# Sync with NAS.
 	rsync -azv \

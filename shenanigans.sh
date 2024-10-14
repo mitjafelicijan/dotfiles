@@ -34,7 +34,7 @@ alias grep='grep --color=always'
 alias less='less -R'
 alias tmux='tmux -u'
 alias vi='vim'
-alias rss='newsraft -f ~/.dotfiles/rssfeeds'
+alias newsraft='newsraft -f ~/.dotfiles/rssfeeds'
 alias server='python3 -m http.server 6969'
 
 # Custom folder jump commands.

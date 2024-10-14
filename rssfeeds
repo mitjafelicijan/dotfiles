@@ -1,52 +1,49 @@
-https://theorangeduck.com/feeds/pages Blogs "~Daniel Holden"
-https://lwn.net/headlines/rss Blogs
-https://kristoff.it/index.xml Blogs
-https://www.computerenhance.com/feed Blogs
-https://tratt.net/laurie/news.rss Blogs
-https://willhbr.net/feed.xml Blogs
-https://andrewkelley.me/rss.xml Blogs
-https://beyondloom.com/blog/rss.xml Blogs
-https://thomashunter.name/feed.rss Blogs
-https://decuser.github.io/feed.xml Blogs
-https://simonwillison.net/atom/entries/ Blogs
-https://til.simonwillison.net/tils/feed.atom Blogs
-https://www.andreinc.net/feed.xml Blogs
-https://voussoir.net/writing/writing.atom Blogs "~Ethan Dalool"
-https://blog.regehr.org/feed Blogs
-https://richiejp.com/atom.xml Blogs "~Richard Palethorpe"
-https://szymonkaliski.com/feed.xml Blogs
-https://world.hey.com/dhh/feed.atom Blogs
-https://mitchellh.com/feed.xml Blogs
-https://matt-rickard.com/rss Blogs
-https://solar.lowtechmagazine.com/posts/index.xml Blogs
-https://utcc.utoronto.ca/~cks/space/blog/?atom Blogs
-https://neil.computer/rss/ Blogs
-https://matduggan.com/rss/ Blogs
-https://michael.stapelberg.ch/feed.xml Blogs
-https://journal.valeriansaliou.name/rss/ Blogs
-https://www.duskborn.com/index.xml Blogs
-https://mirzapandzo.com/rss.xml Blogs
-https://mitjafelicijan.com/feed.xml Blogs
-https://harelang.org/index.xml Announcements
-https://emacsredux.com/atom.xml Announcements
-https://crawl.develz.org/wordpress/feed Announcements
-https://go.dev/blog/feed.atom Announcements
-https://blog.gtk.org/feed/ Announcements
-https://github.com/helix-editor/helix/releases.atom Announcements
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8DntJ-sBtgC-jA0yEjxqjw Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCaTznQhurW5AaiYPbhEA-KA Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCNzszbnvQeFzObW0ghk0Ckw Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCAMu6Dso0ENoNm3sKpQsy0g Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5--wS0Ljbin1TjWQX6eafA Videos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ Videos
+https://theorangeduck.com/feeds/pages
+https://lwn.net/headlines/rss
+https://kristoff.it/index.xml
+https://www.computerenhance.com/feed
+https://tratt.net/laurie/news.rss
+https://willhbr.net/feed.xml
+https://andrewkelley.me/rss.xml
+https://beyondloom.com/blog/rss.xml
+https://thomashunter.name/feed.rss
+https://decuser.github.io/feed.xml
+https://simonwillison.net/atom/entries/
+https://til.simonwillison.net/tils/feed.atom
+https://www.andreinc.net/feed.xml
+https://voussoir.net/writing/writing.atom
+https://blog.regehr.org/feed
+https://richiejp.com/atom.xml
+https://szymonkaliski.com/feed.xml
+https://world.hey.com/dhh/feed.atom
+https://mitchellh.com/feed.xml
+https://matt-rickard.com/rss
+https://solar.lowtechmagazine.com/posts/index.xml
+https://utcc.utoronto.ca/~cks/space/blog/?atom
+https://neil.computer/rss/
+https://matduggan.com/rss/
+https://michael.stapelberg.ch/feed.xml
+https://journal.valeriansaliou.name/rss/
+https://www.duskborn.com/index.xml
+https://mirzapandzo.com/rss.xml
+https://mitjafelicijan.com/feed.xml
+https://harelang.org/index.xml
+https://crawl.develz.org/wordpress/feed
+https://go.dev/blog/feed.atom
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8DntJ-sBtgC-jA0yEjxqjw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCaTznQhurW5AaiYPbhEA-KA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNzszbnvQeFzObW0ghk0Ckw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAMu6Dso0ENoNm3sKpQsy0g
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5--wS0Ljbin1TjWQX6eafA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ

@@ -64,10 +64,6 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 # Useful function. Much wow!
 
-screenshot() {
-	scrot -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
-}
-
 backup() {
 	CWD=$(pwd)
 	VHOME=/home/$USER/Vault

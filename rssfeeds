@@ -1,4 +1,3 @@
-"------------------------------------------- Blogs"
 https://theorangeduck.com/feeds/pages Blogs "~Daniel Holden"
 https://lwn.net/headlines/rss Blogs
 https://kristoff.it/index.xml Blogs
@@ -24,23 +23,16 @@ https://utcc.utoronto.ca/~cks/space/blog/?atom Blogs
 https://neil.computer/rss/ Blogs
 https://matduggan.com/rss/ Blogs
 https://michael.stapelberg.ch/feed.xml Blogs
-# https://offbeatpursuit.com/blog/index.rss Blogs "~Offbeatpursuit - Blog"
-# https://offbeatpursuit.com/paste/index.rss Blogs "~Offbeatpursuit - Paste"
-# https://offbeatpursuit.com/notes/index.rss Blogs "~Offbeatpursuit - Notes"
 https://journal.valeriansaliou.name/rss/ Blogs
 https://www.duskborn.com/index.xml Blogs
 https://mirzapandzo.com/rss.xml Blogs
 https://mitjafelicijan.com/feed.xml Blogs
-
-"------------------------------------ Announcements"
 https://harelang.org/index.xml Announcements
 https://emacsredux.com/atom.xml Announcements
 https://crawl.develz.org/wordpress/feed Announcements
 https://go.dev/blog/feed.atom Announcements
 https://blog.gtk.org/feed/ Announcements
 https://github.com/helix-editor/helix/releases.atom Announcements
-
-"------------------------------------------- Videos"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8DntJ-sBtgC-jA0yEjxqjw Videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg Videos
 https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA Videos

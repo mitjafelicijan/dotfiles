@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop newsboat tmux ctags vim picom
+# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop newsboat tmux ctags vim picom scrot
 
 # Magical environment variables.
 
@@ -63,6 +63,10 @@ export HSTR_CONFIG=hicolor
 if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 # Useful function. Much wow!
+
+screenshot() {
+	scrot -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
+}
 
 backup() {
 	CWD=$(pwd)

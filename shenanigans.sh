@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop newsboat tmux ctags vim
+# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop newsboat tmux ctags vim picom
 
 # Magical environment variables.
 

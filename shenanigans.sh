@@ -119,7 +119,8 @@ tt() { # https://github.com/mitjafelicijan/ticket
 
 	case $1 in
 		-n|-new)
-			ticket_id=$(tr -dc 'a-zA-Z0-9' < /dev/urandom | fold -w 10 | head -n 1)
+			# ticket_id=$(tr -dc 'a-zA-Z0-9' < /dev/urandom | fold -w 10 | head -n 1)
+			ticket_id=$(echo -n "$(date)" | md5sum | cut -c 9-20)
 			ticket_file=$TICKETS/$ticket_id
 			printf "id: %s\n" $ticket_id > $ticket_file
 			printf "responsible: %s\n" `whoami`@`hostname` >> $ticket_file
@@ -131,7 +132,7 @@ tt() { # https://github.com/mitjafelicijan/ticket
 			$EDITOR $ticket_file
 			;;
 		-o|-open)
-			printf "%-12s %-21s %s\n" "Ticket ID" "Created at" "Title"
+			printf "%-14s %-21s %s\n" "Ticket ID" "Created at" "Title"
 			printf "%0.s-" {1..100}
 			printf "\n"
 			grep --color=never -l 'status: open' $TICKETS/* | while read file; do
@@ -139,11 +140,11 @@ tt() { # https://github.com/mitjafelicijan/ticket
 				title=$(head -n 5 "$file" | tail -n 1 | awk '{$1=""; print $0}')
 				cdate=$(head -n 3 "$file" | tail -n 1 | awk '{$1=""; print $0}')
 				cdate_fmt=$(date -d "$cdate" "+%Y-%m-%d %H:%M:%S")
-				printf "%-12s %-20s %.66s\n" "$id" "$cdate_fmt" "$title"
+				printf "%-14s %-20s %.66s\n" "$id" "$cdate_fmt" "$title"
 			done
 			;;
 		-c|-closed)
-			printf "%-12s %-21s %s\n" "Ticket ID" "Created at" "Title"
+			printf "%-14s %-21s %s\n" "Ticket ID" "Created at" "Title"
 			printf "%0.s-" {1..100}
 			printf "\n"
 			grep --color=never -l 'status: closed' $TICKETS/* | while read file; do
@@ -151,7 +152,7 @@ tt() { # https://github.com/mitjafelicijan/ticket
 				title=$(head -n 5 "$file" | tail -n 1 | awk '{$1=""; print $0}')
 				cdate=$(head -n 3 "$file" | tail -n 1 | awk '{$1=""; print $0}')
 				cdate_fmt=$(date -d "$cdate" "+%Y-%m-%d %H:%M:%S")
-				printf "%-12s %-20s %.66s\n" "$id" "$cdate_fmt" "$title"
+				printf "%-14s %-20s %.66s\n" "$id" "$cdate_fmt" "$title"
 			done
 			;;
 		-h|-help)

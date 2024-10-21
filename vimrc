@@ -3,17 +3,12 @@ call plug#begin()
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
-  Plug 'jiangmiao/auto-pairs'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dense-analysis/ale'
+  Plug 'mitjafelicijan/sherbet'
 call plug#end()
 
-colorscheme sorbet
-hi Normal guibg=NONE ctermbg=NONE
-hi StatusLine ctermfg=245 ctermbg=235 cterm=none
-hi StatusLineNC ctermfg=245 ctermbg=none cterm=none
-hi CursorLine cterm=none ctermbg=233 ctermfg=none
-
+colorscheme sherbet
 set number relativenumber autoindent signcolumn=yes cursorline
 set hidden nowrap nobackup noswapfile autoread updatetime=300
 set encoding=utf8 spelllang=en_us

@@ -208,7 +208,7 @@ bar {
   status_command i3blocks
 }
 
-font pango:BerkeleyMono Bold 8
+font pango:BerkeleyMono Bold 9
 focus_follows_mouse no
 hide_edge_borders both
 exec --no-startup-id picom --backend glx --vsync -b

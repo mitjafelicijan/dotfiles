@@ -208,9 +208,11 @@ bar {
   status_command i3blocks
 }
 
+font pango:BerkeleyMono Bold 8
 focus_follows_mouse no
 hide_edge_borders both
 exec --no-startup-id picom --backend glx --vsync -b
+exec_always --no-startup-id xsetroot -solid black
 bindsym --release $mod+z exec scrot -s - | xclip -selection clipboard -target image/png
 bindsym --release $mod+p exec --no-startup-id bash -c 'source ~/.bashrc && togglesink'
 

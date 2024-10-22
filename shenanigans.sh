@@ -1,5 +1,5 @@
 # Software list.
-# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop tmux vim ctags picom scrot
+# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq xmlstarlet htop nvtop tmux vim ctags picom scrot xsetroot
 
 # Magical environment variables.
 NIX_SHELL_PRESERVE_PROMPT=1

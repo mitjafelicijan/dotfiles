@@ -204,11 +204,13 @@ bar {
     urgent_workspace   #900000 #900000 #FFFFFF
     binding_mode       #900000 #900000 #FFFFFF
   }
-  status_command i3status
+  # status_command i3status
+  status_command i3blocks
 }
 
 focus_follows_mouse no
+hide_edge_borders both
 exec --no-startup-id picom --backend glx --vsync -b
 bindsym --release $mod+z exec scrot -s - | xclip -selection clipboard -target image/png
-hide_edge_borders both
+bindsym --release $mod+p exec --no-startup-id bash -c 'source ~/.bashrc && togglesink'
 

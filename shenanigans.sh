@@ -98,8 +98,9 @@ backup() {
 	cd $CWD
 }
 
+# Simple ticket system based on https://github.com/mitjafelicijan/ticket.
 export TICKETS=~/Vault/tickets
-tt() { # https://github.com/mitjafelicijan/ticket
+tt() {
 	if [ "$(uname -s)" != "Linux" ]; then
 		printf "Currently only Linux is supported.\n"
 		return 1
@@ -128,7 +129,7 @@ tt() { # https://github.com/mitjafelicijan/ticket
 			printf "status: open\n" >> $ticket_file
 			printf "title: ?\n" >> $ticket_file
 			printf "====\n" >> $ticket_file
-			printf "Describe your problem here\n" >> $ticket_file
+			printf "Description...\n" >> $ticket_file
 			$EDITOR $ticket_file
 			;;
 		-o|-open)
@@ -170,5 +171,28 @@ tt() { # https://github.com/mitjafelicijan/ticket
 			fi
 			;;
 	esac
+}
+
+# Toggles between pulseaudio sinks in round-robin.
+togglesink() {
+	sinks=($(pactl list short sinks | awk '{print $2}'))
+	current_sink=$(pactl get-default-sink)
+	current_index=-1
+
+	for i in "${!sinks[@]}"; do
+		if [[ "${sinks[$i]}" == "$current_sink" ]]; then
+			current_index=$i
+			break
+		fi
+	done
+
+	if [[ $current_index -eq -1 ]]; then
+		next_index=0
+	else
+		next_index=$(( (current_index + 1) % ${#sinks[@]} ))
+	fi
+
+	pactl set-default-sink "${sinks[$next_index]}"
+	notify-send "Switched to sink: ${sinks[$next_index]}"
 }
 

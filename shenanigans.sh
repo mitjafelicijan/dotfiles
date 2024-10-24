@@ -76,18 +76,13 @@ backup() {
 	cd $VHOME/dotfiles
 
 	# Make a copy of certain files.
-	cp /home/$USER/.shenanigans.sh shenanigans.sh
-	cp /home/$USER/.bash_history_infinite bash_history_infinite
-	cp /home/$USER/.gitconfig gitconfig
-
-	cp -Rf /home/$USER/.ssh/ ./
-	cp -Rf /home/$USER/.aws/ ./
-
-	find /home/$USER/Videos -type f -name "*.webm" -exec cp -n {} $VHOME/videos/ \;
-	find /home/$USER/Pictures -type f -name "*.png" -exec cp -n {} $VHOME/pictures/ \;
+	rsync -azv /home/$USER/.bash_history_infinite bash_history_infinite
+	rsync -azv /home/$USER/.ssh/ ssh
+	rsync -azv /home/$USER/.aws/ aws
+	rsync -azv /home/$USER/.gnupg/ gnupg/
 
 	# Sync with NAS.
-	rsync -azv \
+	rsync -azvpog \
 		--exclude '.venv/' \
 		--exclude '.git/' \
 		--exclude '.import/' \
@@ -100,6 +95,7 @@ backup() {
 
 	# Add to log file.
 	echo `date +"%D %T"` >> ~/.vault.log
+	notify-send "Backup finished successfully."
 
 	# Return back to original directory
 	cd $CWD
@@ -200,5 +196,6 @@ togglesink() {
 	fi
 
 	pactl set-default-sink "${sinks[$next_index]}"
+	notify-send "Switched to sink: ${sinks[$next_index]}"
 }
 

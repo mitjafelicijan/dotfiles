@@ -1,0 +1,16 @@
+[user]
+	name = Mitja Felicijan
+	email = mitja.felicijan@gmail.com
+	signingkey = mitja.felicijan@gmail.com
+[core]
+	editor = vim
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[alias]
+	pushall = !sh -c \"git remote | xargs -L1 git push --all\"
+[init]
+	defaultBranch = master
+[pull]
+	rebase = true

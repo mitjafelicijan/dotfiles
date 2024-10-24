@@ -1,7 +1,3 @@
-# Software list:
-# cifs-utils tree hstr s3cmd xclip mc gnupg ripgrep jq busybox
-# xmlstarlet htop nvtop tmux vim ctags picom scrot xsetroot
-
 # Magical environment variables.
 NIX_SHELL_PRESERVE_PROMPT=1
 TERM=xterm-256color
@@ -58,6 +54,17 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 export HSTR_CONFIG=hicolor
 if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
+
+# Machine provision script for essential software.
+# This is meant to be used on Debian 11+.
+provision() {
+	doas apt install \
+		build-essential git gcc make busybox cifs-utils tree hstr s3cmd \
+		xmlstarlet htop nvtop tmux picom scrot xclip mc ripgrep jq \
+		rsync doas newsboat entr clang clang-tidy clang-tools \
+		libx11-dev libxinerama-dev libxft-dev x11-xserver-utils \
+		podman podman-compose 
+}
 
 # Backup to NAS function. Much wow!
 backup() {

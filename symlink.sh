@@ -1,3 +1,11 @@
+#!/usr/bin/env sh
+
+set -x
+
+mkdir -p ~/.config/i3
+mkdir -p ~/.config/i3status/
+mkdir -p ~/.newsboat
+
 ln -s ~/.dotfiles/shenanigans.sh ~/.shenanigans.sh
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/vimrc ~/.vimrc

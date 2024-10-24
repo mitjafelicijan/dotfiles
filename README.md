@@ -4,6 +4,6 @@
 git clone git@github.com:mitjafelicijan/dotfiles.git ~/.dotfiles
 
 # Create symbolic links to actual config files.
-bash symlink.sh
+sh symlink.sh
 ```
 

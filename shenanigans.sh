@@ -32,7 +32,6 @@ alias grep='grep --color=always'
 alias less='less -R'
 alias tmux='tmux -u'
 alias vi='vim'
-alias newsraft='newsraft -f ~/.dotfiles/rssfeeds'
 alias server='python3 -m http.server 6969'
 
 # Custom folder jump commands.
@@ -194,6 +193,5 @@ togglesink() {
 	fi
 
 	pactl set-default-sink "${sinks[$next_index]}"
-	notify-send "Switched to sink: ${sinks[$next_index]}"
 }
 

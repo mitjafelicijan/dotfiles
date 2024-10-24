@@ -8,6 +8,7 @@ order += "load"
 order += "memory"
 order += "disk /"
 order += "ethernet enp5s0"
+order += "volume master"
 order += "tztime brisbane"
 order += "tztime ny"
 order += "tztime local"
@@ -32,6 +33,14 @@ ethernet enp5s0 {
 cpu_temperature 0 {
 	format = "TEMP: %degrees°C"
 	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
+}
+
+volume master {
+	format = "VOL: %volume"
+	format_muted = "VOL: muted (%volume)"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
 }
 
 tztime local {

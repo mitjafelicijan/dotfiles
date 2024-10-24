@@ -1,0 +1,54 @@
+general {
+	colors = true
+	interval = 5
+}
+
+order += "cpu_temperature 0"
+order += "load"
+order += "memory"
+order += "disk /"
+order += "ethernet enp5s0"
+order += "tztime brisbane"
+order += "tztime ny"
+order += "tztime local"
+
+load {
+	format = "CPU: %5min"
+}
+
+memory {
+	format = "RAM: %free"
+}
+
+disk "/" {
+	format = "DISK: %free"
+}
+
+ethernet enp5s0 {
+	format_up = "NET: %ip (%speed)"
+	format_down = "E: down"
+}
+
+cpu_temperature 0 {
+	format = "TEMP: %degrees°C"
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
+}
+
+tztime local {
+	format = "%Y-%m-%d %H:%M:%S"
+}
+
+tztime brisbane {
+	format = "Brisbane: %H:%M"
+	timezone = "Australia/Brisbane"
+}
+
+tztime ny {
+	format = "NY: %H:%M"
+	timezone = "America/New_York"
+}
+
+tztime local {
+	format = "Local: %Y-%m-%d %H:%M:%S"
+}
+

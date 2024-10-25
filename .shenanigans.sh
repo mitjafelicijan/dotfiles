@@ -60,7 +60,7 @@ provision() {
 		xmlstarlet htop nvtop tmux picom scrot xclip mc ripgrep jq \
 		rsync doas newsboat entr clang clang-tidy clang-tools \
 		libx11-dev libxinerama-dev libxft-dev x11-xserver-utils \
-		podman podman-compose 
+		stow podman podman-compose 
 }
 
 # Backup to NAS function. Much wow!

@@ -73,13 +73,13 @@ backup() {
 	cd $VHOME/dotfiles
 
 	# Make a copy of certain files.
-	rsync -azv /home/$USER/.bash_history_infinite bash_history_infinite
-	rsync -azv /home/$USER/.ssh/ ssh
-	rsync -azv /home/$USER/.aws/ aws
-	rsync -azv /home/$USER/.gnupg/ gnupg/
+	rsync -azhv /home/$USER/.bash_history_infinite bash_history_infinite
+	rsync -azhv /home/$USER/.ssh/ ssh
+	rsync -azhv /home/$USER/.aws/ aws
+	rsync -azhv /home/$USER/.gnupg/ gnupg/
 
 	# Sync with NAS.
-	rsync -azvpog \
+	rsync -azhvpog \
 		--exclude '.venv/' \
 		--exclude '.git/' \
 		--exclude '.import/' \

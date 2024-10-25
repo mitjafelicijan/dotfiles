@@ -4,6 +4,6 @@ Relies on [GNU Stow](https://www.gnu.org/software/stow/).
 
 ```sh
 git clone git@github.com:mitjafelicijan/dotfiles.git ~/.dotfiles
-cd .dotfiles && stow
+cd .dotfiles && stow .
 ```
 

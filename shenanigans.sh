@@ -40,9 +40,6 @@ export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
-# Other paths.
-export PATH=$HOME/.local/bin/odin-linux-amd64-dev-2024-1:$PATH
-
 # History and search. Stolen from J.
 HISTCONTROL=ignoreboth
 shopt -s histappend

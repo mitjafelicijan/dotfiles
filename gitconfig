@@ -10,6 +10,7 @@
 	gpgsign = true
 [alias]
 	pushall = !sh -c \"git remote | xargs -L1 git push --all\"
+	tree = log --oneline --graph
 [init]
 	defaultBranch = master
 [pull]

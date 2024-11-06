@@ -9,7 +9,7 @@ call plug#end()
 
 colorscheme sherbet
 set number relativenumber autoindent signcolumn=yes cursorline
-set hidden nowrap nobackup noswapfile autoread updatetime=300
+set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
 set encoding=utf8 spelllang=en_us
 set backspace=2 scrolloff=4
 set shiftwidth=4 tabstop=4

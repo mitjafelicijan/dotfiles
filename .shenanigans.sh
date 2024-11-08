@@ -40,6 +40,9 @@ export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
+# Language server.
+export PATH=$HOME/.local/bin/luals/bin:$PATH
+
 # History and search. Stolen from J.
 HISTCONTROL=ignoreboth
 shopt -s histappend

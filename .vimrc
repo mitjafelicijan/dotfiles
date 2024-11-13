@@ -25,6 +25,7 @@ nmap <silent> gr :ALEFindReferences<cr>
 nmap <silent> gd :ALEGoToDefinition<cr>
 nmap <silent> re :ALERename<cr>
 
+let g:ale_completion_enabled = 1
 let g:ale_hover_to_floating_preview = 1
 let g:ale_detail_to_floating_preview = 1
 let g:ale_floating_window_border = 0

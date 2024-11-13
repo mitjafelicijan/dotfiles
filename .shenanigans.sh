@@ -1,8 +1,9 @@
 # Magical environment variables.
-NIX_SHELL_PRESERVE_PROMPT=1
-TERM=xterm-256color
-VISUAL=vim
-EDITOR=vim
+export NIX_SHELL_PRESERVE_PROMPT=1
+export COLORTERM=truecolor
+export TERM=xterm-256color
+export VISUAL=vim
+export EDITOR=vim
 
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -19,9 +20,8 @@ is_inside_nix_shell() {
 export PS1="[\033[38;5;166m\]\u@\h\[$(tput sgr0)\]]$(is_inside_nix_shell)\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \w\[$(tput sgr0)\] \n$ "
 
 # General aliases.
-alias ls='ls --color=none'
-alias l='ls -lh --color=none'
-alias ll='ls -lha --color=none'
+alias l='ls -lh'
+alias ll='ls -lha'
 alias t='tree -L 2'
 alias ..='cd ..'
 alias grep='grep --color=always'
@@ -40,7 +40,7 @@ export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
-# Language server.
+# Language servers.
 export PATH=$HOME/.local/bin/luals/bin:$PATH
 
 # History and search. Stolen from J.
@@ -99,81 +99,6 @@ backup() {
 
 	# Return back to original directory
 	cd $CWD
-}
-
-# Simple ticket system based on https://github.com/mitjafelicijan/ticket.
-export TICKETS=~/Vault/tickets
-tt() {
-	if [ "$(uname -s)" != "Linux" ]; then
-		printf "Currently only Linux is supported.\n"
-		return 1
-	fi
-
-	if [ -z "$TICKETS" ]; then
-		TICKETS="$HOME/tickets"
-	fi
-
-	mkdir -p $TICKETS
-
-	# Display open tickets if no argument provided.
-	if [ -z "$1" ]; then
-		echo "`tt -o`"
-		return 0
-	fi
-
-	case $1 in
-		-n|-new)
-			# ticket_id=$(tr -dc 'a-zA-Z0-9' < /dev/urandom | fold -w 10 | head -n 1)
-			ticket_id=$(echo -n "$(date)" | md5sum | cut -c 9-20)
-			ticket_file=$TICKETS/$ticket_id
-			printf "id: %s\n" $ticket_id > $ticket_file
-			printf "responsible: %s\n" `whoami`@`hostname` >> $ticket_file
-			printf "created: %s\n" "`date`" >> $ticket_file
-			printf "status: open\n" >> $ticket_file
-			printf "title: ?\n" >> $ticket_file
-			printf "====\n" >> $ticket_file
-			printf "Description...\n" >> $ticket_file
-			$EDITOR $ticket_file
-			;;
-		-o|-open)
-			printf "%-14s %-21s %s\n" "Ticket ID" "Created at" "Title"
-			printf "%0.s-" {1..100}
-			printf "\n"
-			grep --color=never -l 'status: open' $TICKETS/* | while read file; do
-				id=$(head -n 1 "$file" | tail -n 1 | awk '{ print $2 }')
-				title=$(head -n 5 "$file" | tail -n 1 | awk '{$1=""; print $0}')
-				cdate=$(head -n 3 "$file" | tail -n 1 | awk '{$1=""; print $0}')
-				cdate_fmt=$(date -d "$cdate" "+%Y-%m-%d %H:%M:%S")
-				printf "%-14s %-20s %.66s\n" "$id" "$cdate_fmt" "$title"
-			done
-			;;
-		-c|-closed)
-			printf "%-14s %-21s %s\n" "Ticket ID" "Created at" "Title"
-			printf "%0.s-" {1..100}
-			printf "\n"
-			grep --color=never -l 'status: closed' $TICKETS/* | while read file; do
-				id=$(head -n 1 "$file" | tail -n 1 | awk '{ print $2 }')
-				title=$(head -n 5 "$file" | tail -n 1 | awk '{$1=""; print $0}')
-				cdate=$(head -n 3 "$file" | tail -n 1 | awk '{$1=""; print $0}')
-				cdate_fmt=$(date -d "$cdate" "+%Y-%m-%d %H:%M:%S")
-				printf "%-14s %-20s %.66s\n" "$id" "$cdate_fmt" "$title"
-			done
-			;;
-		-h|-help)
-			printf "Usage: ticket [option]\n"
-			printf "  -n, -new          creates a new ticket\n"
-			printf "  -o, -open         lists open tickets\n"
-			printf "  -c, -closed       lists closed tickets\n"
-			printf "  -h, -help         shows this help\n"
-			;;
-		*)
-			if [ -e "$TICKETS/$1" ] && [ -f "$TICKETS/$1" ]; then
-				$EDITOR "$TICKETS/$1"
-			else
-				printf "Ticket not found: $TICKETS/$1\n"
-			fi
-			;;
-	esac
 }
 
 # Toggles between pulseaudio sinks in round-robin.

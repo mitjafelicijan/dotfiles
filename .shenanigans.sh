@@ -72,14 +72,18 @@ backup() {
 	VHOME=/home/$USER/Vault
 	ME=$(whoami)@$(hostname)
 
-	mkdir -p $VHOME/dotfiles
-	cd $VHOME/dotfiles
-
-	# Make a copy of certain files.
+	# Everything dotfiles.
+	cd $VHOME && mkdir -p $VHOME/dotfiles && cd $VHOME/dotfiles
 	rsync -azhv /home/$USER/.bash_history_infinite bash_history_infinite
 	rsync -azhv /home/$USER/.ssh/ ssh
 	rsync -azhv /home/$USER/.aws/ aws
 	rsync -azhv /home/$USER/.gnupg/ gnupg/
+
+	# WoW settings and addons.
+	cd $VHOME && mkdir -p $VHOME/twow && cd $VHOME/twow
+	rsync -azhv /home/$USER/Games/turtlewow/Interface .
+	rsync -azhv /home/$USER/Games/turtlewow/WTF .
+	rsync -azhv /home/$USER/Games/turtlewow/start.sh .
 
 	# Sync with NAS.
 	rsync -azhvpog \

@@ -80,10 +80,8 @@ backup() {
 	rsync -azhv /home/$USER/.gnupg/ gnupg/
 
 	# WoW settings and addons.
-	cd $VHOME && mkdir -p $VHOME/twow && cd $VHOME/twow
-	rsync -azhv /home/$USER/Games/turtlewow/Interface .
-	rsync -azhv /home/$USER/Games/turtlewow/WTF .
-	rsync -azhv /home/$USER/Games/turtlewow/start.sh .
+	cd $VHOME
+	rsync -azhv /home/$USER/Games/turtlewow .
 
 	# Sync with NAS.
 	rsync -azhvpog \

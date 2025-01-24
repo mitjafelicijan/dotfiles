@@ -29,6 +29,7 @@ alias less='less -R'
 alias tmux='tmux -u'
 alias vi='vim'
 alias server='python3 -m http.server 6969'
+alias gg='lazygit'
 
 # Custom folder jump commands.
 alias p='cd ~/Vault/projects'

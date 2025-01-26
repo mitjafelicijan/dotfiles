@@ -33,4 +33,5 @@ let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
 let g:ctrlp_use_caching = 0
 let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-
+let g:ale_linters = { 'cpp': ['clangd'], 'c': ['clangd'] }
+let g:ale_fixers = { 'cpp': ['clangd'], 'c': ['clangd'] }

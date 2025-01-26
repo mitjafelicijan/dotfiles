@@ -39,6 +39,7 @@ alias d='cd ~/Downloads'
 # Additional path settings.
 export PATH=$HOME/Applications:$PATH
 export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 
 # Language servers.
@@ -60,11 +61,11 @@ if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 # This is meant to be used on Debian 11+.
 provision() {
 	doas apt install \
-		build-essential git gcc make busybox cifs-utils tree hstr s3cmd \
-		xmlstarlet htop nvtop tmux picom scrot xclip mc ripgrep jq \
-		rsync doas newsboat entr clang clang-tidy clang-tools \
+		build-essential git gcc make cmake busybox cifs-utils tree hstr \
+		s3cmd xmlstarlet htop nvtop tmux scrot xclip mc ripgrep jq \
+		rsync entr clang clang-tidy clang-tools pulseaudio-utils \
 		libx11-dev libxinerama-dev libxft-dev x11-xserver-utils \
-		stow podman podman-compose 
+		stow podman podman-compose
 }
 
 # Backup to NAS function. Much wow!

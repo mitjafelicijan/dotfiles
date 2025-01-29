@@ -1,3 +1,10 @@
+# Software list:
+# build-essential git gcc make cmake busybox cifs-utils tree hstr
+# s3cmd xmlstarlet htop nvtop tmux scrot xclip mc ripgrep jq
+# rsync entr clang clang-tidy clang-tools clangd pulseaudio-utils
+# libx11-dev libxinerama-dev libxft-dev x11-xserver-utils
+# stow podman podman-compose curl vim xxd
+
 # Magical environment variables.
 export NIX_SHELL_PRESERVE_PROMPT=1
 export COLORTERM=truecolor
@@ -57,17 +64,6 @@ bind '"\e[B": history-search-forward'
 export HSTR_CONFIG=hicolor
 if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
-# Machine provision script for essential software.
-# This is meant to be used on Debian 11+.
-provision() {
-	doas apt install \
-		build-essential git gcc make cmake busybox cifs-utils tree hstr \
-		s3cmd xmlstarlet htop nvtop tmux scrot xclip mc ripgrep jq \
-		rsync entr clang clang-tidy clang-tools pulseaudio-utils \
-		libx11-dev libxinerama-dev libxft-dev x11-xserver-utils \
-		stow podman podman-compose
-}
-
 # Backup to NAS function. Much wow!
 backup() {
 	CWD=$(pwd)
@@ -83,7 +79,8 @@ backup() {
 
 	# WoW settings and addons.
 	cd $VHOME
-	rsync -azhv /home/$USER/Games/turtlewow .
+	rsync -azhv /home/$USER/Games/turtlewow/WTF turtlewow
+	rsync -azhv /home/$USER/Games/turtlewow/start.sh turtlewow/
 
 	# Sync with NAS.
 	rsync -azhvpog \

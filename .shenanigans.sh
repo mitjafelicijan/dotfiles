@@ -1,9 +1,8 @@
 # Software list:
-# build-essential git gcc make cmake busybox cifs-utils tree hstr
+# git gcc make cmake busybox cifs-utils tree hstr curl vim xxd
 # s3cmd xmlstarlet htop nvtop tmux scrot xclip mc ripgrep jq
-# rsync entr clang clang-tidy clang-tools clangd pulseaudio-utils
-# libx11-dev libxinerama-dev libxft-dev x11-xserver-utils
-# stow podman podman-compose curl vim xxd
+# stow rsync entr clang clang-tidy clang-tools clangd
+# podman podman-compose
 
 # Magical environment variables.
 export NIX_SHELL_PRESERVE_PROMPT=1

@@ -79,6 +79,7 @@ backup() {
 	# WoW settings and addons.
 	cd $VHOME
 	rsync -azhv /home/$USER/Games/turtlewow/WTF turtlewow
+	rsync -azhv /home/$USER/Games/turtlewow/SuperWoWhook.dll turtlewow/
 	rsync -azhv /home/$USER/Games/turtlewow/start.sh turtlewow/
 
 	# Sync with NAS.

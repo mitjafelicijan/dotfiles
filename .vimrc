@@ -1,6 +1,7 @@
 call plug#begin()
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-unimpaired'
   Plug 'airblade/vim-gitgutter'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dense-analysis/ale'
@@ -22,6 +23,11 @@ nnoremap <C-k> :ALEHover<cr>
 nnoremap <C-j> :ALEDetail<cr>
 nnoremap <C-r> :!sh .vim<CR>
 nnoremap <Leader>r :let @/ = ''<CR>
+
+nmap <C-Up> [e
+nmap <C-Down> ]e
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
 
 nmap <silent> gr :ALEFindReferences<cr>
 nmap <silent> gd :ALEGoToDefinition<cr>

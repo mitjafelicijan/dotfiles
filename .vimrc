@@ -20,7 +20,6 @@ nnoremap <C-q> :copen<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
 nnoremap <C-k> :ALEHover<cr>
 nnoremap <C-j> :ALEDetail<cr>
-nnoremap <C-r> :!sh .vim<CR>
 nnoremap <Leader>r :let @/ = ''<CR>
 
 nmap <silent> gr :ALEFindReferences<cr>

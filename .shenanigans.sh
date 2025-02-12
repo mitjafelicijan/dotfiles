@@ -1,8 +1,8 @@
 # Software list:
-# git gcc make cmake busybox cifs-utils tree hstr curl vim xxd
-# s3cmd xmlstarlet htop nvtop tmux scrot xclip mc ripgrep jq
+# git gcc make cmake busybox cifs-utils tree hstr curl 
+# s3cmd xmlstarlet htop nvtop tmux xclip mc ripgrep jq
 # stow rsync entr clang clang-tidy clang-tools clangd
-# podman podman-compose
+# vim xxd podman podman-compose
 
 # Magical environment variables.
 export NIX_SHELL_PRESERVE_PROMPT=1

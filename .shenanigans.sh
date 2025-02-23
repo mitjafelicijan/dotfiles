@@ -1,8 +1,8 @@
 # Software list:
-# git gcc make cmake busybox cifs-utils tree hstr curl 
-# s3cmd xmlstarlet htop nvtop tmux xclip mc ripgrep jq
-# stow rsync entr clang clang-tidy clang-tools clangd
-# vim xxd podman podman-compose
+#   git gcc make cmake busybox cifs-utils tree hstr curl 
+#   s3cmd xmlstarlet htop nvtop tmux xclip mc ripgrep jq
+#   stow rsync entr vim xxd podman podman-compose
+#   clang clang-tidy clang-toolsi-extra clangd clang-analyzer
 
 # Magical environment variables.
 export NIX_SHELL_PRESERVE_PROMPT=1
@@ -50,6 +50,10 @@ export PATH=/usr/local/go/bin:$PATH
 
 # Language servers.
 export PATH=$HOME/.local/bin/luals/bin:$PATH
+
+# Other stuff.
+export PATH=$HOME/Applications/riscv-gnu-toolchain/bin:$PATH
+export PATH=$HOME/Applications/xtensa-lx106-elf/bin:$PATH
 
 # History and search. Stolen from J.
 HISTCONTROL=ignoreboth

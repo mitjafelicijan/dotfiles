@@ -21,12 +21,13 @@ nnoremap <C-b> :CtrlPBuffer<cr>
 nnoremap <C-k> :ALEHover<cr>
 nnoremap <C-j> :ALEDetail<cr>
 nnoremap <Leader>r :let @/ = ''<CR>
+nnoremap <Leader>f :%!clang-format -style=file<CR>:w<CR>
 
 nmap <silent> gr :ALEFindReferences<cr>
 nmap <silent> gd :ALEGoToDefinition<cr>
 nmap <silent> re :ALERename<cr>
 
-let g:ale_completion_enabled = 0
+let g:ale_completion_enabled = 1
 let g:ale_hover_to_floating_preview = 1
 let g:ale_detail_to_floating_preview = 1
 let g:ale_floating_window_border = 0

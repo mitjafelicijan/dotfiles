@@ -1,53 +1,65 @@
-https://theorangeduck.com/feeds/pages
-https://geohot.github.io/blog/feed.xml
-https://lwn.net/headlines/rss
-https://kristoff.it/index.xml
-https://www.computerenhance.com/feed
-https://tratt.net/laurie/news.rss
-https://willhbr.net/feed.xml
-https://andrewkelley.me/rss.xml
-https://beyondloom.com/blog/rss.xml
-https://thomashunter.name/feed.rss
-https://decuser.github.io/feed.xml
-https://simonwillison.net/atom/entries/
-https://til.simonwillison.net/tils/feed.atom
-https://www.andreinc.net/feed.xml
-https://voussoir.net/writing/writing.atom
-https://blog.regehr.org/feed
-https://richiejp.com/atom.xml
-https://szymonkaliski.com/feed.xml
-https://world.hey.com/dhh/feed.atom
-https://mitchellh.com/feed.xml
-https://matt-rickard.com/rss
-https://neil.computer/rss/
-https://matduggan.com/rss/
-https://michael.stapelberg.ch/feed.xml
-https://journal.valeriansaliou.name/rss/
-https://www.duskborn.com/index.xml
-https://mirzapandzo.com/rss.xml
-https://mitjafelicijan.com/feed.xml
-https://crawl.develz.org/wordpress/feed
-https://go.dev/blog/feed.atom
-https://www.youtube.com/feeds/videos.xml?channel_id=UCqmugCqELzhIMNYnsjScXXw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCSju5G2aFaWMqn-_0YBtq5A
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUSck1dOH7VKmG4lRW7tZXg
-https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwgKmJM4ZJQRJ-U5NjvR2dg
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8DntJ-sBtgC-jA0yEjxqjw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCaTznQhurW5AaiYPbhEA-KA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCNzszbnvQeFzObW0ghk0Ckw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCAMu6Dso0ENoNm3sKpQsy0g
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg
-https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5--wS0Ljbin1TjWQX6eafA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ
+https://theorangeduck.com/feeds/pages blog
+https://geohot.github.io/blog/feed.xml blog
+https://lwn.net/headlines/rss blog
+https://kristoff.it/index.xml blog
+https://www.computerenhance.com/feed blog
+https://tratt.net/laurie/news.rss blog
+https://willhbr.net/feed.xml blog
+https://andrewkelley.me/rss.xml blog
+https://beyondloom.com/blog/rss.xml blog
+https://thomashunter.name/feed.rss blog
+https://decuser.github.io/feed.xml blog
+https://simonwillison.net/atom/entries/ blog
+https://til.simonwillison.net/tils/feed.atom blog
+https://www.andreinc.net/feed.xml blog
+https://voussoir.net/writing/writing.atom blog
+https://blog.regehr.org/feed blog
+https://richiejp.com/atom.xml blog
+https://szymonkaliski.com/feed.xml blog
+https://world.hey.com/dhh/feed.atom blog
+https://mitchellh.com/feed.xml blog
+https://matt-rickard.com/rss blog
+https://neil.computer/rss/ blog
+https://matduggan.com/rss/ blog
+https://michael.stapelberg.ch/feed.xml blog
+https://journal.valeriansaliou.name/rss/ blog
+https://www.duskborn.com/index.xml blog
+https://mirzapandzo.com/rss.xml blog
+https://mitjafelicijan.com/feed.xml blog
+https://offbeatpursuit.com/blog/index.rss "~Offbeatpursuit blog" blog
+https://offbeatpursuit.com/notes/index.rss "~Offbeatpursuit notes" blog
+https://offbeatpursuit.com/paste/index.rss "~Offbeatpursuit paste" blog
+
+https://crawl.develz.org/wordpress/feed releases
+https://go.dev/blog/feed.atom releases
+https://github.com/raysan5/raylib/releases.atom releases
+https://github.com/ggml-org/llama.cpp/releases.atom releases
+https://github.com/doitsujin/dxvk/releases.atom releases
+https://github.com/papers-we-love/papers-we-love/commits.atom releases
+https://github.com/nothings/stb/commits.atom releases
+https://github.com/nicbarker/clay/releases.atom releases
+https://github.com/cc65/cc65/commits.atom releases
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqmugCqELzhIMNYnsjScXXw media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCSju5G2aFaWMqn-_0YBtq5A media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUSck1dOH7VKmG4lRW7tZXg media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwgKmJM4ZJQRJ-U5NjvR2dg media
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8DntJ-sBtgC-jA0yEjxqjw media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCaTznQhurW5AaiYPbhEA-KA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNzszbnvQeFzObW0ghk0Ckw media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCAMu6Dso0ENoNm3sKpQsy0g media
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5--wS0Ljbin1TjWQX6eafA media
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ media

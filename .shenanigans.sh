@@ -1,7 +1,7 @@
 # Software list:
 #   git gcc make cmake busybox cifs-utils tree hstr curl 
 #   s3cmd xmlstarlet htop nvtop tmux xclip mc ripgrep jq
-#   stow rsync entr vim xxd podman podman-compose
+#   stow rsync entr vim xxd sbcl rlwrap podman podman-compose
 #   clang clang-tidy clang-toolsi-extra clangd clang-analyzer
 
 # Magical environment variables.

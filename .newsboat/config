@@ -1,5 +1,5 @@
 reload-threads 100
-article-sort-order date-desc
+article-sort-order date-asc
 show-read-feeds no
 refresh-on-startup yes
 confirm-mark-all-feeds-read no

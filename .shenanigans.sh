@@ -38,6 +38,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias vi='vim'
 	alias server='python3 -m http.server 6969'
 	alias gg='lazygit'
+	alias newsbarge='newsbarge -feed-file=/home/m/.feeds.txt -out-dir=/home/m/Downloads -days-span=14'
 
 	# Custom folder jump commands.
 	alias p='cd ~/Vault/projects'

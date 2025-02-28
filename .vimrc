@@ -5,7 +5,6 @@ call plug#begin()
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dense-analysis/ale'
   Plug 'mitjafelicijan/sherbet'
-  Plug 'mzlogin/vim-markdown-toc'
 call plug#end()
 
 colorscheme sherbet

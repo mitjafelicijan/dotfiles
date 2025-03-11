@@ -1,7 +1,7 @@
 # Software list:
-#   git gcc make cmake busybox cifs-utils tree hstr curl 
-#   s3cmd xmlstarlet htop nvtop tmux xclip mc ripgrep jq pipx
-#   stow rsync entr vim xxd sbcl rlwrap podman podman-compose
+#   git gcc make cmake busybox cifs-utils tree hstr curl
+#   s3cmd xmlstarlet htop nvtop tmux xclip mc jq pipx
+#   stow rsync entr vim xxd sbcl rlwrap newsboat
 #   clang clang-tidy clang-tools-extra clangd clang-analyzer
 # Additonal stuff:
 #   pipx install pyright
@@ -40,8 +40,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias tmux='tmux -u'
 	alias vi='vim'
 	alias server='python3 -m http.server 6969'
+	alias newsboat='newsboat -r -u ~/.feeds.txt'
 	alias gg='lazygit'
-	alias newsbarge='newsbarge -feed-file=/home/m/.feeds.txt -out-dir=/home/m/Downloads -days-span=7'
 
 	# Custom folder jump commands.
 	alias p='cd ~/Vault/projects'
@@ -53,13 +53,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH=$HOME/go/bin:$PATH
 	export PATH=$HOME/.local/bin:$PATH
 	export PATH=/usr/local/go/bin:$PATH
-
-	# Language servers.
-	export PATH=$HOME/.local/bin/luals/bin:$PATH
-
-	# Other stuff.
-	export PATH=$HOME/Applications/riscv-gnu-toolchain/bin:$PATH
-	export PATH=$HOME/Applications/xtensa-lx106-elf/bin:$PATH
 
 	# History and search. Stolen from J.
 	HISTCONTROL=ignoreboth

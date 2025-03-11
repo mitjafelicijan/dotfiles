@@ -24,6 +24,7 @@ https://journal.valeriansaliou.name/rss/
 https://www.duskborn.com/index.xml
 https://mirzapandzo.com/rss.xml
 https://mitjafelicijan.com/feed.xml
+https://offbeatpursuit.com/blog/index.rss
 
 https://crawl.develz.org/wordpress/feed
 https://go.dev/blog/feed.atom

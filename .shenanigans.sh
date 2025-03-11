@@ -38,7 +38,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias grep='grep --color=always'
 	alias less='less -R'
 	alias tmux='tmux -u'
-	alias vi='vim'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
 	alias gg='lazygit'

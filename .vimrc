@@ -5,10 +5,9 @@ call plug#begin()
   Plug 'mitjafelicijan/ungabunga'
 call plug#end()
 
-set nocompatible laststatus=2
+set nocompatible laststatus=2 encoding=utf8 spelllang=en_us
 set number relativenumber autoindent signcolumn=yes cursorline ignorecase
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
-set encoding=utf8 spelllang=en_us
 colorscheme ungabunga
 
 nnoremap <C-Right> :bnext<cr>

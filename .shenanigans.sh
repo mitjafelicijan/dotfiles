@@ -1,8 +1,11 @@
 # Software list:
 #   git gcc make cmake busybox cifs-utils tree hstr curl 
-#   s3cmd xmlstarlet htop nvtop tmux xclip mc ripgrep jq
+#   s3cmd xmlstarlet htop nvtop tmux xclip mc ripgrep jq pipx
 #   stow rsync entr vim xxd sbcl rlwrap podman podman-compose
-#   clang clang-tidy clang-toolsi-extra clangd clang-analyzer
+#   clang clang-tidy clang-tools-extra clangd clang-analyzer
+# Additonal stuff:
+#   pipx install pyright
+#   go install golang.org/x/tools/gopls@latest
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then

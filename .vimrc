@@ -1,5 +1,6 @@
 call plug#begin()
   Plug 'tpope/vim-commentary'
+  Plug 'airblade/vim-gitgutter'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dense-analysis/ale'
   Plug 'mitjafelicijan/ungabunga'
@@ -28,3 +29,4 @@ let g:ale_detail_to_floating_preview = 1
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
 let g:ctrlp_use_caching = 0
+let g:ale_linters = { 'c': ['clangd'] }

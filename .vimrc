@@ -1,15 +1,14 @@
 call plug#begin()
-  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-commentary'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dense-analysis/ale'
-  Plug 'mitjafelicijan/ungabunga'
 call plug#end()
 
 set nocompatible laststatus=2 encoding=utf8 spelllang=en_us
 set number relativenumber autoindent signcolumn=yes cursorline ignorecase
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
-colorscheme ungabunga
+colorscheme wildcharm
 
 nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>

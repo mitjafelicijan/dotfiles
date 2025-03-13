@@ -1,7 +1,7 @@
 # Software list:
 #   git gcc make cmake busybox cifs-utils tree hstr curl
 #   s3cmd xmlstarlet htop nvtop tmux xclip mc jq pipx
-#   stow rsync entr vim xxd sbcl rlwrap newsboat
+#   stow rsync entr vim xxd sbcl rlwrap newsboat tig
 #   clang clang-tidy clang-tools-extra clangd clang-analyzer
 # Additonal stuff:
 #   pipx install pyright
@@ -40,7 +40,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias tmux='tmux -u'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
-	alias gg='lazygit'
 
 	# Custom folder jump commands.
 	alias p='cd ~/Vault/projects'

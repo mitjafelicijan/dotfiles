@@ -15,9 +15,10 @@ nnoremap <C-Right> :bnext<cr>
 nnoremap <C-Left> :bprevious<cr>
 nnoremap <C-q> :copen<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
-nnoremap <C-k> :ALEHover<cr>
-nnoremap <C-j> :ALEDetail<cr>
-nnoremap <Leader>r :let @/ = ''<CR>
+nnoremap <C-n> :Explore<cr>
+nnoremap <Leader>q :ALEHover<cr>
+nnoremap <Leader>w :ALEDetail<cr>
+nnoremap <Leader>e :nohlsearch<CR>
 
 nmap <silent> gr :ALEFindReferences<cr>
 nmap <silent> gd :ALEGoToDefinition<cr>

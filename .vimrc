@@ -1,12 +1,13 @@
+set nocompatible
+
 call plug#begin()
-  Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-commentary'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dense-analysis/ale'
 call plug#end()
 
-set nocompatible laststatus=2 encoding=utf8 spelllang=en_us
-set number relativenumber autoindent signcolumn=yes cursorline ignorecase
+set laststatus=2 encoding=utf8 spelllang=en_us tabstop=4 shiftwidth=4
+set number relativenumber autoindent cursorline ignorecase signcolumn=yes
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
 colorscheme wildcharm
 

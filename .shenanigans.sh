@@ -40,6 +40,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias tmux='tmux -u'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
+	alias gg='lazygit'
+	alias gd='lazydocker'
 
 	# Custom folder jump commands.
 	alias p='cd ~/Vault/projects'

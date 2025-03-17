@@ -6,6 +6,7 @@
 # Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest
+#   sudo npm i -g @biomejs/biome
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then

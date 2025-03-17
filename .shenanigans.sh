@@ -1,7 +1,7 @@
 # Software list:
 #   git gcc make cmake busybox cifs-utils tree hstr curl
-#   s3cmd xmlstarlet htop nvtop tmux xclip mc jq pipx
-#   stow rsync entr vim xxd sbcl rlwrap newsboat tig
+#   s3cmd xmlstarlet htop nvtop tmux xclip jq pipx newsboat
+#   stow rsync entr vim vifm xxd sbcl rlwrap tig
 #   clang clang-tidy clang-tools-extra clangd clang-analyzer
 # Additonal stuff:
 #   pipx install pyright

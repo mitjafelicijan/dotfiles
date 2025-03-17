@@ -6,6 +6,7 @@
 	editor = vim
 [commit]
 	gpgsign = true
+	verbose = true
 [tag]
 	gpgsign = true
 [alias]

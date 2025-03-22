@@ -4,9 +4,10 @@ call plug#begin()
   Plug 'tpope/vim-commentary'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dense-analysis/ale'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-set laststatus=2 encoding=utf8 spelllang=en_us tabstop=4 shiftwidth=4
+set laststatus=2 encoding=utf8 spelllang=en_us tabstop=4 shiftwidth=4 path=**
 set number relativenumber autoindent cursorline ignorecase signcolumn=yes
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
 colorscheme wildcharm

@@ -1,66 +1,41 @@
-https://theorangeduck.com/feeds/pages
-https://geohot.github.io/blog/feed.xml
-https://kristoff.it/index.xml
-https://www.computerenhance.com/feed
-https://tratt.net/laurie/news.rss
-https://willhbr.net/feed.xml
-https://andrewkelley.me/rss.xml
-https://beyondloom.com/blog/rss.xml
-https://thomashunter.name/feed.rss
-https://decuser.github.io/feed.xml
-https://til.simonwillison.net/tils/feed.atom
-https://www.andreinc.net/feed.xml
-https://voussoir.net/writing/writing.atom
-https://blog.regehr.org/feed
-https://richiejp.com/atom.xml
-https://szymonkaliski.com/feed.xml
-https://world.hey.com/dhh/feed.atom
-https://mitchellh.com/feed.xml
-https://matt-rickard.com/rss
-https://neil.computer/rss/
-https://matduggan.com/rss/
-https://michael.stapelberg.ch/feed.xml
-https://journal.valeriansaliou.name/rss/
-https://www.duskborn.com/index.xml
-https://mirzapandzo.com/rss.xml
-https://mitjafelicijan.com/feed.xml
-https://offbeatpursuit.com/blog/index.rss
+https://theorangeduck.com/feeds/pages "blogs"
+https://geohot.github.io/blog/feed.xml "blogs"
+https://kristoff.it/index.xml "blogs"
+https://www.computerenhance.com/feed "blogs"
+https://tratt.net/laurie/news.rss "blogs"
+https://willhbr.net/feed.xml "blogs"
+https://beyondloom.com/blog/rss.xml "blogs"
+https://thomashunter.name/feed.rss "blogs"
+https://decuser.github.io/feed.xml "blogs"
+https://til.simonwillison.net/tils/feed.atom "blogs"
+https://www.andreinc.net/feed.xml "blogs"
+https://voussoir.net/writing/writing.atom "blogs"
+https://blog.regehr.org/feed "blogs"
+https://richiejp.com/atom.xml "blogs"
+https://szymonkaliski.com/feed.xml "blogs"
+https://world.hey.com/dhh/feed.atom "blogs"
+https://matt-rickard.com/rss "blogs"
+https://neil.computer/rss/ "blogs"
+https://matduggan.com/rss/ "blogs"
+https://michael.stapelberg.ch/feed.xml "blogs"
+https://journal.valeriansaliou.name/rss/ "blogs"
+https://www.duskborn.com/index.xml "blogs"
+https://mirzapandzo.com/rss.xml "blogs"
+https://mitjafelicijan.com/feed.xml "blogs"
+https://offbeatpursuit.com/blog/index.rss "blogs"
 
-https://crawl.develz.org/wordpress/feed
-https://go.dev/blog/feed.atom
-https://github.com/raysan5/raylib/releases.atom
-https://github.com/doitsujin/dxvk/releases.atom
-https://github.com/papers-we-love/papers-we-love/commits.atom
-https://github.com/nothings/stb/commits.atom
-https://github.com/nicbarker/clay/releases.atom
-https://github.com/cc65/cc65/commits.atom
+https://crawl.develz.org/wordpress/feed "releases"
+https://go.dev/blog/feed.atom "releases"
+https://github.com/papers-we-love/papers-we-love/commits.atom "releases"
+https://github.com/nothings/stb/commits.atom "releases"
 
-https://feeds.buzzsprout.com/1501960.rss
-https://corecursive.libsyn.com/feed
-https://seradio.libsyn.com/rss
-http://feeds2.feedburner.com/JupiterBroadcasting
-
-https://www.youtube.com/feeds/videos.xml?channel_id=UCqmugCqELzhIMNYnsjScXXw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCSju5G2aFaWMqn-_0YBtq5A
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUSck1dOH7VKmG4lRW7tZXg
-https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwgKmJM4ZJQRJ-U5NjvR2dg
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8DntJ-sBtgC-jA0yEjxqjw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCaTznQhurW5AaiYPbhEA-KA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVk4b-svNJoeytrrlOixebQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCNzszbnvQeFzObW0ghk0Ckw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCAMu6Dso0ENoNm3sKpQsy0g
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg
-https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5--wS0Ljbin1TjWQX6eafA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ
-https://www.youtube.com/feeds/videos.xml?channel_id=UCJetJ7nDNLlEzDLXv7KIo0w
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwgKmJM4ZJQRJ-U5NjvR2dg "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCS0N5baNlQWJCUrhCEo8WlA "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-0fWjosItIOD4ThhS6oyfA "videos"

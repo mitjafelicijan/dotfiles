@@ -3,9 +3,10 @@
 #   s3cmd xmlstarlet htop nvtop tmux xclip jq pipx newsboat
 #   stow rsync entr vim vifm xxd sbcl rlwrap tig
 #   clang clang-tidy clang-tools-extra clangd clang-analyzer
-# Additonal stuff:
+# Linters & Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest
+#   sudo npm i -g dockerfile_lint
 #   sudo npm i -g @biomejs/biome
 
 # Only run if the script is being sourced (bashrc).
@@ -47,6 +48,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	# Custom folder jump commands.
 	alias p='cd ~/Vault/projects'
 	alias j='cd ~/Junk/current'
+	alias s='cd ~/Vault/sandbox'
 	alias d='cd ~/Downloads'
 
 	# Additional path settings.

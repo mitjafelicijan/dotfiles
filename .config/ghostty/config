@@ -1,5 +1,5 @@
+theme = Harper
 background = 000000
-foreground = ffffff
 window-width = 100
 window-height = 50
 cursor-style = block

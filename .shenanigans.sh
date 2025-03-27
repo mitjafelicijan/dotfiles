@@ -57,6 +57,9 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH=$HOME/.local/bin:$PATH
 	export PATH=/usr/local/go/bin:$PATH
 
+	# Lua LSP
+	export PATH=$HOME/.local/bin/luals/bin:$PATH
+
 	# History and search. Stolen from J.
 	HISTCONTROL=ignoreboth
 	shopt -s histappend

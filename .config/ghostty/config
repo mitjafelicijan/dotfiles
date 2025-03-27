@@ -1,0 +1,11 @@
+background = 000000
+foreground = ffffff
+window-width = 100
+window-height = 50
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+confirm-close-surface = false
+font-family = Berkeley Mono
+font-style = Bold
+font-size = 14

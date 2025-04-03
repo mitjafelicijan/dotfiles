@@ -46,8 +46,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias gd='lazydocker'
 
 	# Custom folder jump commands.
+	alias j='cd ~/Junk'
 	alias p='cd ~/Vault/projects'
-	alias j='cd ~/Junk/current'
 	alias s='cd ~/Vault/sandbox'
 	alias d='cd ~/Downloads'
 
@@ -56,8 +56,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH=$HOME/go/bin:$PATH
 	export PATH=$HOME/.local/bin:$PATH
 	export PATH=/usr/local/go/bin:$PATH
-
-	# Lua LSP
+	export PATH=$HOME/Applications/google-cloud-sdk/bin:$PATH
 	export PATH=$HOME/.local/bin/luals/bin:$PATH
 
 	# History and search. Stolen from J.

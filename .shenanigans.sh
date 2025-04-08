@@ -83,7 +83,6 @@ backup() {
 	rsync -azhv /home/$USER/.bash_history_infinite bash_history_infinite
 	rsync -azhv /home/$USER/.ssh/ ssh
 	rsync -azhv /home/$USER/.aws/ aws
-	rsync -azhv /home/$USER/.gnupg/ gnupg/
 
 	# WoW settings and addons.
 	cd $VHOME

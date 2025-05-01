@@ -1,7 +1,7 @@
 # Software list:
 #   git gcc make cmake busybox cifs-utils tree hstr curl
 #   s3cmd xmlstarlet htop nvtop tmux xclip jq pipx newsboat
-#   stow rsync entr vim vifm xxd sbcl rlwrap tig
+#   stow rsync entr vim vifm xxd sbcl rlwrap tig ack
 #   clang clang-tidy clang-tools-extra clangd clang-analyzer
 # Linters & Additonal stuff:
 #   pipx install pyright
@@ -42,13 +42,17 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias tmux='tmux -u'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
+	alias ack='ack -S'
 	alias gg='lazygit'
 	alias gd='lazydocker'
+	alias tf='terraform'
+	alias tg='terragrunt'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'
 	alias p='cd ~/Vault/projects'
 	alias s='cd ~/Vault/sandbox'
+	alias n='cd ~/Vault/notes'
 	alias d='cd ~/Downloads'
 
 	# Additional path settings.
@@ -78,17 +82,23 @@ backup() {
 	VHOME=/home/$USER/Vault
 	ME=$(whoami)@$(hostname)
 
+	# Create folders etc.
+	cd $VHOME && mkdir -p $VHOME/dotfiles
+
 	# Everything dotfiles.
-	cd $VHOME && mkdir -p $VHOME/dotfiles && cd $VHOME/dotfiles
+	cd $VHOME/dotfiles
 	rsync -azhv /home/$USER/.bash_history_infinite bash_history_infinite
 	rsync -azhv /home/$USER/.ssh/ ssh
 	rsync -azhv /home/$USER/.aws/ aws
 
 	# WoW settings and addons.
-	cd $VHOME
-	rsync -azhv /home/$USER/Games/turtlewow/WTF turtlewow
-	rsync -azhv /home/$USER/Games/turtlewow/SuperWoWhook.dll turtlewow/
-	rsync -azhv /home/$USER/Games/turtlewow/start.sh turtlewow/
+	cd $VHOME/dotfiles
+	zip -r twow.zip \
+		/home/$USER/Games/turtlewow/WTF \
+		/home/$USER/Games/turtlewow/SuperWoWhook.dll \
+		/home/$USER/Games/turtlewow/nampower.dll \
+		/home/$USER/Games/turtlewow/dlls.txt \
+		/home/$USER/Games/turtlewow/wow.desktop
 
 	# Sync with NAS.
 	rsync -azhvpog \

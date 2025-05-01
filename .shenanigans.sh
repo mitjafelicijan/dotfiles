@@ -52,7 +52,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias j='cd ~/Junk'
 	alias p='cd ~/Vault/projects'
 	alias s='cd ~/Vault/sandbox'
-	alias n='cd ~/Vault/notes'
 	alias d='cd ~/Downloads'
 
 	# Additional path settings.

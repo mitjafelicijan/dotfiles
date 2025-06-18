@@ -47,6 +47,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias gd='lazydocker'
 	alias tf='terraform'
 	alias tg='terragrunt'
+	alias tgl='TERRAGRUNT_USE_LOCAL_SOURCES=1 terragrunt'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'

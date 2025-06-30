@@ -1,67 +1,37 @@
-# Software list:
-#   git gcc make cmake busybox cifs-utils tree hstr curl
-#   s3cmd xmlstarlet htop nvtop tmux xclip jq pipx newsboat
-#   stow rsync entr vim vifm xxd sbcl rlwrap tig ack
-#   clang clang-tidy clang-tools-extra clangd clang-analyzer
-# Linters & Additonal stuff:
-#   pipx install pyright
-#   go install golang.org/x/tools/gopls@latest
-#   sudo npm i -g dockerfile_lint
-#   sudo npm i -g @biomejs/biome
+# Software list (Void Linux):
+#   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
+#   file-roller xfce4-screenshooter xsetroot
+#   clang clang-tools-extra vim stow git curl tmux hstr tree make cmake
+#   entr ack lazygit newsboat htop
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	# Magical environment variables.
-	export NIX_SHELL_PRESERVE_PROMPT=1
 	export COLORTERM=truecolor
 	export TERM=xterm-256color
 	export VISUAL=vim
 	export EDITOR=vim
 
-	parse_git_branch() {
-		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-	}
-
-	is_inside_nix_shell() {
-		nix_shell_name="$(basename "$IN_NIX_SHELL" 2>/dev/null)"
-		if [[ -n "$nix_shell_name" ]]; then
-			echo " \e[0;36m(nix-shell)\e[0m"
-		fi
-	}
-
 	# Better prompt.
-	export PS1="\n[\033[38;5;166m\]\u@\h\[$(tput sgr0)\]] \033[90m\T\033[0m$(is_inside_nix_shell)\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \w\[$(tput sgr0)\] \n$ "
+	export PS1="\n# \u@\h \T \w\n# "
 
 	# General aliases.
 	alias l='ls -lh'
 	alias ll='ls -lha'
 	alias t='tree -L 2'
 	alias ..='cd ..'
-	alias grep='grep --color=always'
+	alias grep='grep -irn --color=always'
 	alias less='less -R'
 	alias tmux='tmux -u'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
 	alias ack='ack -S'
 	alias gg='lazygit'
-	alias gd='lazydocker'
-	alias tf='terraform'
-	alias tg='terragrunt'
-	alias tgl='TERRAGRUNT_USE_LOCAL_SOURCES=1 terragrunt'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'
-	alias p='cd ~/Vault/projects'
-	alias s='cd ~/Vault/sandbox'
+	alias p='cd ~/Projects'
 	alias d='cd ~/Downloads'
-
-	# Additional path settings.
-	export PATH=$HOME/Applications:$PATH
-	export PATH=$HOME/go/bin:$PATH
-	export PATH=$HOME/.local/bin:$PATH
-	export PATH=/usr/local/go/bin:$PATH
-	export PATH=$HOME/Applications/google-cloud-sdk/bin:$PATH
-	export PATH=$HOME/.local/bin/luals/bin:$PATH
 
 	# History and search. Stolen from J.
 	HISTCONTROL=ignoreboth
@@ -75,70 +45,3 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export HSTR_CONFIG=hicolor
 	if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 fi
-
-# Backup to NAS function. Much wow!
-backup() {
-	CWD=$(pwd)
-	VHOME=/home/$USER/Vault
-	ME=$(whoami)@$(hostname)
-
-	# Create folders etc.
-	cd $VHOME && mkdir -p $VHOME/dotfiles
-
-	# Everything dotfiles.
-	cd $VHOME/dotfiles
-	rsync -azhv /home/$USER/.bash_history_infinite bash_history_infinite
-	rsync -azhv /home/$USER/.ssh/ ssh
-	rsync -azhv /home/$USER/.aws/ aws
-
-	# WoW settings and addons.
-	cd $VHOME/dotfiles
-	zip -r twow.zip \
-		/home/$USER/Games/turtlewow/WTF \
-		/home/$USER/Games/turtlewow/SuperWoWhook.dll \
-		/home/$USER/Games/turtlewow/nampower.dll \
-		/home/$USER/Games/turtlewow/dlls.txt \
-		/home/$USER/Games/turtlewow/wow.desktop
-
-	# Sync with NAS.
-	rsync -azhvpog \
-		--exclude '.venv/' \
-		--exclude '.git/' \
-		--exclude '.import/' \
-		--exclude '.godot/' \
-		--exclude '.zig-cache/' \
-		--exclude 'node_modules/' \
-		--delete \
-		$VHOME/ /media/Void/Backup/$ME/
-
-	# Add to log file.
-	echo `date +"%D %T"` >> ~/.vault.log
-	notify-send "Backup finished successfully."
-
-	# Return back to original directory
-	cd $CWD
-}
-
-# Toggles between pulseaudio sinks in round-robin.
-# Gnome shortcut: ptyxis -- bash -c 'source ~/.shenanigans.sh && togglesink'
-togglesink() {
-	sinks=($(pactl list short sinks | awk '{print $2}'))
-	current_sink=$(pactl get-default-sink)
-	current_index=-1
-
-	for i in "${!sinks[@]}"; do
-		if [[ "${sinks[$i]}" == "$current_sink" ]]; then
-			current_index=$i
-			break
-		fi
-	done
-
-	if [[ $current_index -eq -1 ]]; then
-		next_index=0
-	else
-		next_index=$(( (current_index + 1) % ${#sinks[@]} ))
-	fi
-
-	pactl set-default-sink "${sinks[$next_index]}"
-	notify-send "Switched to sink: ${sinks[$next_index]}"
-}

@@ -31,5 +31,3 @@ let g:ale_hover_to_floating_preview = 1
 let g:ale_detail_to_floating_preview = 1
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
-let g:ale_linters = { 'c': ['clangd'], 'cpp': ['clangd'] }
-let g:ale_fixers = { 'c': ['clangd'], 'cpp': ['clangd'] }

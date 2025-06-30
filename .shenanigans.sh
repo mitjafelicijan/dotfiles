@@ -1,8 +1,8 @@
 # Software list (Void Linux):
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
-#   file-roller xfce4-screenshooter xsetroot
+#   file-roller xfce4-screenshooter xfce4-plugins xsetroot thunar-archive-plugin
 #   clang clang-tools-extra vim stow git curl tmux hstr tree make cmake
-#   entr ack lazygit newsboat htop
+#   entr ack lazygit newsboat htop mc
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
@@ -12,8 +12,12 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export VISUAL=vim
 	export EDITOR=vim
 
+	git_branch() {
+		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+	}
+
 	# Better prompt.
-	export PS1="\n# \u@\h \T \w\n# "
+	export PS1='\n# \u@\h \T \w $(git_branch)\n# '
 
 	# General aliases.
 	alias l='ls -lh'
@@ -45,3 +49,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export HSTR_CONFIG=hicolor
 	if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 fi
+
+wow() {
+	cd ~/Games/turtlewow && ./wow.sh
+}

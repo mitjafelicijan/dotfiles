@@ -60,16 +60,16 @@ backup() {
 	mkdir -p /tmp/$SNAPSHOT
 
 	archive_sets=(
-		"ssh.zip /home/$USER/.ssh"
-		"bash_history_infinite.zip /home/$USER/.bash_history_infinite"
-		"projects.zip /home/$USER/Projects"
-		"twow.zip /home/$USER/Games/turtlewow/WTF /home/$USER/Games/turtlewow/SuperWoWhook.dll /home/$USER/Games/turtlewow/dlls.txt /home/$USER/Games/turtlewow/start.sh"
+		"ssh.zip $HOME/.ssh"
+		"bash_history_infinite.zip $HOME/.bash_history_infinite"
+		"projects.zip $HOME/Projects"
+		"twow.zip $HOME/Games/turtlewow/WTF $HOME/Games/turtlewow/SuperWoWhook.dll $HOME/Games/turtlewow/dlls.txt $HOME/Games/turtlewow/wow.sh"
 	)
 
 	for entry in "${archive_sets[@]}"; do
 		zip -r /tmp/$SNAPSHOT/${entry} -x "**/.venv/*" "**/.git/*" "**/.import/*" "**/.godot/*" "**/.zig-cache/*" "**/node_modules/*"
 	done
 
-	rsync -azhvpog /tmp/$SNAPSHOT /media/Void/Backup
+	rsync -azhv /tmp/$SNAPSHOT /media/Void/Backup
 	rm -Rf /tmp/$SNAPSHOT
 }

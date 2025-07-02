@@ -1,7 +1,7 @@
 [user]
 	name = Mitja Felicijan
 	email = mitja.felicijan@gmail.com
-	signingkey = /home/m/.ssh/id_rsa.pub
+	signingkey = ~/.ssh/id_rsa.pub
 [core]
 	editor = vim
 [commit]

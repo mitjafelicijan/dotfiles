@@ -15,12 +15,10 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export VISUAL=vim
 	export EDITOR=vim
 
-	git_branch() {
-		git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-	}
-
-	# Better prompt.
-	export PS1='\n# \u@\h \T \w $(git_branch)\n# '
+	# Customized Bash prompt.
+	SYMBOL='\[\e[38;5;214m\]\$\[\e[0m\]'
+	git_branch() { git branch 2>/dev/null | sed -n 's/^\* \(.*\)/(\1)/p'; }
+	export PS1="\n$SYMBOL \u@\h \t \w \$(git_branch)\n$SYMBOL "
 
 	# General aliases.
 	alias l='ls -lh'

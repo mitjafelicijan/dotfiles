@@ -10,6 +10,7 @@ call plug#end()
 set laststatus=2 encoding=utf8 spelllang=en_us tabstop=4 shiftwidth=4 path=**
 set number relativenumber autoindent cursorline ignorecase signcolumn=yes
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
+set hlsearch incsearch
 colorscheme wildcharm
 
 nnoremap <C-Right> :bnext<cr>

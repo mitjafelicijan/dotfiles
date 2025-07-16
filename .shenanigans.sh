@@ -1,8 +1,8 @@
 # Software list (Void Linux):
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 #   file-roller xfce4-screenshooter xfce4-plugins xsetroot thunar-archive-plugin
-#   clang clang-tools-extra vim stow git curl tmux hstr tree make cmake xclip
-#   entr ack lazygit newsboat htop mc mpv cifs-utils zip rsync python3-pipx jq
+#   clang clang-tools-extra vim stow git curl tmux hstr tree make cmake xclipi jq
+#   entr ack lazygit newsboat htop mc mpv cifs-utils zip rsync python3-pipx jq conky
 # Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest
@@ -25,7 +25,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias ll='ls -lha'
 	alias t='tree -L 2'
 	alias ..='cd ..'
-	alias grep='grep -irn --color=always'
 	alias less='less -R'
 	alias tmux='tmux -u'
 	alias server='python3 -m http.server 6969'

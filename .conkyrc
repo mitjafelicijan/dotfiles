@@ -44,7 +44,7 @@ ${color grey}CPU Temp${alignr}$color ${exec sensors | grep 'Package id 0:' | awk
 ${color grey}GPU Temp${alignr}$color ${exec nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C
 
 ${color grey}Net Up: ${upspeed enp5s0}${alignr}Net Down: ${downspeed enp5s0}$color
-${upspeedgraph enp5s0 20,190 ff0000}${alignr}${downspeedgraph enp5s0 20,190 00ff00}
+${upspeedgraph enp5s0 20,200 ff0000}${alignr}${downspeedgraph enp5s0 20,200 00ff00}
 
 ${color grey}CPU Usage${alignr}$color $cpu%
 ${cpubar 10}

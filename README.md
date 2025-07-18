@@ -5,3 +5,11 @@ git clone git@github.com:mitjafelicijan/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles && stow .
 ```
 
+```ini
+# /usr/share/xsessions/cwm.desktop
+[Desktop Entry]
+Name=cwm
+Comment=cwm
+Exec=cwm
+Type=Application
+```

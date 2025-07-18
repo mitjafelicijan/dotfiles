@@ -2,7 +2,7 @@ fontname "Berkeley Mono:size=8:bold"
 autogroup 1
 borderwidth 2
 color ungroupborder yellow
-ignore conky
+sticky yes
 
 unbind-key all
 bind-key 4-Return 'st -f "Berkeley Mono:style=Bold:size=10" -g 110x50'

@@ -10,6 +10,8 @@ bind-key Print "sh -c 'maim -s | xclip -selection clipboard -t image/png'"
 bind-key 4-e "thunar"
 bind-key 4-b "chromium --new-window"
 bind-key 4-p "rofi -show drun"
+bind-key 4-z "xmagnify -s 1000 -z 3"
+bind-key 4-bracketright "pats -t"
 bind-key 4S-q quit
 bind-key 4S-r restart
 bind-key 4-q window-close

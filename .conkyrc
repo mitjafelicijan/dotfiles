@@ -17,6 +17,7 @@ conky.config = {
 }
 
 conky.text = [[
+
 ${alignr}${time %A} ${time %H:%M} ${time %Y-%m-%d}
 ${hr}
 Uptime${alignr} $uptime
@@ -24,6 +25,7 @@ Kernel${alignr} $kernel
 Frequency${alignr} $freq_g GHz
 CPU Temp${alignr} ${exec sensors | grep 'Package id 0:' | awk '{print $4}' | sed 's/+//'}
 GPU Temp${alignr} ${exec nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C
+Audio Sink${alignr}${exec pats -l}
 
 CPU Usage${alignr} $cpu%
 ${cpugraph}

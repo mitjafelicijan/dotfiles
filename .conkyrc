@@ -37,7 +37,7 @@ ${memgraph}
 Disk IO${alignr} $diskio
 ${diskiograph /dev/nvme0n1}
 Net Up: ${upspeed enp5s0}${alignr}Net Down: ${downspeed enp5s0}
-${upspeedgraph enp5s0 20,110 ff0000}${alignr}${downspeedgraph enp5s0 20,110 00ff00}
+${upspeedgraph enp5s0 20,115 ff0000}${alignr}${downspeedgraph enp5s0 20,115 00ff00}
 
 World Clocks
 $hr

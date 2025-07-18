@@ -34,4 +34,4 @@ unbind-mouse all
 bind-mouse 4-1 window-move
 bind-mouse 4-3 window-resize
 bind-mouse 1 menu-window
-bind-mouse 2 menu-group
+bind-mouse 3 menu-group

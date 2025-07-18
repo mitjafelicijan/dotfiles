@@ -3,7 +3,7 @@
 #   file-roller xfce4-screenshooter xfce4-plugins xsetroot thunar-archive-plugin
 #   clang clang-tools-extra vim stow git curl tmux hstr tree make cmake xclip jq
 #   entr ack lazygit newsboat htop mc mpv cifs-utils zip rsync python3-pipx cwm
-#   lm_sensors conky maim xlockmore
+#   lm_sensors conky maim xlockmore rofi
 # Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest

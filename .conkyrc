@@ -1,21 +1,19 @@
 conky.config = {
 	alignment = 'top_right',
-	background = false,
-	own_window = true,
-	use_xft = true,
-	font = 'Berkeley Mono:bold:size=11',
-	own_window_type = 'dock',
+	background = true,
 	double_buffer = true,
-	default_color = 'grey',
-	minimum_width = 346,
-	maximum_width = 346,
-	default_graph_height = 20,
-	gap_x = 30,
-	gap_y = 60,
-
-	-- Transparency settings. 
+	default_color = 'darkgrey',
+	use_xft = true,
+	font = 'Berkeley Mono:bold:size=8',
+	own_window = true,
 	own_window_argb_visual = true,
-	own_window_transparent = true,
+	own_window_type = 'desktop',
+	own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,above',
+	minimum_width = 246,
+	maximum_width = 246,
+	default_graph_height = 20,
+	gap_x = 20,
+	gap_y = 20,
 }
 
 conky.text = [[
@@ -27,25 +25,27 @@ GPU Temp${alignr} ${exec nvidia-smi --query-gpu=temperature.gpu --format=csv,noh
 
 CPU Usage${alignr} $cpu%
 ${cpugraph}
-${cpugraph cpu1 15,30}${offset 5}${cpugraph cpu2 15,30}${offset 5}${cpugraph cpu3 15,30}${offset 5}${cpugraph cpu4 15,30}${offset 5}${cpugraph cpu5 15,30}${offset 5}${cpugraph cpu6 15,30}${offset 5}${cpugraph cpu7 15,30}${offset 5}${cpugraph cpu8 15,30}${offset 5}${cpugraph cpu9 15,30}${offset 5}${cpugraph cpu10 15,30}
-${cpugraph cpu11 15,30}${offset 5}${cpugraph cpu12 15,30}${offset 5}${cpugraph cpu13 15,30}${offset 5}${cpugraph cpu14 15,30}${offset 5}${cpugraph cpu15 15,30}${offset 5}${cpugraph cpu16 15,30}${offset 5}${cpugraph cpu17 15,30}${offset 5}${cpugraph cpu18 15,30}${offset 5}${cpugraph cpu19 15,30}${offset 5}${cpugraph cpu20 15,30}
+${cpugraph cpu1 15,20}${offset 5}${cpugraph cpu2 15,20}${offset 5}${cpugraph cpu3 15,20}${offset 5}${cpugraph cpu4 15,20}${offset 5}${cpugraph cpu5 15,20}${offset 5}${cpugraph cpu6 15,20}${offset 5}${cpugraph cpu7 15,20}${offset 5}${cpugraph cpu8 15,20}${offset 5}${cpugraph cpu9 15,20}${offset 5}${cpugraph cpu10 15,20}
+${cpugraph cpu11 15,20}${offset 5}${cpugraph cpu12 15,20}${offset 5}${cpugraph cpu13 15,20}${offset 5}${cpugraph cpu14 15,20}${offset 5}${cpugraph cpu15 15,20}${offset 5}${cpugraph cpu16 15,20}${offset 5}${cpugraph cpu17 15,20}${offset 5}${cpugraph cpu18 15,20}${offset 5}${cpugraph cpu19 15,20}${offset 5}${cpugraph cpu20 15,20}
 
 RAM Usage${alignr} $mem/$memmax - $memperc%
 ${memgraph}
 Disk IO${alignr} $diskio
 ${diskiograph /dev/nvme0n1}
-Up: ${upspeed enp5s0}${alignr}Down: ${downspeed enp5s0}
-${upspeedgraph enp5s0 20,160 ff0000}${alignr}${downspeedgraph enp5s0 20,160 00ff00}
+Net Up: ${upspeed enp5s0}${alignr}Net Down: ${downspeed enp5s0}
+${upspeedgraph enp5s0 20,110 ff0000}${alignr}${downspeedgraph enp5s0 20,110 00ff00}
 
 World Clocks
- New York${alignr}${tztime America/New_York %a %H:%M}
- Brisbane${alignr}${tztime Australia/Brisbane %a %H:%M}
- San Francisco${alignr}${tztime America/Los_Angeles %a %H:%M}
+$hr
+New York${alignr}${tztime America/New_York %a %H:%M}
+Brisbane${alignr}${tztime Australia/Brisbane %a %H:%M}
+San Francisco${alignr}${tztime America/Los_Angeles %a %H:%M}
 
-Top Processes        PID   CPU%   MEM%
- ${top name 1}${top pid 1} ${top cpu 1} ${top mem 1}
- ${top name 2}${top pid 2} ${top cpu 2} ${top mem 2}
- ${top name 3}${top pid 3} ${top cpu 3} ${top mem 3}
- ${top name 4}${top pid 4} ${top cpu 4} ${top mem 4}
- ${top name 5}${top pid 5} ${top cpu 5} ${top mem 5}
+Top Processes        PID   CPU%   MEM%${color}
+$hr
+${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+${top name 5} ${top pid 5} ${top cpu 5} ${top mem 5}
 ]]

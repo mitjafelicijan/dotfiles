@@ -1,7 +1,7 @@
 # Software list (Void Linux):
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 #   file-roller xfce4-plugins thunar-archive-plugin
-#   lm_sensors conky maim xlockmore rofi picom cwm xclip xsetroot
+#   lm_sensors conky maim xlockmore rofi picom cwm xclip xsetroot st
 #   clang clang-tools-extra vim stow git curl tmux hstr tree make cmake jq
 #   entr ack lazygit newsboat htop mc mpv cifs-utils zip rsync python3-pipx
 # Additonal stuff:

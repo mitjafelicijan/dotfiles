@@ -12,11 +12,13 @@ conky.config = {
 	minimum_width = 246,
 	maximum_width = 246,
 	default_graph_height = 20,
-	gap_x = 20,
-	gap_y = 20,
+	gap_x = 10,
+	gap_y = 10,
 }
 
 conky.text = [[
+${alignr}${time %A} ${time %H:%M} ${time %Y-%m-%d}
+${hr}
 Uptime${alignr} $uptime
 Kernel${alignr} $kernel
 Frequency${alignr} $freq_g GHz

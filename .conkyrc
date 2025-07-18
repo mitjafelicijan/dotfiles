@@ -17,7 +17,6 @@ conky.config = {
 }
 
 conky.text = [[
-
 ${alignr}${time %A} ${time %H:%M} ${time %Y-%m-%d}
 ${hr}
 Uptime${alignr} $uptime

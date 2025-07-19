@@ -2,6 +2,7 @@ fontname "Berkeley Mono:size=8:bold"
 borderwidth 2
 color ungroupborder yellow
 sticky yes
+moveamount 100
 unbind-key all
 unbind-mouse all
 
@@ -37,7 +38,17 @@ bind-key 4S-4 window-movetogroup-4
 bind-key 4S-5 window-movetogroup-5
 bind-key 4S-6 window-movetogroup-6
 
+bind-key 4-Up window-move-up
+bind-key 4-Down window-move-down
+bind-key 4-Left window-move-left
+bind-key 4-Right window-move-right
+bind-key MC-Up window-resize-up-big
+bind-key MC-Down window-resize-down-big
+bind-key MC-Left window-resize-left-big
+bind-key MC-Right window-resize-right-big
+
 bind-mouse 4-1 window-move
 bind-mouse 4-3 window-resize
-bind-mouse 2 menu-group
-bind-mouse 3 menu-window
+bind-mouse 1 menu-window
+bind-mouse 2 menu-ssh
+bind-mouse 3 menu-group

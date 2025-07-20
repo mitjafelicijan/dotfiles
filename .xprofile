@@ -1,3 +1,4 @@
+xset r off
 xinput --set-prop "pointer:Logitech MX Master 3" "libinput Accel Speed" -0.8
 picom --vsync --backend glx &
 conky -d &

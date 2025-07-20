@@ -17,7 +17,7 @@ conky.config = {
 }
 
 conky.text = [[
-${alignr}${time %A} ${time %H:%M} ${time %Y-%m-%d}
+Group: ${exec wmctrl -l | awk -v id=$(printf "0x%08x" "$(xdotool getwindowfocus)") '$1 == id {print $2}'}${alignr}${time %A} ${time %H:%M} ${time %Y-%m-%d}
 ${hr}
 Uptime${alignr} $uptime
 Kernel${alignr} $kernel

@@ -1,5 +1,6 @@
 fontname "Berkeley Mono:size=8:bold"
-borderwidth 2
+borderwidth 3
+color activeborder khaki
 sticky yes
 moveamount 100
 unbind-key all
@@ -7,7 +8,7 @@ unbind-mouse all
 
 bind-key 4-Return 'st -f "Berkeley Mono:style=Bold:size=10" -g 110x60'
 bind-key Print "sh -c 'maim -s | xclip -selection clipboard -t image/png'"
-bind-key 4-e "chromium --new-window"
+bind-key 4-e /home/m/Applications/Brave-nightly-v1.82.99-x86_64.AppImage --new-window"
 bind-key 4-p "rofi -show drun"
 bind-key 4-z "xmagnify -s 1000 -z 3"
 bind-key 4-bracketright "pats -t"

@@ -1,9 +1,10 @@
 # Software list (Void Linux):
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 #   file-roller xfce4-plugins thunar-archive-plugin
-#   lm_sensors conky maim xlockmore rofi picom cwm xclip xsetroot st xdotool
-#   clang clang-tools-extra vim stow git curl tmux hstr tree make cmake jq
-#   entr ack lazygit newsboat htop mc mpv cifs-utils zip rsync python3-pipx
+#   lm_sensors conky maim xlockmore rofi picom cwm xclip xsetroot st
+#   xss-lock wmctrl zip mc htop entr ack cifs-utils rsync xdotool jq
+#   clang clang-tools-extra vim git curl tmux hstr tree make cmake
+#   stow newsboat mpv cifs-utils rsync python3-pipx lazygit
 # Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest
@@ -54,6 +55,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	# Custom paths.
 	export PATH="$PATH:$HOME/.local/bin"
 	export PATH="$PATH:$HOME/go/bin"
+	export PATH="$PATH:$HOME/Applications"
 fi
 
 backup() {

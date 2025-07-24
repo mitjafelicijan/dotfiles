@@ -20,7 +20,6 @@ configuration {
 prompt, inputbar, entry {
 	text-color: white;
 	padding: 0 10 10 0;
-	text-style: bold;
 }
 
 listview {

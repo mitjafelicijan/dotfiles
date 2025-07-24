@@ -20,7 +20,6 @@ nnoremap <C-b> :CtrlPBuffer<cr>
 nnoremap <Leader>e :nohlsearch<cr>
 nnoremap <Leader>q :ALEHover<cr>
 nnoremap <Leader>w :ALEDetail<cr>
-nnoremap <Leader>gc :r !< % lazycommit<cr>
 
 nmap <silent> gr :ALEFindReferences<cr>
 nmap <silent> gd :ALEGoToDefinition<cr>

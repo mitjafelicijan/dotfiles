@@ -21,6 +21,8 @@ bind-key 4S-q quit
 bind-key 4S-r restart
 bind-key 4-q window-close
 bind-key 4-l lock
+bind-key 4-z window-vmaximize
+bind-key 4-x window-hmaximize
 bind-key M-Tab window-cycle
 bind-key 4-Tab group-cycle
 

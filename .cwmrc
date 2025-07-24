@@ -10,7 +10,7 @@ bind-key 4-Return 'st -f "Berkeley Mono:style=Bold:size=10" -g 110x60'
 bind-key Print "sh -c 'maim -s | xclip -selection clipboard -t image/png'"
 bind-key 4-e /home/m/Applications/Brave-nightly-v1.82.99-x86_64.AppImage --new-window"
 bind-key 4-p "rofi -show drun"
-bind-key 4-z "xmagnify -s 1000 -z 3"
+bind-key 4-s "xmagnify -s 1000 -z 3"
 bind-key 4-b "wmctrl -r :ACTIVE: -e 0,3408,1045,416,236"
 bind-key 4-bracketright "pats -t"
 bind-key XF86AudioLowerVolume "pactl set-sink-volume @DEFAULT_SINK@ -5%"
@@ -21,6 +21,7 @@ bind-key 4S-q quit
 bind-key 4S-r restart
 bind-key 4-q window-close
 bind-key 4-l lock
+bind-key 4-f window-fullscreen
 bind-key 4-z window-vmaximize
 bind-key 4-x window-hmaximize
 bind-key M-Tab window-cycle
@@ -48,5 +49,5 @@ bind-key 4S-Right window-resize-right
 bind-mouse 4-1 window-move
 bind-mouse 4-3 window-resize
 bind-mouse 1 menu-window
-bind-mouse 2 menu-ssh
+bind-mouse 2 menu-exec-wm
 bind-mouse 3 menu-group

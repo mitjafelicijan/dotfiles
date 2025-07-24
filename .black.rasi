@@ -1,6 +1,6 @@
 configuration {
 	show-icons: false;
-	disable-history: true;
+	disable-history: false;
 }
 
 * {

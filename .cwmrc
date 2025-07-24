@@ -49,5 +49,4 @@ bind-key 4S-Right window-resize-right
 bind-mouse 4-1 window-move
 bind-mouse 4-3 window-resize
 bind-mouse 1 menu-window
-bind-mouse 2 menu-exec-wm
 bind-mouse 3 menu-group

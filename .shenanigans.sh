@@ -12,13 +12,12 @@
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	# Magical environment variables.
+	export LANG=en_US.UTF-8
+	export LC_ALL=en_US.UTF-8
 	export COLORTERM=truecolor
 	export TERM=xterm-256color
 	export VISUAL=vim
 	export EDITOR=vim
-
-	export LANG=en_US.UTF-8
-	export LC_ALL=en_US.UTF-8
 
 	# Customized Bash prompt.
 	SYMBOL='\[\e[38;5;214m\]\$\[\e[0m\]'

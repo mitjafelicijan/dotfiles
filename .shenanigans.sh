@@ -17,14 +17,17 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export VISUAL=vim
 	export EDITOR=vim
 
+	export LANG=en_US.UTF-8
+	export LC_ALL=en_US.UTF-8
+
 	# Customized Bash prompt.
 	SYMBOL='\[\e[38;5;214m\]\$\[\e[0m\]'
 	git_branch() { git branch 2>/dev/null | sed -n 's/^\* \(.*\)/(\1)/p'; }
 	export PS1="\n$SYMBOL \u@\h \t \w \$(git_branch)\n$SYMBOL "
 
 	# General aliases.
-	alias l='ls -lh'
-	alias ll='ls -lha'
+	alias l='ls -lh --group-directories-first'
+	alias ll='ls -lha --group-directories-first'
 	alias t='tree -L 2'
 	alias ..='cd ..'
 	alias less='less -R'

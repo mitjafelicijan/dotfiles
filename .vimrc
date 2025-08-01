@@ -7,10 +7,10 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
 call plug#end()
 
-set laststatus=2 encoding=utf8 spelllang=en_us tabstop=4 shiftwidth=4 path=**
+set laststatus=2 encoding=utf8 spelllang=en_us tabstop=4 shiftwidth=4
 set number relativenumber autoindent cursorline ignorecase signcolumn=yes
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
-set hlsearch incsearch
+set hlsearch incsearch backspace=indent,eol,start path=**
 colorscheme wildcharm
 
 nnoremap <C-Right> :bnext<cr>

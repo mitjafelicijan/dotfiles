@@ -31,11 +31,9 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias ..='cd ..'
 	alias less='less -R'
 	alias tmux='tmux -u'
-	alias ack='ack -S'
 	alias gg='lazygit'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
-	alias wow='sh ~/Games/turtlewow/wow.sh &'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'

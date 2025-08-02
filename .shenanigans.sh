@@ -4,7 +4,7 @@
 #   lm_sensors conky maim xlockmore rofi picom cwm xclip xsetroot st
 #   xss-lock wmctrl zip mc htop entr ack cifs-utils rsync xdotool jq
 #   clang clang-tools-extra vim git curl tmux hstr tree make cmake
-#   stow newsboat mpv rsync python3-pipx lazygit
+#   stow newsboat mpv rsync python3-pipx lazygit fossil
 # Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest
@@ -75,6 +75,13 @@ backup() {
 
 	rsync -azhv /tmp/$SNAPSHOT /media/Void/Backup
 	rm -Rf /tmp/$SNAPSHOT
+}
+
+pushcode() {
+	find ~/Projects/ -type f -name "*.fossil" | while read -r file; do
+		s3cmd put "$file" s3://vault/code/
+		s3cmd setacl s3://vault/code/$(basename $file) --acl-public
+	done
 }
 
 screenrecord() {

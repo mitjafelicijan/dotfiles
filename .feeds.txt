@@ -31,3 +31,4 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCTAfm-YD2M9xzvbYvRc5ttA "vi
 https://www.youtube.com/feeds/videos.xml?channel_id=UCoL8olX-259lS1N6QPyP4IQ "videos"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC6107grRI4m0o2-emgoDnAA "videos"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2avWDLN1EI3r1RZ_dlSxCw "videos"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMN0a7GHQnC6H74SmCGSmdw "videos"

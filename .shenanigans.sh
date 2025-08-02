@@ -76,3 +76,7 @@ backup() {
 	rsync -azhv /tmp/$SNAPSHOT /media/Void/Backup
 	rm -Rf /tmp/$SNAPSHOT
 }
+
+screenrecord() {
+	ffmpeg -f x11grab -s 3840x2560 -i :0.0 -r 60 -vcodec h264_nvenc -preset fast ~/Videos/$(date +%Y-%m-%d-%H-%M-%S).mp4
+}

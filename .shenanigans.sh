@@ -4,7 +4,7 @@
 #   lm_sensors conky maim xlockmore rofi picom cwm xclip xsetroot st
 #   xss-lock wmctrl zip mc htop entr ack cifs-utils rsync xdotool jq
 #   clang clang-tools-extra vim git curl tmux hstr tree make cmake
-#   stow newsboat mpv rsync python3-pipx lazygit fossil
+#   ctags stow newsboat mpv rsync python3-pipx lazygit fossil
 # Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest

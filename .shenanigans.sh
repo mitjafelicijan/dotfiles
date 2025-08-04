@@ -77,13 +77,6 @@ backup() {
 	rm -Rf /tmp/$SNAPSHOT
 }
 
-pushcode() {
-	find ~/Projects/ -type f -name "*.fossil" | while read -r file; do
-		s3cmd put "$file" s3://vault/code/
-		s3cmd setacl s3://vault/code/$(basename $file) --acl-public
-	done
-}
-
 screenrecord() {
 	ffmpeg -f x11grab -s 3840x2560 -i :0.0 -r 60 -vcodec h264_nvenc -preset fast ~/Videos/$(date +%Y-%m-%d-%H-%M-%S).mp4
 }

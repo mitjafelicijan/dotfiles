@@ -17,6 +17,7 @@ https://www.duskborn.com/index.xml "blogs"
 https://mirzapandzo.com/rss.xml "blogs"
 https://offbeatpursuit.com/blog/index.rss "blogs"
 https://tomscii.sig7.se/feed.xml "blogs"
+https://protesilaos.com/master.xml "blogs"
 
 https://crawl.develz.org/wordpress/feed "releases"
 https://go.dev/blog/feed.atom "releases"

@@ -19,7 +19,8 @@ nnoremap <C-q> :copen<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
 nnoremap <Leader>q :nohlsearch<cr>
 nnoremap <Leader>c :silent call system('ctags --c++-kinds=+p -R .')<CR>
-nnoremap <leader>g :vimgrep /<C-r><C-w>/ **/*<CR>:copen<CR>
+nnoremap <leader>g :vimgrepadd /<C-r><C-w>/gj **/*<CR>:copen<CR>
+nnoremap <leader>t :vimgrepadd /TODO:\\|FIXME:\\|XXX:/gj **/*<CR>:copen<CR>
 
 let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = ''

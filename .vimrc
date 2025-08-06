@@ -7,10 +7,10 @@ call plug#begin()
 	Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
-set path+=** laststatus=2 encoding=utf8 spelllang=en_us tabstop=4 shiftwidth=4
-set number relativenumber autoindent cursorline ignorecase hlsearch incsearch 
+set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
+set path+=** number autoindent cursorline ignorecase hlsearch incsearch
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
-set backspace=indent,eol,start completeopt=menuone
+set backspace=indent,eol,start completeopt=menuone grepprg=rg\ --vimgrep
 colorscheme wildcharm
 
 nnoremap <C-Right> :bnext<cr>
@@ -19,8 +19,7 @@ nnoremap <C-q> :copen<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
 nnoremap <Leader>q :nohlsearch<cr>
 nnoremap <Leader>c :silent call system('ctags --c++-kinds=+p -R .')<CR>
-nnoremap <leader>g :vimgrepadd /<C-r><C-w>/gj **/*<CR>:copen<CR>
-nnoremap <leader>t :vimgrepadd /TODO:\\|FIXME:\\|XXX:/gj **/*<CR>:copen<CR>
+nnoremap <leader>r :grep <C-r><C-w><CR>:copen<CR>
 
 let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = ''

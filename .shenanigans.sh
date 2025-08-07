@@ -1,10 +1,10 @@
 # Software list (Void Linux):
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 #   file-roller xfce4-plugins thunar-archive-plugin
-#   lm_sensors conky maim xlockmore rofi picom cwm xclip xsetroot st
-#   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq ripgrep gdb
-#   clang clang-tools-extra vim git curl tmux hstr tree make cmake
-#   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc xdotool
+#   lm_sensors conky maim xlockmore picom cwm xclip xsetroot xdotool
+#   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st
+#   clang clang-tools-extra vim git curl tmux hstr tree make cmake gdb
+#   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc
 # Additonal stuff:
 #   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest

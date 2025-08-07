@@ -1,5 +1,4 @@
 xset r rate 400 20
-xset -r 22
 xset s 300
 
 xss-lock -- xlock &

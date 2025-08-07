@@ -1,4 +1,4 @@
-set nocompatible noexrc secure
+set nocompatible exrc secure
 filetype plugin on
 
 call plug#begin()

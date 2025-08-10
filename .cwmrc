@@ -45,7 +45,7 @@ bind-key 4S-Up window-resize-up
 bind-key 4S-Down window-resize-down
 bind-key 4S-Left window-resize-left
 bind-key 4S-Right window-resize-right
-bind-key 4C-Top window-snap-top
+bind-key 4C-Up window-snap-up
 bind-key 4C-Down window-snap-down
 bind-key 4C-Left window-snap-left
 bind-key 4C-Right window-snap-right

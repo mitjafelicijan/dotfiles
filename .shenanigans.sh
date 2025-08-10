@@ -6,8 +6,9 @@
 #   clang clang-tools-extra vim git curl tmux hstr tree make cmake gdb
 #   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc
 # Additonal stuff:
-#   pipx install pyright
 #   go install golang.org/x/tools/gopls@latest
+#   pipx install pyright mdformat
+#   pipx inject mdformat mdformat-gfm
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
@@ -37,6 +38,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'
+	alias n='cd ~/Notes'
 	alias p='cd ~/Projects'
 	alias d='cd ~/Downloads'
 
@@ -66,6 +68,7 @@ backup() {
 		"ssh.zip $HOME/.ssh"
 		"bash_history_infinite.zip $HOME/.bash_history_infinite"
 		"projects.zip $HOME/Projects"
+		"notes.zip $HOME/Notes"
 		"twow.zip $HOME/Games/turtlewow/WTF $HOME/Games/turtlewow/SuperWoWhook.dll $HOME/Games/turtlewow/dlls.txt $HOME/Games/turtlewow/wow.sh"
 	)
 

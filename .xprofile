@@ -1,5 +1,6 @@
 xset r rate 400 20
-xset s 300
+xset dpms 0 0 1800
+xset s 900
 
 xss-lock -- xlock &
 xinput --set-prop "pointer:Logitech MX Master 3" "libinput Accel Speed" -0.8

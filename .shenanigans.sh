@@ -2,7 +2,7 @@
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 #   file-roller xfce4-plugins thunar-archive-plugin
 #   lm_sensors conky maim xlockmore picom cwm xclip xsetroot xdotool
-#   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st
+#   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st lynx
 #   clang clang-tools-extra vim git curl tmux hstr tree make cmake gdb
 #   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc
 # Additonal stuff:

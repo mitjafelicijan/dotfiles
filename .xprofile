@@ -1,4 +1,5 @@
-xset r rate 400 20
+xkbset bo 50
+xset r rate 400 30
 xset dpms 0 0 1800
 xset s 900
 

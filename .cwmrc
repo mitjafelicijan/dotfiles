@@ -8,6 +8,7 @@ unbind-mouse all
 
 bind-key 4-Return 'st -f "Berkeley Mono:style=Bold:size=10" -g 110x60'
 bind-key Print "sh -c 'maim -s | xclip -selection clipboard -t image/png'"
+bind-key C-Escape "sh -c 'maim -s | xclip -selection clipboard -t image/png'"
 bind-key 4-e /home/m/Applications/brave --new-window"
 bind-key 4-p "rofi -show drun -theme ~/.black.rasi"
 bind-key 4-s "xmagnify -s 1000 -z 3"

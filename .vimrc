@@ -5,6 +5,7 @@ call plug#begin()
 	Plug 'tpope/vim-commentary'
 	Plug 'mitjafelicijan/sniper.vim'
 	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'tvaintrob/bicep.vim'
 call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4

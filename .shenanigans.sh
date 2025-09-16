@@ -4,7 +4,7 @@
 #   lm_sensors conky maim xlockmore picom cwm xclip xsetroot xdotool
 #   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st lynx
 #   clang clang-tools-extra vim git curl tmux hstr tree make cmake gdb
-#   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc
+#   vifm nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc
 # Additonal stuff:
 #   go install golang.org/x/tools/gopls@latest
 #   pipx install pyright mdformat

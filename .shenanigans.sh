@@ -68,8 +68,7 @@ backup() {
 		"ssh.zip $HOME/.ssh"
 		"bash_history_infinite.zip $HOME/.bash_history_infinite"
 		"projects.zip $HOME/Projects"
-		"notes.zip $HOME/Notes"
-		"twow.zip $HOME/Games/turtlewow/Sound $HOME/Games/turtlewow/WTF $HOME/Games/turtlewow/SuperWoWhook.dll $HOME/Games/turtlewow/dlls.txt $HOME/Games/turtlewow/wow.sh"
+		"twow.zip $HOME/Games/turtlewow/WTF $HOME/Games/turtlewow/wow.sh"
 	)
 
 	for entry in "${archive_sets[@]}"; do

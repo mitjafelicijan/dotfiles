@@ -1,5 +1,5 @@
 conky.config = {
-	update_interval = 2,
+	update_interval = 1,
 	alignment = 'top_right',
 	background = true,
 	double_buffer = true,

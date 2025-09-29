@@ -83,3 +83,11 @@ backup() {
 screenrecord() {
 	ffmpeg -f x11grab -s 3840x2560 -i :0.0 -r 60 -vcodec h264_nvenc -preset fast ~/Videos/$(date +%Y-%m-%d-%H-%M-%S).mp4
 }
+
+mic_status() {
+	if pactl get-source-mute @DEFAULT_SOURCE@ | grep -q "no"; then
+		echo "\${color green}active\${color}"
+	else
+		echo "\${color orange}muted\${color}"
+	fi
+}

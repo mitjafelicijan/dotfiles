@@ -85,9 +85,5 @@ screenrecord() {
 }
 
 mic_status() {
-	if pactl get-source-mute @DEFAULT_SOURCE@ | grep -q "no"; then
-		echo "\${color green}active\${color}"
-	else
-		echo "\${color orange}muted\${color}"
-	fi
+	pactl get-source-mute @DEFAULT_SOURCE@ | grep -q "no" && echo 1 || echo 0;
 }

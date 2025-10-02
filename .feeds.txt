@@ -1,23 +1,24 @@
-https://geohot.github.io/blog/feed.xml "blog"
-https://willhbr.net/feed.xml "blog"
-https://til.simonwillison.net/tils/feed.atom "blog"
-https://voussoir.net/writing/writing.atom "blog"
-https://richiejp.com/atom.xml "blog"
-https://world.hey.com/dhh/feed.atom "blog"
-https://matduggan.com/rss/ "blog"
-https://michael.stapelberg.ch/feed.xml "blog"
-https://www.duskborn.com/index.xml "blog"
-https://mirzapandzo.com/rss.xml "blog"
-https://offbeatpursuit.com/blog/index.rss "blog"
-https://tomscii.sig7.se/feed.xml "blog"
-https://protesilaos.com/master.xml "blog"
-https://www.computerenhance.com/feed "blog"
-https://lore.kernel.org/all/new.atom "lore"
+https://geohot.github.io/blog/feed.xml
+https://willhbr.net/feed.xml
+https://til.simonwillison.net/tils/feed.atom
+https://voussoir.net/writing/writing.atom
+https://richiejp.com/atom.xml
+https://world.hey.com/dhh/feed.atom
+https://matduggan.com/rss/
+https://michael.stapelberg.ch/feed.xml
+https://www.duskborn.com/index.xml
+https://mirzapandzo.com/rss.xml
+https://offbeatpursuit.com/blog/index.rss
+https://tomscii.sig7.se/feed.xml
+https://protesilaos.com/master.xml
+https://www.computerenhance.com/feed
 
-https://crawl.develz.org/wordpress/feed "release"
-https://go.dev/blog/feed.atom "release"
-https://github.com/papers-we-love/papers-we-love/commits.atom "release"
-https://github.com/nothings/stb/commits.atom "release"
-https://github.com/srevinsaju/Brave-AppImage/releases.atom "release"
+https://crawl.develz.org/wordpress/feed
+https://go.dev/blog/feed.atom
+https://github.com/papers-we-love/papers-we-love/commits.atom
+https://github.com/nothings/stb/commits.atom
+https://github.com/srevinsaju/Brave-AppImage/releases.atom
+https://github.com/raysan5/raylib/releases.atom
+https://github.com/X11Libre/xserver/releases.atom
 
-https://api.substack.com/feed/podcast/462466.rss "podcast"
+https://api.substack.com/feed/podcast/462466.rss

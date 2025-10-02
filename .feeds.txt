@@ -12,11 +12,12 @@ https://offbeatpursuit.com/blog/index.rss "blog"
 https://tomscii.sig7.se/feed.xml "blog"
 https://protesilaos.com/master.xml "blog"
 https://www.computerenhance.com/feed "blog"
+https://lore.kernel.org/all/new.atom "lore"
 
 https://crawl.develz.org/wordpress/feed "release"
 https://go.dev/blog/feed.atom "release"
 https://github.com/papers-we-love/papers-we-love/commits.atom "release"
 https://github.com/nothings/stb/commits.atom "release"
-https://github.com/srevinsaju/Brave-AppImage/release.atom "release"
+https://github.com/srevinsaju/Brave-AppImage/releases.atom "release"
 
 https://api.substack.com/feed/podcast/462466.rss "podcast"

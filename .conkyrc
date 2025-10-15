@@ -43,9 +43,9 @@ ${upspeedgraph enp5s0 20,115 ff0000}${alignr}${downspeedgraph enp5s0 20,115 00ff
 
 World Clocks
 $hr
-New York${alignr}${tztime America/New_York %a %H:%M}
 Brisbane${alignr}${tztime Australia/Brisbane %a %H:%M}
 San Francisco${alignr}${tztime America/Los_Angeles %a %H:%M}
+New York${alignr}${tztime America/New_York %a %H:%M}
 
 Top Processes        PID   CPU%   MEM%${color}
 $hr

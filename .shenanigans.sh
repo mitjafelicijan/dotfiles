@@ -58,6 +58,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH="$PATH:$HOME/.local/bin"
 	export PATH="$PATH:$HOME/go/bin"
 	export PATH="$PATH:$HOME/Applications"
+	export PATH="$PATH:$HOME/Applications/odin-linux-amd64-nightly+2025-12-04/"
 fi
 
 backup() {

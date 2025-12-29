@@ -15,6 +15,9 @@
 	rebase = true
 [gpg]
 	format = ssh
+[alias]
+	pushall = !sh -c \"git remote | xargs -L1 git push --all\"
+	tree = log --oneline --graph
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

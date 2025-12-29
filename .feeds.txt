@@ -21,8 +21,3 @@ https://github.com/srevinsaju/Brave-AppImage/releases.atom
 https://github.com/raysan5/raylib/releases.atom
 https://github.com/X11Libre/xserver/releases.atom
 https://github.com/diasurgical/DevilutionX/releases.atom
-
-https://api.substack.com/feed/podcast/462466.rss
-
-https://www.youtube.com/feeds/videos.xml?channel_id=UCzsd4-oyHhNbAXfceOQ5HTw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCCoAJ5JYKYTMubpTIsWi70w

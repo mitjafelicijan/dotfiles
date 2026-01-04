@@ -1,7 +1,7 @@
 # Software list (Void Linux):
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 #   file-roller xfce4-plugins thunar-archive-plugin
-#   lm_sensors conky maim xlockmore picom cwm xclip xsetroot xdotool
+#   lm_sensors conky maim xlockmore picom cwm xclip xsetroot xdotool fd
 #   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st lynx
 #   clang clang-tools-extra vim git curl tmux hstr tree make cmake gdb
 #   vifm nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc
@@ -34,7 +34,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias tmux='tmux -u'
 	alias gg='lazygit'
 	alias server='python3 -m http.server 6969'
-	alias newsboat='newsboat -r -u ~/.feeds.txt --cleanup'
+	alias newsboat='newsboat -r -u ~/.feeds.txt'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'

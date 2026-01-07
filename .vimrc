@@ -15,19 +15,19 @@ set backspace=indent,eol,start completeopt=menuone
 set path+=** wildignore+=tags,*.o,*.a,*.so
 colorscheme wildcharm
 
-nnoremap <C-Right> :bnext<cr>
-nnoremap <C-Left> :bprevious<cr>
-nnoremap <C-q> :copen<cr>
-nnoremap <C-b> :CtrlPBuffer<cr>
-nnoremap <Leader>q :nohlsearch<cr>
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-Left> :bprevious<CR>
+nnoremap <C-q> :copen<CR>
+nnoremap <C-b> :CtrlPBuffer<CR>
+nnoremap <Leader>q :nohlsearch<CR>
 nnoremap <Leader>c :silent call system('ctags --c++-kinds=+p -R .')<CR>
 nnoremap <leader>w :vimgrep /<C-r><C-w>/gj **/*<CR>:copen<CR>
-nnoremap <C-k> :ALEHover<cr>
-nnoremap <C-j> :ALEDetail<cr>
+nnoremap <C-k> :ALEHover<CR>
+nnoremap <C-j> :ALEDetail<CR>
 
-nmap <silent> gr :ALEFindReferences<cr>
-nmap <silent> gd :ALEGoToDefinition<cr>
-nmap <silent> re :ALERename<cr>
+nmap <silent> gr :ALEFindReferences<CR>
+nmap <silent> gd :ALEGoToDefinition<CR>
+nmap <silent> re :ALERename<CR>
 
 let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = ''

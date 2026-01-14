@@ -1,10 +1,10 @@
 # Software list (Void Linux):
 #   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 #   file-roller xfce4-plugins thunar-archive-plugin
-#   lm_sensors conky maim xlockmore picom cwm xclip xsetroot xdotool fd
-#   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st lynx
+#   lm_sensors conky maim xlockmore picom cwm xclip xsetroot xdotool
+#   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st fd
 #   clang clang-tools-extra vim git curl tmux hstr tree make cmake gdb
-#   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit tcc lf
+#   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit
 # Additonal stuff:
 #   go install golang.org/x/tools/gopls@latest
 #   pipx install pyright mdformat
@@ -26,13 +26,12 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PS1="\n$SYMBOL \u@\h \t \w \$(git_branch)\n$SYMBOL "
 
 	# General aliases.
-	alias l='ls -lh --group-directories-first'
-	alias ll='ls -lha --group-directories-first'
+	alias l='ls -lh --group-directories-first --color=always'
+	alias ll='ls -lha --group-directories-first --color=always'
 	alias t='tree -L 2'
 	alias ..='cd ..'
 	alias less='less -R'
 	alias tmux='tmux -u'
-	alias gg='lazygit'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
 
@@ -78,10 +77,6 @@ backup() {
 
 	rsync -azhv /tmp/$SNAPSHOT /media/Void/Backup
 	rm -Rf /tmp/$SNAPSHOT
-}
-
-screenrecord() {
-	ffmpeg -f x11grab -s 3840x2560 -i :0.0 -r 60 -vcodec h264_nvenc -preset fast ~/Videos/$(date +%Y-%m-%d-%H-%M-%S).mp4
 }
 
 mic_status() {

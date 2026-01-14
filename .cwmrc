@@ -14,7 +14,7 @@ bind-key 4-e thunar
 bind-key 4-r simplescreenrecorder
 bind-key 4-p "rofi -show drun -theme ~/.black.rasi"
 bind-key 4-s "xmagnify -s 1000 -z 3"
-bind-key 4-b "wmctrl -r :ACTIVE: -e 0,3408,1050,416,236"
+bind-key 4-b "wmctrl -r :ACTIVE: -e 0,3408,1060,416,236"
 bind-key 4-bracketright "pats -t"
 bind-key C-grave "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
 bind-key XF86AudioLowerVolume "pactl set-sink-volume @DEFAULT_SINK@ -5%"

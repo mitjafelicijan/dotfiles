@@ -1,23 +1,13 @@
 https://geohot.github.io/blog/feed.xml
-https://willhbr.net/feed.xml
 https://til.simonwillison.net/tils/feed.atom
 https://voussoir.net/writing/writing.atom
-https://richiejp.com/atom.xml
 https://world.hey.com/dhh/feed.atom
 https://matduggan.com/rss/
 https://michael.stapelberg.ch/feed.xml
 https://www.duskborn.com/index.xml
-https://mirzapandzo.com/rss.xml
 https://offbeatpursuit.com/blog/index.rss
 https://tomscii.sig7.se/feed.xml
-https://protesilaos.com/master.xml
 https://www.computerenhance.com/feed
 
-https://crawl.develz.org/wordpress/feed
-https://go.dev/blog/feed.atom
-https://github.com/papers-we-love/papers-we-love/commits.atom
-https://github.com/nothings/stb/commits.atom
 https://github.com/srevinsaju/Brave-AppImage/releases.atom
-https://github.com/raysan5/raylib/releases.atom
 https://github.com/X11Libre/xserver/releases.atom
-https://github.com/diasurgical/DevilutionX/releases.atom

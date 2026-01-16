@@ -30,6 +30,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias ll='ls -lha --group-directories-first --color=always'
 	alias t='tree -L 2'
 	alias ..='cd ..'
+	alias gg='lazygit'
 	alias less='less -R'
 	alias tmux='tmux -u'
 	alias server='python3 -m http.server 6969'
@@ -81,4 +82,9 @@ backup() {
 
 mic_status() {
 	pactl get-source-mute @DEFAULT_SOURCE@ | grep -q "no" && echo 1 || echo 0;
+}
+
+slugify() {
+  local text="$1"
+  echo "$text" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g'
 }

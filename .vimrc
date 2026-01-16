@@ -3,7 +3,6 @@ filetype plugin on
 
 call plug#begin()
 	Plug 'tpope/vim-commentary'
-	Plug 'tpope/vim-fugitive'
 	Plug 'mitjafelicijan/sniper.vim'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
@@ -22,6 +21,8 @@ nnoremap <C-q> :copen<CR>
 nnoremap <C-b> :CtrlPBuffer<CR>
 nnoremap <C-k> :ALEHover<CR>
 nnoremap <C-j> :ALEDetail<CR>
+nnoremap <M-Right> :cnext<CR>
+nnoremap <M-Left> :cprevious<CR>
 nnoremap <Leader>d :bd<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <Leader>q :nohlsearch<CR>

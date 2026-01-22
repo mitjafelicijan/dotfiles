@@ -9,6 +9,7 @@ https://offbeatpursuit.com/blog/index.rss
 https://tomscii.sig7.se/feed.xml
 https://www.computerenhance.com/feed
 https://susam.net/feed.xml
+https://www.gingerbill.org/article/index.xml
 
 https://github.com/srevinsaju/Brave-AppImage/releases.atom
 https://github.com/X11Libre/xserver/releases.atom

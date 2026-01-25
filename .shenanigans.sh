@@ -80,11 +80,17 @@ backup() {
 	rm -Rf /tmp/$SNAPSHOT
 }
 
-mic_status() {
+micstatus() {
 	pactl get-source-mute @DEFAULT_SOURCE@ | grep -q "no" && echo 1 || echo 0;
 }
 
 slugify() {
   local text="$1"
   echo "$text" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g'
+}
+
+worldclocks() {
+  echo -e "Brisbane: \t$(TZ='Australia/Brisbane' date +'%a %H:%M')"
+  echo -e "San Francisco: \t$(TZ='America/Los_Angeles' date +'%a %H:%M')"
+  echo -e "New York: \t$(TZ='America/New_York' date +'%a %H:%M')"
 }

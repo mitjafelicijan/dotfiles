@@ -32,13 +32,13 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias ..='cd ..'
 	alias gg='lazygit'
 	alias less='less -R'
-	alias tmux='tmux -u'
+	alias tmux='tmux -T 256 -u'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
+	alias n='cd ~/Notes && vim toc.txt'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'
-	alias n='cd ~/Notes'
 	alias p='cd ~/Projects'
 	alias d='cd ~/Downloads'
 
@@ -56,6 +56,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 
 	# Custom paths.
 	export PATH="$PATH:$HOME/.local/bin"
+	export PATH="$PATH:$HOME/.cargo/bin"
 	export PATH="$PATH:$HOME/go/bin"
 	export PATH="$PATH:$HOME/Applications"
 	export PATH="$PATH:$HOME/Applications/odin-linux-amd64-nightly+2025-12-04/"
@@ -69,6 +70,7 @@ backup() {
 		"ssh.zip $HOME/.ssh"
 		"bash_history_infinite.zip $HOME/.bash_history_infinite"
 		"projects.zip $HOME/Projects"
+		"notes.zip $HOME/Notes"
 		"twow.zip $HOME/Games/turtlewow/WTF $HOME/Games/turtlewow/wow.sh"
 	)
 
@@ -90,7 +92,9 @@ slugify() {
 }
 
 worldclocks() {
-  echo -e "Brisbane: \t$(TZ='Australia/Brisbane' date +'%a %H:%M')"
-  echo -e "San Francisco: \t$(TZ='America/Los_Angeles' date +'%a %H:%M')"
-  echo -e "New York: \t$(TZ='America/New_York' date +'%a %H:%M')"
+  printf "%-18s %s\n" "Local:" "$(TZ='Europe/Ljubljana' date +'%a %H:%M')"
+  printf "%-18s %s\n" "Brisbane:" "$(TZ='Australia/Brisbane' date +'%a %H:%M')"
+  printf "%-18s %s\n" "San Francisco:" "$(TZ='America/Los_Angeles' date +'%a %H:%M')"
+  printf "%-18s %s\n" "New York:" "$(TZ='America/New_York' date +'%a %H:%M')"
+
 }

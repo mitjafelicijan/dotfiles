@@ -2,7 +2,7 @@ fontname "Berkeley Mono:size=8:bold"
 borderwidth 3
 color activeborder khaki
 sticky yes
-moveamount 100
+moveamount 200
 unbind-key all
 unbind-mouse all
 

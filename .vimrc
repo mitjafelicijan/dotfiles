@@ -13,7 +13,7 @@ set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
 set number autoindent cursorline ignorecase hlsearch incsearch signcolumn=yes
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
 set backspace=indent,eol,start completeopt=menuone path+=**
-set foldmethod=syntax foldlevel=99 foldopen= lazyredraw
+set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 colorscheme wildcharm
@@ -35,17 +35,13 @@ nnoremap <Leader>d :bd<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <Leader>q :nohlsearch<CR>
 nnoremap <Leader>e :ALEPopulateQuickfix<CR>:sleep 100m<CR>:copen<CR>
-" nnoremap <leader>w :vimgrep /<C-r><C-w>/gj **/*<CR>:copen<CR>
-
 nnoremap <leader>w :silent! grep! <cword> \| cwindow \| redraw!<CR>
-
 
 nmap <silent> gr :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
 nmap <silent> gd :ALEGoToDefinition<CR>
 nmap <silent> re :ALERename<CR>
 
 let g:ctrlp_use_caching = 0
-" let g:ctrlp_working_path_mode = ''
 let g:ctrlp_working_path_mode = 'ra'
 let g:ale_hover_to_floating_preview = 1
 let g:ale_detail_to_floating_preview = 1

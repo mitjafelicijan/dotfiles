@@ -48,7 +48,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export HISTSIZE=
 	export HISTFILESIZE=
 	export HISTFILE=~/.bash_history_infinite
-	PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+	PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
+	# PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 	bind '"\e[A": history-search-backward'
 	bind '"\e[B": history-search-forward'
 	export HSTR_CONFIG=hicolor
@@ -96,5 +97,4 @@ worldclocks() {
   printf "%-18s %s\n" "Brisbane:" "$(TZ='Australia/Brisbane' date +'%a %H:%M')"
   printf "%-18s %s\n" "San Francisco:" "$(TZ='America/Los_Angeles' date +'%a %H:%M')"
   printf "%-18s %s\n" "New York:" "$(TZ='America/New_York' date +'%a %H:%M')"
-
 }

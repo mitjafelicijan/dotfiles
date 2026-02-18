@@ -27,7 +27,7 @@ CPU Temp${alignr} ${exec sensors | grep 'Package id 0:' | awk '{print $4}' | sed
 GPU Temp${alignr} ${exec nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C
 Audio Sink${alignr}${exec pats -l}
 Volume${alignr}${exec amixer get Master | awk -F'[][]' '/Left:/ { print $2; exit }'}
-Microphone${alignr}${if_match ${execi 5 bash -c 'source ~/.shenanigans.sh; mic_status'} == 1}${color}active${else}${color orange}muted${endif}${color}
+Microphone${alignr}${if_match ${execi 5 bash -c 'source ~/.shenanigans.sh; micstatus'} == 1}${color}active${else}${color orange}muted${endif}${color}
 
 CPU Usage${alignr} $cpu%
 ${cpugraph}

@@ -3,7 +3,7 @@ live_config_reload = true
 
 [window]
 dynamic_title = true
-dimensions = { columns = 140, lines = 70 }
+dimensions = { columns = 140, lines = 50 }
 
 [font]
 normal = { family = "Berkeley Mono", style = "Bold" }

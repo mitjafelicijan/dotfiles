@@ -7,6 +7,7 @@ call plug#begin()
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'carlsmedstad/vim-bicep'
 call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4

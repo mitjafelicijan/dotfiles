@@ -16,6 +16,8 @@ set backspace=indent,eol,start completeopt=menuone path+=**
 set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+set omnifunc=ale#completion#OmniFunc
+set completeopt=menu,menuone,popup,noselect,noinsert
 colorscheme wildcharm
 
 if executable('rg')

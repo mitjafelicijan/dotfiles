@@ -8,6 +8,6 @@ xset dpms 0 0 1800
 xset s 900
 
 xss-lock -- xlock &
-xinput --set-prop "pointer:Logitech MX Master 3" "libinput Accel Speed" -0.7
+xinput --set-prop "pointer:Logitech MX Master 3" "libinput Accel Speed" -0.3
 
 exec glitch

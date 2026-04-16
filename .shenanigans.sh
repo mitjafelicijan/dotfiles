@@ -60,7 +60,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH="$PATH:$HOME/.cargo/bin"
 	export PATH="$PATH:$HOME/go/bin"
 	export PATH="$PATH:$HOME/Applications"
-	export PATH="$PATH:$HOME/Applications/odin-linux-amd64-nightly+2025-12-04/"
 fi
 
 backup() {
@@ -73,6 +72,7 @@ backup() {
 		"projects.zip $HOME/Projects"
 		"notes.zip $HOME/Notes"
 		"twow.zip $HOME/Games/turtlewow/WTF $HOME/Games/turtlewow/wow.sh"
+		"vanilla+.zip $HOME/Games/vanilla+/WTF $HOME/Games/vanilla+/wow.sh"
 	)
 
 	for entry in "${archive_sets[@]}"; do

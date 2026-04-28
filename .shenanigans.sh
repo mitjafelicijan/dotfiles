@@ -1,14 +1,9 @@
-# Software list (Void Linux):
-#   void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
+# Software list:
 #   file-roller xfce4-plugins thunar-archive-plugin
-#   lm_sensors conky maim xlockmore picom cwm xclip xsel xsetroot xdotool
-#   xss-lock wmctrl zip mc htop entr cifs-utils rsync jq rofi st fd
-#   clang clang-tools-extra vim git curl tmux hstr tree make cmake gdb
-#   nvtop ctags stow newsboat mpv rsync python3-pipx lazygit
+#   vim git tmux maim xclip xsel mc htop entr cifs-utils rsync jq rofi fd
+#   rsync curl hstr tree make gdb nvtop ctags stow newsboat mpv lazygit
 # Additonal stuff:
 #   go install golang.org/x/tools/gopls@latest
-#   pipx install pyright mdformat
-#   pipx inject mdformat mdformat-gfm
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
@@ -35,7 +30,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias tmux='tmux -T 256 -u'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
-	alias n='cd ~/Notes && vim toc.txt'
+	alias emptytrash='gio trash --empty'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'
@@ -49,7 +44,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export HISTFILESIZE=
 	export HISTFILE=~/.bash_history_infinite
 	PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
-	# PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 	bind '"\e[A": history-search-backward'
 	bind '"\e[B": history-search-forward'
 	export HSTR_CONFIG=hicolor
@@ -70,9 +64,6 @@ backup() {
 		"ssh.zip $HOME/.ssh"
 		"bash_history_infinite.zip $HOME/.bash_history_infinite"
 		"projects.zip $HOME/Projects"
-		"notes.zip $HOME/Notes"
-		"twow.zip $HOME/Games/turtlewow/WTF $HOME/Games/turtlewow/wow.sh"
-		"vanilla+.zip $HOME/Games/vanilla+/WTF $HOME/Games/vanilla+/wow.sh"
 	)
 
 	for entry in "${archive_sets[@]}"; do
@@ -83,18 +74,14 @@ backup() {
 	rm -Rf /tmp/$SNAPSHOT
 }
 
-micstatus() {
-	pactl get-source-mute @DEFAULT_SOURCE@ | grep -q "no" && echo 1 || echo 0;
-}
-
 slugify() {
-  local text="$1"
-  echo "$text" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g'
+	local text="$1"
+	echo "$text" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g'
 }
 
 worldclocks() {
-  printf "%-18s %s\n" "Local:" "$(TZ='Europe/Ljubljana' date +'%a %H:%M')"
-  printf "%-18s %s\n" "Brisbane:" "$(TZ='Australia/Brisbane' date +'%a %H:%M')"
-  printf "%-18s %s\n" "San Francisco:" "$(TZ='America/Los_Angeles' date +'%a %H:%M')"
-  printf "%-18s %s\n" "New York:" "$(TZ='America/New_York' date +'%a %H:%M')"
+	printf "%-18s %s\n" "Local:" "$(TZ='Europe/Ljubljana' date +'%a %H:%M')"
+	printf "%-18s %s\n" "Brisbane:" "$(TZ='Australia/Brisbane' date +'%a %H:%M')"
+	printf "%-18s %s\n" "San Francisco:" "$(TZ='America/Los_Angeles' date +'%a %H:%M')"
+	printf "%-18s %s\n" "New York:" "$(TZ='America/New_York' date +'%a %H:%M')"
 }

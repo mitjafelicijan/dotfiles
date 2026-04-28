@@ -16,7 +16,7 @@
 [gpg]
 	format = ssh
 [alias]
-	pushall = !sh -c \"git remote | xargs -L1 git push --all\"
+	pushall = !sh -c \"git remote | xargs -L1 git push --all --force-with-lease\"
 	tree = log --oneline --graph
 [filter "lfs"]
 	required = true

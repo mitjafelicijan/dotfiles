@@ -7,7 +7,7 @@ dimensions = { columns = 140, lines = 50 }
 
 [font]
 normal = { family = "Berkeley Mono", style = "Bold" }
-size = 10
+size = 9
 
 [colors.primary]
 background = '#000000'

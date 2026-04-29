@@ -15,14 +15,13 @@ set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
 set backspace=indent,eol,start completeopt=menuone path+=**
 set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
-set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 set omnifunc=ale#completion#OmniFunc
 set completeopt=menu,menuone,popup,noselect,noinsert
 colorscheme wildcharm
 
 if executable('rg')
-  set grepprg=rg\ --vimgrep\ --smart-case
-  set grepformat=%f:%l:%c:%m
+	set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+	set grepformat=%f:%l:%c:%m
 endif
 
 nnoremap <C-Right> :bnext<CR>

@@ -1,9 +1,6 @@
 # Software list:
-#   file-roller xfce4-plugins thunar-archive-plugin
 #   vim git tmux maim xclip xsel mc htop entr cifs-utils rsync jq rofi picom
 #   st rsync curl hstr tree make gdb nvtop ctags stow newsboat mpv lazygit fd
-# Additonal stuff:
-#   go install golang.org/x/tools/gopls@latest
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then

@@ -3,21 +3,27 @@ general {
 	interval = 5
 }
 
-order += "disk /"
 order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "disk /"
 order += "memory"
 order += "tztime local"
 
 disk "/" {
-	format = "Disk: %avail"
+	format = "Disk: %used (%percentage_used)"
 }
 
 cpu_usage {
 	format = "CPU: %usage"
 }
 
+cpu_temperature 0 {
+	format = "Temp: %degrees °C"
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
+}
+
 memory {
-	format = "Memory: %used"
+	format = "Memory: %used (%percentage_used)"
 }
 
 tztime local {

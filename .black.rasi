@@ -11,8 +11,8 @@ configuration {
 
 #window {
 	background-color: black;
-	border: 2;
-	border-color: white;
+	border: 3;
+	border-color:  #c3b091;
 	padding: 20;
 	width: 800;
 }
@@ -28,7 +28,7 @@ listview {
 }
 
 element-text {
-	text-color: khaki;
+	text-color: #c3b091;
 }
 
 element-text selected {

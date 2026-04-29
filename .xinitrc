@@ -10,5 +10,5 @@ xset s 900
 xss-lock -- xlock &
 xinput --set-prop "pointer:Logitech MX Master 3" "libinput Accel Speed" -0.3
 
-picom --vsync --backend glx -D 0 &
+picom --vsync --backend glx -D 0 -c -o 0 &
 exec i3

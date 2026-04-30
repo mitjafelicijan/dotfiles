@@ -2,7 +2,7 @@ set $mod Mod4
 
 font pango:Berkeley Mono Bold 7
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color 000000
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
@@ -15,7 +15,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # My keybinds
 bindsym $mod+bracketright exec --no-startup-id pats -t
 bindsym $mod+m exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym $mod+l exec --no-startup-id i3lock
+bindsym $mod+l exec --no-startup-id i3lock --nofork --color 000000
 bindsym $mod+z exec --no-startup-id xmagnify -s 1000 -z 3
 bindsym $mod+p exec --no-startup-id "rofi -show drun -theme ~/.black.rasi"
 bindsym $mod+Escape exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"

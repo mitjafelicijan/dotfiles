@@ -1,6 +1,7 @@
 # Software list:
-#   vim git tmux maim xclip xsel mc htop entr cifs-utils rsync jq rofi picom
-#   st rsync curl hstr tree make gdb nvtop ctags stow newsboat mpv lazygit fd
+#   xss-lock xkbset xclip xsel cifs-utils picom
+#   vim git tmux maim mc htop entr rsync jq rofi stow newsboat 
+#   st rsync curl hstr tree make gdb nvtop ctags mpv lazygit fd
 
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then

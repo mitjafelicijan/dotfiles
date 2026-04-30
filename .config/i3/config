@@ -16,6 +16,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+bracketright exec --no-startup-id pats -t
 bindsym $mod+m exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym $mod+l exec --no-startup-id i3lock
+bindsym $mod+z exec --no-startup-id xmagnify -s 1000 -z 3
 bindsym $mod+p exec --no-startup-id "rofi -show drun -theme ~/.black.rasi"
 bindsym $mod+Escape exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
 
@@ -170,5 +171,5 @@ client.urgent           $secondary    $secondary    $light        $light
 for_window [workspace="1"] floating enable
 
 # Expections for opening in floating mode where XSetClassHint is set to floating
-for_window [class="^(mpv|SimpleScreenRecorder|Thunar|transmission)$"] floating enable
+for_window [class="^(mpv|SimpleScreenRecorder|Thunar|transmission|Xmagnify)$"] floating enable
 for_window [title="^(Stalag)$"] floating enable

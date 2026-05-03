@@ -11,3 +11,9 @@ https://www.computerenhance.com/feed
 https://susam.net/feed.xml
 https://www.gingerbill.org/article/index.xml
 https://mmk2410.org/blog.rss
+
+https://github.com/srevinsaju/Brave-AppImage/releases.atom
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUzQJ3JBuQ9w-po4TXRJHiA
+https://www.youtube.com/feeds/videos.xml?channel_id=UCrqM0Ym_NbK1fqeQG2VIohg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ

@@ -3,22 +3,19 @@ set $mod Mod4
 font pango:Berkeley Mono Bold 7
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --color 000000
-exec --no-startup-id nm-applet
-
-# Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
+
+# Keybinds
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# My keybinds
 bindsym $mod+bracketright exec --no-startup-id pats -t
 bindsym $mod+m exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym $mod+l exec --no-startup-id i3lock --nofork --color 000000
 bindsym $mod+z exec --no-startup-id xmagnify -s 1000 -z 3
 bindsym $mod+p exec --no-startup-id "rofi -show drun -theme ~/.black.rasi"
-bindsym $mod+Escape exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
+bindsym $mod+grave exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -172,4 +169,4 @@ for_window [workspace="1"] floating enable
 
 # Expections for opening in floating mode where XSetClassHint is set to floating
 for_window [class="^(mpv|SimpleScreenRecorder|Thunar|transmission|Xmagnify)$"] floating enable
-for_window [title="^(Stalag)$"] floating enable
+for_window [title="^(Stalag|game)$"] floating enable

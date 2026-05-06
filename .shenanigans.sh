@@ -1,5 +1,5 @@
 # Software list:
-#   xss-lock xkbset xclip xsel cifs-utils picom
+#   xss-lock xkbset xclip xsel xwininfo cifs-utils picom ffmpeg
 #   vim git tmux maim mc htop entr rsync jq rofi stow newsboat 
 #   st rsync curl hstr tree make gdb nvtop ctags mpv lazygit fd
 
@@ -82,4 +82,30 @@ worldclocks() {
 	printf "%-18s %s\n" "Brisbane:" "$(TZ='Australia/Brisbane' date +'%a %H:%M')"
 	printf "%-18s %s\n" "San Francisco:" "$(TZ='America/Los_Angeles' date +'%a %H:%M')"
 	printf "%-18s %s\n" "New York:" "$(TZ='America/New_York' date +'%a %H:%M')"
+}
+
+record() {
+	mkdir -p "$HOME/Videos"
+	win=$(xwininfo -int | awk '/Window id:/{print $4; exit}')
+	[ -z "$win" ] && { echo "no window picked"; exit 1; }
+
+	eval $(
+		xwininfo -id "$win" | awk '
+			/Absolute upper-left X:/{x=$4}
+			/Absolute upper-left Y:/{y=$4}
+			/Width:/{w=$2}
+			/Height:/{h=$2}
+		END{printf("X=%s;Y=%s;W=%s;H=%s\n", x, y, w, h)}
+		'
+	)
+
+	if [ -z "$W" ] || [ -z "$H" ]; then
+		echo "failed to get geometry"; exit 1
+	fi
+
+	ts=$(date '+%F-%H-%M-%S')
+	out="$HOME/Videos/record-${ts}.mp4"
+	echo "Recording ${W}x${H}+${X},${Y} -> ${out}"
+
+	ffmpeg -y -f x11grab -video_size "${W}x${H}" -framerate 60 -i "${DISPLAY:-:0.0}+${X},${Y}" -c:v libx264 -preset veryfast -crf 23 -pix_fmt yuv420p "$out"
 }

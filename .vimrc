@@ -17,6 +17,7 @@ set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
 set omnifunc=ale#completion#OmniFunc
 set completeopt=menu,menuone,popup,noselect,noinsert
+set background=dark
 colorscheme wildcharm
 
 if executable('rg')

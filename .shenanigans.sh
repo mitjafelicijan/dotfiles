@@ -103,6 +103,9 @@ record() {
 		echo "failed to get geometry"; exit 1
 	fi
 
+	W=$((W / 2 * 2))
+	H=$((H / 2 * 2))
+
 	ts=$(date '+%F-%H-%M-%S')
 	out="$HOME/Videos/record-${ts}.mp4"
 	echo "Recording ${W}x${H}+${X},${Y} -> ${out}"

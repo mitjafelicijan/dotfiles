@@ -3,11 +3,11 @@ filetype plugin on
 
 call plug#begin()
 	Plug 'tpope/vim-commentary'
-	Plug 'mitjafelicijan/sniper.vim'
-	Plug 'mitjafelicijan/c3.vim'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'mitjafelicijan/sniper.vim'
+	Plug 'mitjafelicijan/c3.vim'
 call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
@@ -25,33 +25,30 @@ if executable('rg')
 	set grepformat=%f:%l:%c:%m
 endif
 
-nnoremap <C-Right> :bnext<CR>
-nnoremap <C-Left>  :bprevious<CR>
-nnoremap <M-Right> :cnext<CR>
-nnoremap <M-Left>  :cprevious<CR>
-nnoremap <C-q> :copen<CR>
-nnoremap <C-b> :CtrlPBuffer<CR>
-nnoremap <C-k> :ALEHover<CR>
-nnoremap <C-j> :ALEDetail<CR>
-nnoremap <Leader>d :bd<CR>
-nnoremap <Leader>q :nohlsearch<CR>
-nnoremap <Leader>e :ALEPopulateQuickfix<CR>:sleep 100m<CR>:copen<CR>
-nnoremap <leader>w :silent! grep! <cword> \| cwindow \| redraw!<CR>
-
-nmap <silent> gr :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
-nmap <silent> gd :ALEGoToDefinition<CR>
-nmap <silent> re :ALERename<CR>
-
-imap <C-n> <Plug>(ale_complete)
-
-nnoremap <A-Down> :m .+1<CR>==
-nnoremap <A-Up>   :m .-2<CR>==
-nnoremap <A-Right> >>
-nnoremap <A-Left>  <<
-vnoremap <A-Down>  :m '>+1<CR>gv=gv
-vnoremap <A-Up>    :m '<-2<CR>gv=gv
-vnoremap <A-Right> >gv
-vnoremap <A-Left>  <gv
+nnoremap <C-Right>  :bnext<CR>
+nnoremap <C-Left>   :bprevious<CR>
+nnoremap <M-Right>  :cnext<CR>
+nnoremap <M-Left>   :cprevious<CR>
+nnoremap <C-q>      :copen<CR>
+nnoremap <C-b>      :CtrlPBuffer<CR>
+nnoremap <C-k>      :ALEHover<CR>
+nnoremap <C-j>      :ALEDetail<CR>
+nnoremap <Leader>d  :bd<CR>
+nnoremap <Leader>q  :nohlsearch<CR>
+nnoremap <Leader>e  :ALEPopulateQuickfix<CR>:sleep 100m<CR>:copen<CR>
+nnoremap <leader>w  :silent! grep! <cword> \| cwindow \| redraw!<CR>
+nnoremap <A-Down>   :m .+1<CR>==
+nnoremap <A-Up>     :m .-2<CR>==
+nnoremap <A-Right>  >>
+nnoremap <A-Left>   <<
+vnoremap <A-Down>   :m '>+1<CR>gv=gv
+vnoremap <A-Up>     :m '<-2<CR>gv=gv
+vnoremap <A-Right>  >gv
+vnoremap <A-Left>   <gv
+nmap <silent> gr    :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
+nmap <silent> gd    :ALEGoToDefinition<CR>
+nmap <silent> re    :ALERename<CR>
+imap <C-n>          <Plug>(ale_complete)
 
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 1

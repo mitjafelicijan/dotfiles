@@ -46,6 +46,7 @@ nmap <silent> re :ALERename<CR>
 imap <C-n> <Plug>(ale_complete)
 
 let g:ctrlp_use_caching = 0
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'ra'
 let g:ale_hover_to_floating_preview = 1
 let g:ale_detail_to_floating_preview = 1

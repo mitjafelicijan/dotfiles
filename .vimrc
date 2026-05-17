@@ -8,6 +8,7 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'mitjafelicijan/sniper.vim'
 	Plug 'mitjafelicijan/c3.vim'
+	Plug 'mitjafelicijan/llm.vim'
 call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
@@ -33,7 +34,7 @@ nnoremap <C-q>      :copen<CR>
 nnoremap <C-b>      :CtrlPBuffer<CR>
 nnoremap <C-k>      :ALEHover<CR>
 nnoremap <C-j>      :ALEDetail<CR>
-nnoremap <Leader>d  :bd<CR>
+nnoremap <Leader>d  :bd!<CR>
 nnoremap <Leader>q  :nohlsearch<CR>
 nnoremap <Leader>e  :ALEPopulateQuickfix<CR>:sleep 100m<CR>:copen<CR>
 nnoremap <leader>w  :silent! grep! <cword> \| cwindow \| redraw!<CR>

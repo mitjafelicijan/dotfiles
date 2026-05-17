@@ -8,7 +8,6 @@ call plug#begin()
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
 	Plug 'airblade/vim-gitgutter'
-	Plug 'madox2/vim-ai'
 call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
@@ -17,7 +16,6 @@ set hidden nowrap nobackup noswapfile noundofile autoread updatetime=300
 set backspace=indent,eol,start completeopt=menuone path+=**
 set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
-set omnifunc=ale#completion#OmniFunc
 set completeopt=menu,menuone,popup,noselect,noinsert
 set background=dark
 colorscheme wildcharm
@@ -39,11 +37,13 @@ nnoremap <Leader>d :bd<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <Leader>q :nohlsearch<CR>
 nnoremap <Leader>e :ALEPopulateQuickfix<CR>:sleep 100m<CR>:copen<CR>
-nnoremap <leader>w :silent grep! -R "<C-r><C-w>" .<CR>:redraw!<CR>:copen<CR>
+nnoremap <leader>w :silent! grep! <cword> \| cwindow \| redraw!<CR>
 
 nmap <silent> gr :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
 nmap <silent> gd :ALEGoToDefinition<CR>
 nmap <silent> re :ALERename<CR>
+
+imap <C-n> <Plug>(ale_complete)
 
 let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = 'ra'

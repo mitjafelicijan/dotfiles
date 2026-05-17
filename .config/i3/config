@@ -168,5 +168,5 @@ client.urgent           $secondary    $secondary    $light        $light
 for_window [workspace="^(1|5)$"] floating enable
 
 # Expections for opening in floating mode where XSetClassHint is set to floating
-for_window [class="^(floating|mpv|SimpleScreenRecorder|Thunar|transmission|Xmagnify)$"] floating enable
-for_window [title="^(Stalag|game)$"] floating enable
+for_window [class="^(mpv|Thunar|transmission|Xmagnify)$"] floating enable
+for_window [title="^(floating|game|iceworks)$"] floating enable

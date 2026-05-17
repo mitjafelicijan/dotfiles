@@ -52,6 +52,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH="$PATH:$HOME/.cargo/bin"
 	export PATH="$PATH:$HOME/go/bin"
 	export PATH="$PATH:$HOME/Applications"
+	export PATH="$PATH:$HOME/.local/bin/zig"
+	export PATH="$PATH:$HOME/.local/bin/c3"
 fi
 
 backup() {

@@ -4,9 +4,11 @@ filetype plugin on
 call plug#begin()
 	Plug 'tpope/vim-commentary'
 	Plug 'mitjafelicijan/sniper.vim'
+	Plug 'mitjafelicijan/c3.vim'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'dense-analysis/ale'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'madox2/vim-ai'
 call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
@@ -37,7 +39,7 @@ nnoremap <Leader>d :bd<CR>
 nnoremap <leader>t :term<CR>
 nnoremap <Leader>q :nohlsearch<CR>
 nnoremap <Leader>e :ALEPopulateQuickfix<CR>:sleep 100m<CR>:copen<CR>
-nnoremap <leader>w :silent! grep! <cword> \| cwindow \| redraw!<CR>
+nnoremap <leader>w :silent grep! -R "<C-r><C-w>" .<CR>:redraw!<CR>:copen<CR>
 
 nmap <silent> gr :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
 nmap <silent> gd :ALEGoToDefinition<CR>

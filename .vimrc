@@ -7,8 +7,6 @@ call plug#begin()
 	Plug 'dense-analysis/ale'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'mitjafelicijan/sniper.vim'
-	Plug 'mitjafelicijan/c3.vim'
-	Plug 'mitjafelicijan/llm.vim'
 call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
@@ -18,6 +16,7 @@ set backspace=indent,eol,start completeopt=menuone path+=**
 set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
 set completeopt=menu,menuone,popup,noselect,noinsert
+set omnifunc=ale#completion#OmniFunc
 set background=dark
 colorscheme wildcharm
 
@@ -28,8 +27,6 @@ endif
 
 nnoremap <C-Right>  :bnext<CR>
 nnoremap <C-Left>   :bprevious<CR>
-nnoremap <M-Right>  :cnext<CR>
-nnoremap <M-Left>   :cprevious<CR>
 nnoremap <C-q>      :copen<CR>
 nnoremap <C-b>      :CtrlPBuffer<CR>
 nnoremap <C-k>      :ALEHover<CR>

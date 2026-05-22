@@ -9,9 +9,14 @@ vim.opt.termguicolors = true
 vim.opt.undofile = true
 vim.opt.number = true
 vim.opt.cursorline = true
+vim.opt.foldmethod = "syntax"
+vim.opt.foldlevel = 99
+vim.opt.scrolloff = 10
 vim.opt.mouse = ""
 vim.opt.guicursor = ""
 vim.opt.clipboard = "unnamedplus"
+vim.opt.wildmode = { "longest:full", "full" }
+vim.opt.wildignore:append({ "node_modules", ".git" })
 vim.opt.completeopt = { "menu", "menuone", "popup", "noselect", "noinsert" }
 
 vim.keymap.set("n", "<C-Left>",  ":bprevious<CR>")
@@ -46,10 +51,17 @@ vim.lsp.config("clang", {
 
 vim.lsp.config("gopls", {
 	cmd = { "gopls" },
-	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+	filetypes = { "go", "gomod", "gowork" },
+	root_markers = { "go.mod", ".git", },
 })
 
-vim.lsp.enable({ "clangd", "gopls" })
+vim.lsp.config("c3lsp", {
+	cmd = { "c3lsp" },
+	filetypes = { "c3", "c3i" },
+	root_markers = { ".git", },
+})
+
+vim.lsp.enable({ "clangd", "gopls", "c3lsp" })
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(event)

@@ -10,8 +10,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export LC_ALL=en_US.UTF-8
 	export COLORTERM=truecolor
 	export TERM=xterm-256color
-	export VISUAL=vim
-	export EDITOR=vim
+	export VISUAL=nvim
+	export EDITOR=nvim
 
 	# Customized Bash prompt.
 	SYMBOL='\[\e[38;5;214m\]\$\[\e[0m\]'
@@ -26,6 +26,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias gg='lazygit'
 	alias less='less -R'
 	alias tmux='tmux -T 256 -u'
+	alias vim='nvim'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
 	alias emptytrash='gio trash --empty'
@@ -54,6 +55,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH="$PATH:$HOME/Applications"
 	export PATH="$PATH:$HOME/.local/bin/zig"
 	export PATH="$PATH:$HOME/.local/bin/c3"
+	export PATH="$PATH:$HOME/.local/bin/odin"
 fi
 
 backup() {

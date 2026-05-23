@@ -1,0 +1,24 @@
+set nocompatible exrc secure
+filetype plugin on
+
+set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
+set number autoindent cursorline ignorecase hlsearch incsearch signcolumn=yes
+set hidden nowrap nobackup noswapfile noundofile autoread updatetime=100
+set backspace=indent,eol,start completeopt=menuone path+=**
+set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
+set completeopt=menu,menuone,popup,noselect,noinsert
+set background=dark
+colorscheme wildcharm
+
+nnoremap <C-Right>  :bnext<CR>
+nnoremap <C-Left>   :bprevious<CR>
+nnoremap <C-q>      :copen<CR>
+nnoremap <C-b>      :CtrlPBuffer<CR>
+nnoremap <Leader>d  :bd!<CR>
+nnoremap <Leader>q  :nohlsearch<CR>
+nnoremap <leader>w  :silent! grep! <cword> \| cwindow \| redraw!<CR>
+
+let g:ctrlp_use_caching = 0
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'ra'

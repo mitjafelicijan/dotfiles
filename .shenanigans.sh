@@ -10,8 +10,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export LC_ALL=en_US.UTF-8
 	export COLORTERM=truecolor
 	export TERM=xterm-256color
-	export VISUAL=nvim
-	export EDITOR=nvim
+	export VISUAL=vim
+	export EDITOR=vim
 
 	# Customized Bash prompt.
 	SYMBOL='\[\e[38;5;214m\]\$\[\e[0m\]'
@@ -26,7 +26,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias gg='lazygit'
 	alias less='less -R'
 	alias tmux='tmux -T 256 -u'
-	alias vim='nvim'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='newsboat -r -u ~/.feeds.txt'
 	alias emptytrash='gio trash --empty'

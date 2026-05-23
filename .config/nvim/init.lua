@@ -19,14 +19,38 @@ vim.opt.wildmode = { "longest:full", "full" }
 vim.opt.wildignore:append({ "node_modules", ".git" })
 vim.opt.completeopt = { "menu", "menuone", "popup", "noselect", "noinsert" }
 
+vim.pack.add({
+	{ src = "https://github.com/nvim-mini/mini.pick" },
+})
+
+local mini = require('mini.pick')
+mini.setup({
+	source = {
+		show = mini.default_show,
+	},
+	window = {
+		prompt_prefix = " ",
+		config = function()
+			return {
+				border = "single",
+				anchor = "SW",
+				height = 15,
+				width = vim.o.columns,
+				row = vim.o.lines - vim.o.cmdheight - 1,
+				col = 0,
+			}
+		end,
+	},
+})
+
 vim.keymap.set("n", "<C-Left>",  ":bprevious<CR>")
 vim.keymap.set("n", "<C-Right>", ":bnext<CR>")
 vim.keymap.set("n", "<Leader>d", ":bd!<CR>")
-vim.keymap.set("n", "<Leader>x", ":Ex .<CR>")
-vim.keymap.set("n", "<Leader>f", ":find ")
-vim.keymap.set("n", "<Leader>b", ":b ")
 vim.keymap.set("n", "<Leader>q", ":nohlsearch<CR>")
 vim.keymap.set("n", "<leader>w", ":silent! grep! <cword> | cwindow | redraw!<CR>")
+vim.keymap.set("n", "<Leader>p", ":Pick files<CR>")
+vim.keymap.set("n", "<Leader>b", ":Pick buffers<CR>")
+vim.keymap.set("n", "<Leader>g", ":Pick grep_live<CR>")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 vim.api.nvim_set_hl(0, "CursorLine", { bg = "#222222" })

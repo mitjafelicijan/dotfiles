@@ -2,6 +2,14 @@ set nocompatible exrc secure
 filetype plugin on
 syntax on
 
+call plug#begin()
+	Plug 'tpope/vim-commentary'
+	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'dense-analysis/ale'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'mitjafelicijan/sniper.vim'
+call plug#end()
+
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
 set number autoindent cursorline ignorecase hlsearch incsearch signcolumn=yes
 set hidden nowrap nobackup noswapfile noundofile autoread updatetime=100
@@ -13,19 +21,26 @@ set omnifunc=ale#completion#OmniFunc
 set background=dark
 colorscheme wildcharm
 
+if executable('rg')
+	set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+	set grepformat=%f:%l:%c:%m
+endif
+
 nnoremap <C-Right>  :bnext<CR>
 nnoremap <C-Left>   :bprevious<CR>
 nnoremap <C-q>      :copen<CR>
 nnoremap <C-b>      :CtrlPBuffer<CR>
 nnoremap <Leader>d  :bd!<CR>
 nnoremap <Leader>q  :nohlsearch<CR>
-nnoremap <leader>w  :silent! grep! <cword> \| cwindow \| redraw!<CR>
+nnoremap <leader>w  :silent! grep <cword> <Bar> cwindow <Bar> redraw!<CR>
 
 nnoremap <C-k>      :ALEHover<CR>
 nnoremap <C-j>      :ALEDetail<CR>
 nmap <silent> gr    :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
 nmap <silent> gd    :ALEGoToDefinition<CR>
 nmap <silent> re    :ALERename<CR>
+nnoremap <C-Up>     :ALEPrevious<CR>
+nnoremap <C-Down>   :ALENext<CR>
 imap <C-n>          <Plug>(ale_complete)
 
 let g:ctrlp_use_caching = 0

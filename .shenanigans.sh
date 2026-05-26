@@ -27,7 +27,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias less='less -R'
 	alias tmux='tmux -T 256 -u'
 	alias server='python3 -m http.server 6969'
-	alias newsboat='newsboat -r -u ~/.feeds.txt'
+	alias newsboat='BROWSER=brave newsboat -r -u ~/.feeds.txt'
 	alias emptytrash='gio trash --empty'
 
 	# Custom folder jump commands.

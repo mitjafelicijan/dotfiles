@@ -55,6 +55,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH="$PATH:$HOME/.local/bin/zig"
 	export PATH="$PATH:$HOME/.local/bin/c3"
 	export PATH="$PATH:$HOME/.local/bin/odin"
+	export PATH="$PATH:$HOME/.local/bin/ols"
 fi
 
 backup() {

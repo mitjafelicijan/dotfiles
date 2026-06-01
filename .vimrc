@@ -51,3 +51,16 @@ let g:ale_detail_to_floating_preview = 1
 let g:ale_floating_window_border = 0
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickf = 1
+
+" Tells which language server was attached in statusline.
+hi User1 ctermbg=239 ctermfg=231
+set statusline=%f\ %=%1*%{ALELSPName(bufnr('%'))}%*\ %-14.(%l,%c%V%)\ %P
+function! ALELSPName(buf) abort
+	let names = []
+	for conn in values(ale#lsp#GetConnections())
+		if has_key(conn.open_documents, a:buf)
+			call add(names, split(conn.id, ':')[0])
+		endif
+	endfor
+	return empty(names) ? '' : ' ' . join(names, ',') . ' '
+endfunction

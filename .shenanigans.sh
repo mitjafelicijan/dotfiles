@@ -34,6 +34,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias j='cd ~/Junk'
 	alias p='cd ~/Projects'
 	alias d='cd ~/Downloads'
+	alias n='cd ~/Notes'
 
 	# History and search. Stolen from J.
 	HISTCONTROL=ignoreboth

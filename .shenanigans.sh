@@ -57,6 +57,10 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PATH="$PATH:$HOME/.local/bin/c3"
 	export PATH="$PATH:$HOME/.local/bin/odin"
 	export PATH="$PATH:$HOME/.local/bin/ols"
+
+	export DEVKITPRO=/opt/devkitpro
+	export DEVKITARM=$DEVKITPRO/devkitARM
+	export PATH=$PATH:$DEVKITARM/bin
 fi
 
 backup() {

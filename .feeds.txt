@@ -1,5 +1,4 @@
 https://geohot.github.io/blog/feed.xml
-https://til.simonwillison.net/tils/feed.atom
 https://voussoir.net/writing/writing.atom
 https://world.hey.com/dhh/feed.atom
 https://matduggan.com/rss/
@@ -12,8 +11,8 @@ https://susam.net/feed.xml
 https://www.gingerbill.org/article/index.xml
 https://mmk2410.org/blog.rss
 https://tonsky.me/atom.xml
-https://www.bluesnews.com/news/atom.xml
 https://wolfsheadonline.com/feed/
+https://www.beautifulpublicdata.com/rss/
 
 https://github.com/srevinsaju/Brave-AppImage/releases.atom
 
@@ -23,7 +22,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCmtyQOKKmrMVaKuRXz02jbQ
 https://www.youtube.com/feeds/videos.xml?channel_id=UCAMu6Dso0ENoNm3sKpQsy0g
 https://www.youtube.com/feeds/videos.xml?channel_id=UC6dKynwWVCYOcyllwU8aAaA
 https://www.youtube.com/feeds/videos.xml?channel_id=UCB2ATFiszUNmw6z1x67GnYw
-https://www.youtube.com/feeds/videos.xml?channel_id=UCg0V1MkdYkMlwZPU3IuKLMg
 https://www.youtube.com/feeds/videos.xml?channel_id=UCh_YjONE-IHFC_3U_uuW8QQ
 https://www.youtube.com/feeds/videos.xml?channel_id=UC65_CVnMw6hvPET_DRDg3GA
 https://www.youtube.com/feeds/videos.xml?channel_id=UCODHrzPMGbNv67e84WDZhQQ

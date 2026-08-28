@@ -20,15 +20,14 @@ opt.undofile = false
 opt.updatetime = 100
 opt.timeoutlen = 400
 opt.ttimeoutlen = 100
-opt.cmdheight = 1
 opt.shortmess:append("c")
 opt.clipboard = "unnamedplus"
 opt.path:append("**")
+opt.mouse = ""
 
 opt.foldmethod = "syntax"
 opt.foldlevel = 99
 opt.foldopen = ""
-opt.lazyredraw = true
 opt.scrolloff = 10
 opt.smoothscroll = true
 opt.wildignore:append("**/.git/*,**/.hg/*,**/.svn/*,**/vendor,tags,*.o,*.a,*.so")
@@ -36,7 +35,6 @@ opt.completeopt = "menu,menuone,popup,noselect,noinsert"
 opt.complete:append("t")
 
 opt.background = "dark"
-opt.termguicolors = true
 opt.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20"
 opt.winborder = "solid"
 opt.laststatus = 3
@@ -108,6 +106,7 @@ local default_config = {
 	capabilities = vim.lsp.protocol.make_client_capabilities(),
 }
 default_config.capabilities.textDocument.completion.completionItem.snippetSupport = true
+default_config.capabilities.textDocument.hover.contentFormat = { "plaintext" }
 
 local servers = {
 	clangd = { cmd = { "clangd", "--background-index" } },
@@ -124,7 +123,13 @@ end
 local status_timer = nil
 function _G.StatusLspName()
 	local names = vim.iter(vim.lsp.get_clients({ bufnr = 0 })):map(function(c) return c.name end):totable()
-	return #names > 0 and (" [" .. table.concat(names, ",") .. "] ") or ""
+	return #names > 0 and (" " .. table.concat(names, ",") .. " ") or ""
+end
+
+function _G.StatusGitBranch()
+	local summary = vim.b.minigit_summary or {}
+	local head = summary.head_name or ""
+	return head ~= "" and ("  " .. head .. " ") or ""
 end
 
 function _G.ShowDiagnostics()
@@ -144,7 +149,7 @@ function _G.ShowDiagnostics()
 end
 
 vim.api.nvim_create_autocmd({"CursorMoved", "CursorMovedI"}, { group = ui_group, callback = _G.ShowDiagnostics })
-opt.statusline = "%f %r%m %=%1*%{v:lua.StatusLspName()}%* %-14.(%l,%c%V%) %P"
+opt.statusline = "%1*%{v:lua.StatusGitBranch()}%* %f %r%m %=%1*%{v:lua.StatusLspName()}%* %-14.(%l,%c%V%) %P"
 
 local keymap = vim.keymap.set
 keymap("n", "<C-Right>", vim.cmd.bnext)
@@ -158,7 +163,6 @@ keymap("n", "<Leader>x", vim.diagnostic.setqflist)
 keymap("n", "<Leader>w", function() require("mini.pick").builtin.grep({ tool = "rg" }) end)
 
 vim.cmd.colorscheme("wildcharm")
-setup_highlights()
 
 require("mini.pick").setup({
 	options = { use_icons = false, content_from_bottom = true },
@@ -180,3 +184,5 @@ require("mini.pick").setup({
 		end,
 	},
 })
+
+require("mini.git").setup({})

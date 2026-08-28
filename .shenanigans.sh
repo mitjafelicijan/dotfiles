@@ -25,7 +25,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias ..='cd ..'
 	alias gg='lazygit'
 	alias less='less -R'
-	alias tmux='tmux -T 256 -u'
 	alias server='python3 -m http.server 6969'
 	alias newsboat='BROWSER=brave newsboat -r -u ~/.feeds.txt'
 	alias emptytrash='gio trash --empty'
@@ -65,6 +64,7 @@ fi
 
 backup() {
 	SNAPSHOT=$(date +%Y-%m-%d)-$(whoami)@$(hostname)
+	BACKUP_DEST="/media/Void/Backup"
 	mkdir -p /tmp/$SNAPSHOT
 
 	archive_sets=(
@@ -77,7 +77,13 @@ backup() {
 		zip -r /tmp/$SNAPSHOT/${entry} -x "**/.venv/*" "**/.git/*" "**/.import/*" "**/.godot/*" "**/.zig-cache/*" "**/node_modules/*"
 	done
 
-	rsync -azhv /tmp/$SNAPSHOT /media/Void/Backup
+	if [ ! -d "$BACKUP_DEST" ]; then
+		echo "$BACKUP_DEST not mounted, skipping rsync"
+		rm -Rf /tmp/$SNAPSHOT
+		return 1
+	fi
+
+	rsync -azhv /tmp/$SNAPSHOT "$BACKUP_DEST"
 	rm -Rf /tmp/$SNAPSHOT
 }
 
@@ -96,7 +102,7 @@ worldclocks() {
 record() {
 	mkdir -p "$HOME/Videos"
 	win=$(xwininfo -int | awk '/Window id:/{print $4; exit}')
-	[ -z "$win" ] && { echo "no window picked"; exit 1; }
+	[ -z "$win" ] && { echo "no window picked"; return 1; }
 
 	eval $(
 		xwininfo -id "$win" | awk '
@@ -109,7 +115,7 @@ record() {
 	)
 
 	if [ -z "$W" ] || [ -z "$H" ]; then
-		echo "failed to get geometry"; exit 1
+		echo "failed to get geometry"; return 1
 	fi
 
 	W=$((W / 2 * 2))

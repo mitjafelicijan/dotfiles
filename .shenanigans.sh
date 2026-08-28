@@ -9,7 +9,9 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export LANG=en_US.UTF-8
 	export LC_ALL=en_US.UTF-8
 	export COLORTERM=truecolor
-	export TERM=xterm-256color
+	if [[ -z "$TMUX" ]]; then
+		export TERM=xterm-256color
+	fi
 	export VISUAL=nvim
 	export EDITOR=nvim
 

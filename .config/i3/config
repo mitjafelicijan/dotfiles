@@ -165,10 +165,10 @@ client.focused_inactive $dark         $dark         $light        $light
 client.urgent           $secondary    $secondary    $light        $light
 
 # Workspaces with only floating windows
-# for_window [workspace="^(1|2)$"] floating enable
+for_window [workspace="^(1|2)$"] floating enable
 
 # Default mode for all workspaces floating
-for_window [class=".*"] floating enable
+# for_window [class=".*"] floating enable
 
 # Exceptions for opening in floating mode where XSetClassHint is set to floating
 # for_window [class="^(mpv|Thunar|transmission|Xmagnify|qemu|mgba)$"] floating enable

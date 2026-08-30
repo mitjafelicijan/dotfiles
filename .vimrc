@@ -52,9 +52,9 @@ let g:ale_floating_window_border = 0
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
 
-" Tells which language server was attached in statusline.
 hi User1 ctermbg=239 ctermfg=231
-set statusline=%f\ %=%1*%{ALELSPName(bufnr('%'))}%*\ %-14.(%l,%c%V%)\ %P
+set statusline=%f\ %=%{GitBranch()}\ %1*%{ALELSPName(bufnr('%'))}%*\ %-14.(%l,%c%V%)\ %P
+
 function! ALELSPName(buf) abort
 	let names = []
 	for conn in values(ale#lsp#GetConnections())
@@ -63,4 +63,9 @@ function! ALELSPName(buf) abort
 		endif
 	endfor
 	return empty(names) ? '' : ' ' . join(names, ',') . ' '
+endfunction
+
+function! GitBranch()
+	let l:branch = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+	return strlen(l:branch) > 0 ? l:branch : ''
 endfunction

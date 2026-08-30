@@ -12,8 +12,8 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	if [[ -z "$TMUX" ]]; then
 		export TERM=xterm-256color
 	fi
-	export VISUAL=nvim
-	export EDITOR=nvim
+	export VISUAL=vim
+	export EDITOR=vim
 
 	# Customized Bash prompt.
 	SYMBOL='\[\e[38;5;214m\]\$\[\e[0m\]'
@@ -30,7 +30,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias server='python3 -m http.server 6969'
 	alias newsboat='BROWSER=brave newsboat -r -u ~/.feeds.txt'
 	alias emptytrash='gio trash --empty'
-	alias vim='nvim'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'

@@ -1,4 +1,7 @@
-vim.pack.add({ "https://github.com/nvim-mini/mini.nvim" })
+vim.pack.add({
+	"https://github.com/nvim-mini/mini.nvim",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+})
 
 local opt = vim.opt
 
@@ -46,7 +49,8 @@ if vim.fn.executable("rg") == 1 then
 end
 
 local function setup_highlights()
-	local float_bg, bar_bg, bar_fg = "#080808", "#444444", "#ffffff"
+	-- local float_bg, bar_bg, bar_fg = "#080808", "#444444", "#ffffff"
+	local float_bg, bar_bg, bar_fg = "#333333", "#444444", "#ffffff"
 
 	local hls = {
 		NormalFloat = { bg = float_bg },

@@ -12,9 +12,9 @@ call plug#end()
 
 set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
 set number autoindent cursorline ignorecase hlsearch incsearch signcolumn=yes
-set hidden nowrap nobackup noswapfile noundofile autoread updatetime=100 timeoutlen=400 ttimeoutlen=100
-set backspace=indent,eol,start path+=**
-set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10 smoothscroll
+set hidden nowrap nobackup noswapfile noundofile autoread updatetime=100
+set backspace=indent,eol,start completeopt=menuone path+=**
+set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
 set completeopt=menu,menuone,popup,noselect,noinsert complete+=t
 set omnifunc=ale#completion#OmniFunc

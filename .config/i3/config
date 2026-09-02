@@ -131,6 +131,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Snap floating windows to screen edges
+bindsym $mod+Ctrl+Left  exec --no-startup-id ~/.local/bin/i3-snap left
+bindsym $mod+Ctrl+Right exec --no-startup-id ~/.local/bin/i3-snap right
+bindsym $mod+Ctrl+Up    exec --no-startup-id ~/.local/bin/i3-snap top
+bindsym $mod+Ctrl+Down  exec --no-startup-id ~/.local/bin/i3-snap bottom
+
+# Corners
+bindsym $mod+Ctrl+Home     exec --no-startup-id ~/.local/bin/i3-snap top-left
+bindsym $mod+Ctrl+Prior    exec --no-startup-id ~/.local/bin/i3-snap top-right
+bindsym $mod+Ctrl+End      exec --no-startup-id ~/.local/bin/i3-snap bottom-left
+bindsym $mod+Ctrl+Next     exec --no-startup-id ~/.local/bin/i3-snap bottom-right
+
 # No title bars
 for_window [class="^.*"] border pixel 2
 

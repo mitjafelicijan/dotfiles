@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+direction="${1:-}"
+
+case "$direction" in
+    left|right|top|bottom|top-left|top-right|bottom-left|bottom-right)
+        ;;
+    *)
+        echo "Usage: i3-snap {left|right|top|bottom|top-left|top-right|bottom-left|bottom-right}"
+        exit 1
+        ;;
+esac
+
+# Get focused window geometry.
+read -r WIN_X WIN_Y WIN_W WIN_H < <(
+    i3-msg -t get_tree |
+        jq -r '
+            .. |
+            objects |
+            select(.focused? == true) |
+            .rect |
+            "\(.x) \(.y) \(.width) \(.height)"
+        '
+)
+
+# Get focused workspace geometry.
+read -r WS_X WS_Y WS_W WS_H < <(
+    i3-msg -t get_workspaces |
+        jq -r '
+            .[] |
+            select(.focused == true) |
+            .rect |
+            "\(.x) \(.y) \(.width) \(.height)"
+        '
+)
+
+# Start at current position.
+X=$WIN_X
+Y=$WIN_Y
+
+case "$direction" in
+    left)
+        X=$WS_X
+        ;;
+
+    right)
+        X=$((WS_X + WS_W - WIN_W))
+        ;;
+
+    top)
+        Y=$WS_Y
+        ;;
+
+    bottom)
+        Y=$((WS_Y + WS_H - WIN_H))
+        ;;
+
+    top-left)
+        X=$WS_X
+        Y=$WS_Y
+        ;;
+
+    top-right)
+        X=$((WS_X + WS_W - WIN_W))
+        Y=$WS_Y
+        ;;
+
+    bottom-left)
+        X=$WS_X
+        Y=$((WS_Y + WS_H - WIN_H))
+        ;;
+
+    bottom-right)
+        X=$((WS_X + WS_W - WIN_W))
+        Y=$((WS_Y + WS_H - WIN_H))
+        ;;
+esac
+
+i3-msg "move position ${X} px ${Y} px" >/dev/null

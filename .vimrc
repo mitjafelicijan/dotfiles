@@ -1,7 +1,3 @@
-set nocompatible exrc secure
-filetype plugin on
-syntax on
-
 call plug#begin()
 	Plug 'tpope/vim-commentary'
 	Plug 'ctrlpvim/ctrlp.vim'
@@ -10,21 +6,14 @@ call plug#begin()
 	Plug 'mitjafelicijan/sniper.vim'
 call plug#end()
 
-set encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
+set nocompatible encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
 set number autoindent cursorline ignorecase hlsearch incsearch signcolumn=yes
-set hidden nowrap nobackup noswapfile noundofile autoread updatetime=100
-set backspace=indent,eol,start completeopt=menuone path+=**
-set foldmethod=syntax foldlevel=99 foldopen= lazyredraw scrolloff=10
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/vendor,tags,*.o,*.a,*.so
-set completeopt=menu,menuone,popup,noselect,noinsert complete+=t
-set omnifunc=ale#completion#OmniFunc
+set hidden nowrap nobackup noswapfile noundofile autoread
 set background=dark
-colorscheme wildcharm
 
-if executable('rg')
-	set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
-	set grepformat=%f:%l:%c:%m
-endif
+syntax on
+filetype plugin on
+colorscheme wildcharm
 
 nnoremap <C-Right>  :bnext<CR>
 nnoremap <C-Left>   :bprevious<CR>
@@ -32,15 +21,14 @@ nnoremap <C-q>      :copen<CR>
 nnoremap <C-b>      :CtrlPBuffer<CR>
 nnoremap <Leader>d  :bd!<CR>
 nnoremap <Leader>q  :nohlsearch<CR>
-nnoremap <leader>w  :silent! grep <cword> <Bar> cwindow <Bar> redraw!<CR>
 
 nnoremap <C-k>      :ALEHover<CR>
 nnoremap <C-j>      :ALEDetail<CR>
+nnoremap <C-Up>     :ALEPrevious<CR>
+nnoremap <C-Down>   :ALENext<CR>
 nmap <silent> gr    :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
 nmap <silent> gd    :ALEGoToDefinition<CR>
 nmap <silent> re    :ALERename<CR>
-nnoremap <C-Up>     :ALEPrevious<CR>
-nnoremap <C-Down>   :ALENext<CR>
 imap <C-n>          <Plug>(ale_complete)
 
 let g:ctrlp_use_caching = 0
@@ -51,21 +39,3 @@ let g:ale_detail_to_floating_preview = 1
 let g:ale_floating_window_border = 0
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
-
-hi User1 ctermbg=239 ctermfg=231
-set statusline=%f\ %=%{GitBranch()}\ %1*%{ALELSPName(bufnr('%'))}%*\ %-14.(%l,%c%V%)\ %P
-
-function! ALELSPName(buf) abort
-	let names = []
-	for conn in values(ale#lsp#GetConnections())
-		if has_key(conn.open_documents, a:buf)
-			call add(names, split(conn.id, ':')[0])
-		endif
-	endfor
-	return empty(names) ? '' : ' ' . join(names, ',') . ' '
-endfunction
-
-function! GitBranch()
-	let l:branch = system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-	return strlen(l:branch) > 0 ? l:branch : ''
-endfunction

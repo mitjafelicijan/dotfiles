@@ -6,6 +6,7 @@
 # Only run if the script is being sourced (bashrc).
 if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	# Magical environment variables.
+	export BASH_SILENCE_DEPRECATION_WARNING=1
 	export LANG=en_US.UTF-8
 	export LC_ALL=en_US.UTF-8
 	export COLORTERM=truecolor

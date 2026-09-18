@@ -21,8 +21,13 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	export PS1="\n$SYMBOL \u@\h \t \w \$(git_branch)\n$SYMBOL "
 
 	# General aliases.
-	alias l='ls -lh --group-directories-first --color=always'
-	alias ll='ls -lha --group-directories-first --color=always'
+	if [[ "$(uname)" == "Darwin" ]]; then
+		alias l='ls -lhG'
+		alias ll='ls -lhaG'
+	else
+		alias l='ls -lh --group-directories-first --color=auto'
+		alias ll='ls -lha --group-directories-first --color=auto'
+	fi
 	alias t='tree -L 2'
 	alias ..='cd ..'
 	alias gg='lazygit'

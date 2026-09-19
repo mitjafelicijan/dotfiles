@@ -1,6 +1,6 @@
 # Software list:
 #   xss-lock xkbset xclip xsel xwininfo cifs-utils picom ffmpeg
-#   vim git tmux maim mc htop entr rsync jq rofi stow newsboat 
+#   vim git tmux maim mc htop entr rsync jq rofi stow newsboat uv
 #   st rsync curl hstr tree make gdb nvtop ctags mpv lazygit fd
 
 # Only run if the script is being sourced (bashrc).

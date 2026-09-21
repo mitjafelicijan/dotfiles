@@ -15,6 +15,7 @@ bindsym $mod+m exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggl
 bindsym $mod+l exec --no-startup-id i3lock --nofork --color 000000
 bindsym $mod+z exec --no-startup-id xmagnify -s 1000 -z 3
 bindsym $mod+p exec --no-startup-id "rofi -show drun -theme ~/.black.rasi"
+bindsym $mod+b exec --no-startup-id brave
 bindsym $mod+grave exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -177,11 +178,4 @@ client.focused_inactive $dark         $dark         $light        $light
 client.urgent           $secondary    $secondary    $light        $light
 
 # Workspaces with only floating windows
-for_window [workspace="^(1|2)$"] floating enable
-
-# Default mode for all workspaces floating
-# for_window [class=".*"] floating enable
-
-# Exceptions for opening in floating mode where XSetClassHint is set to floating
-# for_window [class="^(mpv|Thunar|transmission|Xmagnify|qemu|mgba)$"] floating enable
-# for_window [title="^(floating|game|iceworks)$"] floating enable
+for_window [workspace="^(1)$"] floating enable

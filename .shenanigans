@@ -82,6 +82,7 @@ backup() {
 
 	archive_sets=(
 		"ssh.zip $HOME/.ssh"
+		"jail.zip $HOME/.jail"
 		"bash_history_infinite.zip $HOME/.bash_history_infinite"
 		"projects.zip $HOME/Projects"
 	)

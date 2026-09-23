@@ -39,6 +39,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias emptytrash='gio trash --empty'
 	alias tf='terraform'
 	alias tg='terragrunt'
+	alias opencode='opencode-box'
 
 	# Custom folder jump commands.
 	alias j='cd ~/Junk'
@@ -111,6 +112,14 @@ worldclocks() {
 	printf "%-18s %s\n" "Brisbane:" "$(TZ='Australia/Brisbane' date +'%a %H:%M')"
 	printf "%-18s %s\n" "San Francisco:" "$(TZ='America/Los_Angeles' date +'%a %H:%M')"
 	printf "%-18s %s\n" "New York:" "$(TZ='America/New_York' date +'%a %H:%M')"
+}
+
+opencode-box() {
+	docker run --rm -it \
+		-v "$PWD:/workspace" \
+		-v "$HOME/.local/share/opencode/auth.json:/root/.local/share/opencode/auth.json:ro" \
+		-w /workspace \
+		ghcr.io/anomalyco/opencode:latest
 }
 
 record() {

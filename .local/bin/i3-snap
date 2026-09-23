@@ -5,10 +5,10 @@ set -euo pipefail
 direction="${1:-}"
 
 case "$direction" in
-    left|right|top|bottom|top-left|top-right|bottom-left|bottom-right)
+    left|right|top|bottom)
         ;;
     *)
-        echo "Usage: i3-snap {left|right|top|bottom|top-left|top-right|bottom-left|bottom-right}"
+        echo "Usage: i3-snap {left|right|top|bottom}"
         exit 1
         ;;
 esac
@@ -54,26 +54,6 @@ case "$direction" in
         ;;
 
     bottom)
-        Y=$((WS_Y + WS_H - WIN_H))
-        ;;
-
-    top-left)
-        X=$WS_X
-        Y=$WS_Y
-        ;;
-
-    top-right)
-        X=$((WS_X + WS_W - WIN_W))
-        Y=$WS_Y
-        ;;
-
-    bottom-left)
-        X=$WS_X
-        Y=$((WS_Y + WS_H - WIN_H))
-        ;;
-
-    bottom-right)
-        X=$((WS_X + WS_W - WIN_W))
         Y=$((WS_Y + WS_H - WIN_H))
         ;;
 esac

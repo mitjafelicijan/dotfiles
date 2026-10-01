@@ -9,6 +9,8 @@ call plug#end()
 set nocompatible encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
 set number autoindent cursorline ignorecase hlsearch incsearch signcolumn=yes
 set hidden nowrap nobackup noswapfile noundofile autoread
+set completeopt=menu,menuone,noselect
+set omnifunc=ale#completion#OmniFunc
 set background=dark
 
 syntax on
@@ -30,6 +32,7 @@ nmap <silent> gr    :ALEFindReferences -quickfix<CR>:sleep 100m<CR>:copen<CR>
 nmap <silent> gd    :ALEGoToDefinition<CR>
 nmap <silent> re    :ALERename<CR>
 imap <C-n>          <Plug>(ale_complete)
+imap <C-x><C-o>     <Plug>(ale_complete)
 
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 1

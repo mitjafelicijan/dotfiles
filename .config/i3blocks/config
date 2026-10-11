@@ -1,0 +1,26 @@
+separator_block_width=20
+separator=false
+
+[microphone]
+command=~/.local/bin/i3-micstatus
+interval=1
+
+[cpu]
+command=grep 'cpu ' /proc/stat | awk '{u=$2+$4; t=$2+$4+$5; print "CPU: " int(u*100/t) "%"}'
+interval=5
+
+[temperature]
+command=cat /sys/class/thermal/thermal_zone0/temp | awk '{printf "Temp: %.0f°C\n", $1/1000}'
+interval=5
+
+[disk]
+command=df -h / | awk 'NR==2 {print "Disk: " $3 " (" $5 ")"}'
+interval=30
+
+[memory]
+command=free -h | awk '/Mem:/ {print "Memory: " $3}'
+interval=5
+
+[time]
+command=date '+%a %Y-%m-%d %H:%M:%S'
+interval=1

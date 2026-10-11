@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if pactl get-source-mute @DEFAULT_SOURCE@ | grep -q yes; then
+	echo " MIC: OFF "
+	echo
+	echo "#ffffff"
+	echo "#aa3333"
+else
+	echo " MIC: ON "
+	echo
+	echo "#ffffff"
+	echo "#338844"
+fi

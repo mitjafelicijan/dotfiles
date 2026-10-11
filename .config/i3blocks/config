@@ -1,6 +1,10 @@
 separator_block_width=20
 separator=false
 
+[void-updates]
+command=~/.local/bin/i3-voidupdates
+interval=1800
+
 [microphone]
 command=~/.local/bin/i3-micstatus
 interval=1

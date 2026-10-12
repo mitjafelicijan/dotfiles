@@ -1,13 +1,13 @@
 separator_block_width=20
 separator=false
 
-[void-updates]
-command=~/.local/bin/i3-voidupdates
-interval=1800
-
 [microphone]
 command=~/.local/bin/i3-micstatus
 interval=1
+
+[void-updates]
+command=~/.local/bin/i3-voidupdates
+interval=1800
 
 [cpu]
 command=grep 'cpu ' /proc/stat | awk '{u=$2+$4; t=$2+$4+$5; print "CPU: " int(u*100/t) "%"}'

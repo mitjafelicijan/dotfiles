@@ -29,6 +29,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	else
 		alias l='ls -lh --group-directories-first --color=auto'
 		alias ll='ls -lha --group-directories-first --color=auto'
+		alias open='xdg-open'
 	fi
 	alias t='tree -L 2'
 	alias ..='cd ..'
@@ -44,6 +45,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	alias j='cd ~/Junk'
 	alias p='cd ~/Projects'
 	alias d='cd ~/Downloads'
+	alias s='cd ~/Sandbox'
 	alias n='cd ~/Notes'
 
 	# History and search. Stolen from J.
@@ -111,18 +113,6 @@ worldclocks() {
 	printf "%-18s %s\n" "Brisbane:" "$(TZ='Australia/Brisbane' date +'%a %H:%M')"
 	printf "%-18s %s\n" "San Francisco:" "$(TZ='America/Los_Angeles' date +'%a %H:%M')"
 	printf "%-18s %s\n" "New York:" "$(TZ='America/New_York' date +'%a %H:%M')"
-}
-
-opencode() {
-	docker run --rm -it \
-		--pull=always \
-		--user "$(id -u):$(id -g)" \
-		-e HOME=/tmp \
-		-e XDG_DATA_HOME=/opencode-data \
-		-v "$PWD:/workspace" \
-		-v "$HOME/.config/opencode-docker:/opencode-data/opencode" \
-		-w /workspace \
-		ghcr.io/mitjafelicijan/opencode-docker:latest
 }
 
 record() {

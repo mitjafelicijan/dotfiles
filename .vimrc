@@ -8,7 +8,7 @@ call plug#end()
 
 set nocompatible encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
 set number autoindent cursorline ignorecase hlsearch incsearch signcolumn=yes
-set hidden nowrap nobackup noswapfile noundofile autoread
+set hidden nowrap nobackup noswapfile noundofile autoread updatetime=100
 set completeopt=menu,menuone,noselect
 set omnifunc=ale#completion#OmniFunc
 set background=dark

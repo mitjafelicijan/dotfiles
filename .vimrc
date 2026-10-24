@@ -4,6 +4,7 @@ call plug#begin()
 	Plug 'dense-analysis/ale'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'mitjafelicijan/sniper.vim'
+	Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 set nocompatible encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
@@ -33,6 +34,7 @@ nmap <silent> gd    :ALEGoToDefinition<CR>
 nmap <silent> re    :ALERename<CR>
 imap <C-n>          <Plug>(ale_complete)
 imap <C-x><C-o>     <Plug>(ale_complete)
+xnoremap <Leader>a  :EasyAlign 
 
 let g:ctrlp_use_caching = 0
 let g:ctrlp_show_hidden = 1

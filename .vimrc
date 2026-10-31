@@ -5,6 +5,7 @@ call plug#begin()
 	Plug 'airblade/vim-gitgutter'
 	Plug 'mitjafelicijan/sniper.vim'
 	Plug 'junegunn/vim-easy-align'
+	Plug 'nelsyeung/twig.vim'
 call plug#end()
 
 set nocompatible encoding=utf8 spelllang=en_us laststatus=2 tabstop=4 shiftwidth=4
@@ -36,11 +37,12 @@ imap <C-n>          <Plug>(ale_complete)
 imap <C-x><C-o>     <Plug>(ale_complete)
 xnoremap <Leader>a  :EasyAlign 
 
-let g:ctrlp_use_caching = 0
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_working_path_mode = 'ra'
 let g:ale_hover_to_floating_preview = 1
 let g:ale_detail_to_floating_preview = 1
 let g:ale_floating_window_border = 0
 let g:ale_virtualtext_cursor = 0
 let g:ale_set_quickfix = 1
+let g:ctrlp_use_caching = 0
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {'dir': '\v[\/](vendor|node_modules)$'}

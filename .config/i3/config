@@ -177,3 +177,4 @@ client.urgent           $secondary    $secondary    $light        $light
 
 # Workspaces with only floating windows
 for_window [workspace="^(1|2)$"] floating enable
+for_window [title="^(Xmagnify|blobby)$"] floating enable

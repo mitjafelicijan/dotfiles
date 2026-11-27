@@ -1,7 +1,7 @@
 # Software list:
 #   xss-lock xkbset xclip xsel xwininfo cifs-utils picom ffmpeg
 #   vim git tmux maim mc htop entr rsync jq rofi stow newsboat uv
-#   st rsync curl hstr tree make gdb nvtop ctags mpv lazygit fd
+#   st rsync curl tree make gdb nvtop ctags mpv lazygit fd
 #   terraform terragrunt aws-cli websocat
 
 # Only run if the script is being sourced (bashrc).
@@ -57,8 +57,6 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
 	PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
 	bind '"\e[A": history-search-backward'
 	bind '"\e[B": history-search-forward'
-	export HSTR_CONFIG=hicolor
-	if [[ $- =~ .i. ]]; then bind '"\C-h": "\C-a hstr -- \C-j"'; fi
 
 	# Custom paths.
 	export PATH="$PATH:$HOME/Applications"

@@ -10,11 +10,6 @@ set help = no
 set sidebar_visible = no
 set arrow_cursor = no
 
-# Cache
-set header_cache = "~/.mutt/cache/headers"
-set message_cachedir = "~/.mutt/cache/bodies"
-set message_cache_clean = yes
-
 # Message list
 set index_format = "%Z %{%d %b %H:%M} %-24.24F %?M?[%M] ?%s"
 set status_format = " %f | %m messages | %u unread"
@@ -62,6 +57,11 @@ set mime_forward = ask-no
 set save_history = 100
 set history_file = "~/.mutt/history"
 
+# Cache
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set message_cache_clean = yes
+
 # Info
 set from = "mitja.felicijan@gmail.com"
 set realname = "Mitja Felicijan"
@@ -84,3 +84,14 @@ set spoolfile = "+INBOX"
 set postponed = "+[Gmail]/Drafts"
 set record = "+[Gmail]/Sent Mail"
 set trash = "+[Gmail]/Trash"
+
+# Mailbox browser
+set imap_list_subscribed = no
+
+mailboxes "=INBOX" \
+    "=[Gmail]/All Mail" \
+    "=[Gmail]/Sent Mail" \
+    "=[Gmail]/Drafts" \
+    "=[Gmail]/Starred" \
+    "=[Gmail]/Spam" \
+    "=[Gmail]/Trash"

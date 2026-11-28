@@ -92,6 +92,4 @@ mailboxes "=INBOX" \
     "=[Gmail]/All Mail" \
     "=[Gmail]/Sent Mail" \
     "=[Gmail]/Drafts" \
-    "=[Gmail]/Starred" \
-    "=[Gmail]/Spam" \
     "=[Gmail]/Trash"

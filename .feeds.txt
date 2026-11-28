@@ -11,7 +11,6 @@ https://susam.net/feed.xml
 https://www.gingerbill.org/article/index.xml
 https://mmk2410.org/blog.rss
 https://tonsky.me/atom.xml
-https://wolfsheadonline.com/feed/
 https://www.beautifulpublicdata.com/rss/
 https://www.indieretronews.com/feeds/posts/default
 
